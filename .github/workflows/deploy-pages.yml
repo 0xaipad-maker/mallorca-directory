@@ -40,6 +40,9 @@ jobs:
           EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}
           EXPO_PUBLIC_FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
 
+      - name: Fix asset paths with base tag for Pages subdirectory
+        run: sed -i 's|<head>|<head><base href="/mallorca-directory/">|' dist/index.html
+
       - name: Copy index.html as 404.html for SPA routing
         run: cp dist/index.html dist/404.html
 
