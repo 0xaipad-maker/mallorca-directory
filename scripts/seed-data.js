@@ -1,7 +1,7 @@
 require('dotenv').config({ path: require('path').join(__dirname, '..', '.env') });
 
 const { initializeApp } = require('firebase/app');
-const { getFirestore, collection, addDoc, serverTimestamp } = require('firebase/firestore');
+const { getFirestore, collection, addDoc, getDocs, query, where, updateDoc, doc, deleteDoc, serverTimestamp } = require('firebase/firestore');
 
 const firebaseConfig = {
   apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
@@ -358,23 +358,54 @@ for (const b of businesses) {
 }
 
 async function seedDatabase() {
+  const clean = process.argv.includes('--clean');
+
+  if (clean) {
+    console.log('Cleaning existing documents...');
+    const existing = await getDocs(collection(db, 'businesses'));
+    let deleted = 0;
+    for (const snap of existing.docs) {
+      await deleteDoc(doc(db, 'businesses', snap.id));
+      deleted++;
+    }
+    console.log(`  Deleted ${deleted} documents.`);
+  }
+
   console.log(`Seeding ${businesses.length} businesses...`);
-  let count = 0;
+
+  const existing = await getDocs(collection(db, 'businesses'));
+  const existingMap = {};
+  existing.forEach(snap => {
+    const d = snap.data();
+    const key = (d.name || '') + '|' + (d.category || '');
+    existingMap[key] = snap.id;
+  });
+  if (!clean) console.log(`  Found ${existing.size} existing documents (matching by name+category).`);
+
+  let added = 0, updated = 0;
   for (const b of businesses) {
     try {
-      await addDoc(collection(db, 'businesses'), {
-        ...b,
-        source: 'seed',
-        createdAt: serverTimestamp(),
-        updatedAt: serverTimestamp(),
-      });
-      count++;
-      if (count % 10 === 0) console.log(`  ${count}/${businesses.length} done`);
+      const key = b.name + '|' + b.category;
+      const payload = { ...b, updatedAt: serverTimestamp() };
+
+      if (existingMap[key]) {
+        await updateDoc(doc(db, 'businesses', existingMap[key]), payload);
+        updated++;
+      } else {
+        await addDoc(collection(db, 'businesses'), {
+          ...payload,
+          source: 'seed',
+          createdAt: serverTimestamp(),
+        });
+        added++;
+      }
+
+      if ((added + updated) % 10 === 0) console.log(`  ${added + updated}/${businesses.length} done`);
     } catch (e) {
-      console.error(`  Error adding "${b.name}":`, e.message);
+      console.error(`  Error processing "${b.name}":`, e.message);
     }
   }
-  console.log(`Done! ${count}/${businesses.length} businesses imported.`);
+  console.log(`Done! ${added} added, ${updated} updated, ${businesses.length} total.`);
   process.exit(0);
 }
 
