@@ -2,6 +2,7 @@ export interface Business {
   id: string;
   name: string;
   address: string;
+  area: string;
   phone?: string;
   email?: string;
   website?: string;

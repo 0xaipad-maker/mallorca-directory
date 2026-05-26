@@ -16,4 +16,5 @@ export const categories = [
   { id: 'veterinarians', name: 'Veterinarians', emoji: '🐾', color: '#f5f3ff' },
   { id: 'banks', name: 'Banks & ATMs', emoji: '🏦', color: '#f3f4f6' },
   { id: 'postoffice', name: 'Post Office', emoji: '📮', color: '#fef2f2' },
+  { id: 'industrial', name: 'Industrial Estates', emoji: '🏭', color: '#f3e8ff' },
 ];

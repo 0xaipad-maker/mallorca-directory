@@ -5,26 +5,7 @@ import { collection, query, getDocs, where } from 'firebase/firestore';
 import { db } from '../utils/firebase';
 import { Business } from '../types';
 import { useStore, translations, categoryTranslations } from '../store/useStore';
-
-const categories = [
-  { id: 'restaurants', emoji: '🍽️' },
-  { id: 'cafes', emoji: '☕' },
-  { id: 'hotels', emoji: '🏨' },
-  { id: 'beaches', emoji: '🏖️' },
-  { id: 'parks', emoji: '🌳' },
-  { id: 'activities', emoji: '🎯' },
-  { id: 'shopping', emoji: '🛍️' },
-  { id: 'supermarkets', emoji: '🛒' },
-  { id: 'services', emoji: '🔧' },
-  { id: 'transport', emoji: '🚗' },
-  { id: 'health', emoji: '🏥' },
-  { id: 'pharmacies', emoji: '💊' },
-  { id: 'police', emoji: '👮' },
-  { id: 'gasstations', emoji: '⛽' },
-  { id: 'veterinarians', emoji: '🐾' },
-  { id: 'banks', emoji: '🏦' },
-  { id: 'postoffice', emoji: '📮' },
-];
+import { categories } from '../utils/categories';
 
 export default function HomeScreen() {
   const router = useRouter();
