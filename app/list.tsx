@@ -98,7 +98,7 @@ export default function ListScreen() {
           >
             <Text style={styles.itemName}>{item.name}</Text>
             <Text style={styles.itemAddress}>{item.address}</Text>
-            {item.description && <Text style={styles.itemDesc} numberOfLines={1}>{item.description}</Text>}
+            {item.description?.[language] && <Text style={styles.itemDesc} numberOfLines={1}>{item.description[language]}</Text>}
             {item.rating && <Text style={styles.itemRating}>★ {item.rating}</Text>}
           </TouchableOpacity>
         )}

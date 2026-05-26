@@ -6,7 +6,12 @@ export interface Business {
   phone?: string;
   email?: string;
   website?: string;
-  description?: string;
+  description?: {
+    en: string;
+    es: string;
+    de: string;
+    ru: string;
+  };
   category: string;
   subcategory?: string;
   rating?: number;

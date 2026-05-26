@@ -102,8 +102,8 @@ export default function BusinessDetailScreen() {
           </View>
         )}
 
-        {business.description && (
-          <Text style={styles.description}>{business.description}</Text>
+        {business.description?.[language] && (
+          <Text style={styles.description}>{business.description[language]}</Text>
         )}
       </View>
     </ScrollView>
