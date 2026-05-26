@@ -32,10 +32,10 @@ const CATEGORY_MAP = [
 
 function queryOverpass(query) {
   return new Promise((resolve, reject) => {
-    const data = JSON.stringify({ data: query });
+    const data = 'data=' + encodeURIComponent(query);
     const req = https.request(OVERPASS_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Content-Length': data.length },
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': Buffer.byteLength(data) },
     }, res => {
       let body = '';
       res.on('data', chunk => body += chunk);
