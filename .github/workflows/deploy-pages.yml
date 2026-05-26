@@ -40,11 +40,20 @@ jobs:
           EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}
           EXPO_PUBLIC_FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
 
-      - name: Fix asset paths for Pages subdirectory
+      - name: Fix asset paths and inject URL normalization
         run: |
+          set +o histexpand
           sed -i 's|href="/favicon.ico"|href="/mallorca-directory/favicon.ico"|g' dist/index.html
           sed -i 's|src="/_expo/static|src="/mallorca-directory/_expo/static|g' dist/index.html
-          sed -i 's|<head>|<head><script>if(location.pathname==="/mallorca-directory")location.replace("/mallorca-directory/")</script>|' dist/index.html
+          # Inject URL normalization + history interception for Expo Router
+          # Strips /mallorca-directory prefix before router init, wraps push/replaceState to keep prefix
+          node -e "
+          const fs = require('fs');
+          let h = fs.readFileSync('dist/index.html','utf-8');
+          const s = '<script>(function(){var B=\"/mallorca-directory\",P=history.pushState,R=history.replaceState,S=false;history.pushState=function(s,t,u){if(!S&&typeof u==\"string\"&&u.indexOf(B)!=0&&u.indexOf(\"http\")!=0)u=B+u;return P.call(this,s,t,u)};history.replaceState=function(s,t,u){if(!S&&typeof u==\"string\"&&u.indexOf(B)!=0&&u.indexOf(\"http\")!=0)u=B+u;return R.call(this,s,t,u)};S=true;var p=location.pathname;if(p===B||p===B+\"/\"){R.call(history,null,\"\",\"/\")}else if(p.indexOf(B+\"/\")===0){R.call(history,null,\"\",p.substring(B.length))}S=false;window.addEventListener(\"popstate\",function(){S=true;var p=location.pathname;if(p.indexOf(B)===0){R.call(history,null,\"\",p.substring(B.length)||\"/\")}S=false;setTimeout(function(){var c=location.pathname;if(c.indexOf(B)!==0){S=true;R.call(history,null,\"\",B+c);S=false}},0)})})();</script>';
+          h = h.replace('<head>', '<head>' + s);
+          fs.writeFileSync('dist/index.html', h);
+          "
 
       - name: Copy index.html as 404.html for SPA routing
         run: cp dist/index.html dist/404.html

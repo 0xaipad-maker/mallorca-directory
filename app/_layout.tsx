@@ -1,12 +1,29 @@
 import { Stack, SplashScreen } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
+import { Platform } from 'react-native';
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   useEffect(() => {
-    SplashScreen.hideAsync();
+    if (Platform.OS === 'web') {
+      const base = '/mallorca-directory';
+
+      const restoreUrl = () => {
+        const cur = window.location.pathname;
+        if (!cur.startsWith(base)) {
+          window.history.replaceState(null, '', base + cur);
+        }
+      };
+
+      window.addEventListener('popstate', restoreUrl);
+      restoreUrl();
+      SplashScreen.hideAsync();
+      return () => window.removeEventListener('popstate', restoreUrl);
+    } else {
+      SplashScreen.hideAsync();
+    }
   }, []);
 
   return (
