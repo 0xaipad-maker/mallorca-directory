@@ -23,7 +23,8 @@
       "package": "com.mallorcadb.directory"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "baseUrl": "/mallorca-directory"
     },
     "plugins": [
       "expo-router",
