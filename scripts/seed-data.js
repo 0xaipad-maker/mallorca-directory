@@ -234,6 +234,33 @@ const businesses = [
   { name: 'Polígono Industrial de Son Parera', area: 'Palma', address: 'Polígon Industrial Son Parera, Palma', category: 'industrial', rating: 3.7, verified: true, location: { lat: 39.5830, lng: 2.6780 }, description: 'Smaller industrial estate integrated in Son Castelló area.' },
 ];
 
+const descTemplates = {
+  restaurants: 'Mediterranean and international cuisine in a welcoming setting.',
+  cafes: 'Relaxing spot for coffee, pastries, and light meals.',
+  hotels: 'Comfortable accommodation with excellent service and amenities.',
+  beaches: 'Stunning sandy beach with crystal-clear Mediterranean waters.',
+  parks: 'Beautiful green space perfect for relaxation and nature walks.',
+  activities: 'Fun and exciting experience for all ages.',
+  shopping: 'Great selection of shops and products in a convenient location.',
+  supermarkets: 'Well-stocked supermarket with fresh produce and daily essentials.',
+  services: 'Professional and reliable service you can trust.',
+  transport: 'Convenient transport hub connecting you across Mallorca.',
+  health: 'Quality healthcare and medical services.',
+  pharmacies: 'Full-service pharmacy with professional care.',
+  police: 'Dedicated to keeping the community safe.',
+  gasstations: 'Convenient fuel station with competitive prices.',
+  veterinarians: 'Caring veterinary services for your pets.',
+  banks: 'Full banking services for individuals and businesses.',
+  postoffice: 'Complete postal and parcel services.',
+  industrial: 'Strategic industrial estate with modern facilities for businesses.',
+};
+
+for (const b of businesses) {
+  if (!b.description) {
+    b.description = descTemplates[b.category] || 'Quality service in Mallorca.';
+  }
+}
+
 async function seedDatabase() {
   console.log(`Seeding ${businesses.length} businesses...`);
   let count = 0;

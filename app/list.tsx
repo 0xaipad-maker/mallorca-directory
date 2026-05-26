@@ -98,6 +98,7 @@ export default function ListScreen() {
           >
             <Text style={styles.itemName}>{item.name}</Text>
             <Text style={styles.itemAddress}>{item.address}</Text>
+            {item.description && <Text style={styles.itemDesc} numberOfLines={1}>{item.description}</Text>}
             {item.rating && <Text style={styles.itemRating}>★ {item.rating}</Text>}
           </TouchableOpacity>
         )}
@@ -120,6 +121,7 @@ const styles = StyleSheet.create({
   item: { padding: 16, borderBottomWidth: 1, borderBottomColor: '#f3f4f6', paddingLeft: 52 },
   itemName: { fontWeight: '600', fontSize: 18 },
   itemAddress: { color: '#4b5563' },
+  itemDesc: { color: '#6b7280', fontSize: 13, marginTop: 2 },
   itemRating: { color: '#ca8a04' },
   empty: { padding: 32, alignItems: 'center' },
   emptyText: { color: '#6b7280' },
