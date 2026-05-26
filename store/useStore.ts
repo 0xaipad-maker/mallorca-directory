@@ -1,0 +1,205 @@
+import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
+
+interface User {
+  uid: string;
+  email: string | null;
+  displayName: string | null;
+}
+
+interface StoreState {
+  language: 'es' | 'en' | 'de' | 'ru';
+  favorites: string[];
+  user: User | null;
+  setLanguage: (lang: 'es' | 'en' | 'de' | 'ru') => void;
+  addToFavorites: (id: string) => void;
+  removeFromFavorites: (id: string) => void;
+  isFavorite: (id: string) => boolean;
+  setUser: (user: User | null) => void;
+}
+
+export const useStore = create<StoreState>()(
+  persist(
+    (set, get) => ({
+      language: 'en',
+      favorites: [],
+      user: null,
+      setLanguage: (lang) => set({ language: lang }),
+      addToFavorites: (id) => set((state) => ({ favorites: [...state.favorites, id] })),
+      removeFromFavorites: (id) => set((state) => ({ favorites: state.favorites.filter((f) => f !== id) })),
+      isFavorite: (id) => get().favorites.includes(id),
+      setUser: (user) => set({ user }),
+    }),
+    { name: 'mallorca-storage' }
+  )
+);
+
+export const translations = {
+  es: {
+    title: 'Directorio Mallorca',
+    subtitle: 'Descubre los mejores negocios',
+    search: 'Buscar...',
+    categories: 'Categorías',
+    favorites: 'Favoritos',
+    profile: 'Perfil',
+    language: 'Idioma',
+    settings: 'Configuración',
+    addToFavorites: 'Añadido a favoritos',
+    removeFromFavorites: 'Eliminado de favoritos',
+    verified: 'Verificado',
+    loading: 'Cargando...',
+    noBusinesses: 'No hay negocios',
+    hours: 'Horario',
+    noBusinessesInCategory: 'No hay negocios en esta categoría',
+    signIn: 'Iniciar sesión',
+    signUp: 'Registrarse',
+    signOut: 'Cerrar sesión',
+    email: 'Correo electrónico',
+    password: 'Contraseña',
+    addBusiness: 'Añadir empresa',
+    businessName: 'Nombre de la empresa',
+    phone: 'Teléfono',
+    website: 'Sitio web',
+    description: 'Descripción',
+    address: 'Dirección',
+    submit: 'Enviar',
+    about: 'Acerca de',
+    version: 'Versión',
+    privacy: 'Política de privacidad',
+    help: 'Ayuda y soporte',
+  },
+  en: {
+    title: 'Mallorca Directory',
+    subtitle: 'Discover the best businesses',
+    search: 'Search...',
+    categories: 'Categories',
+    favorites: 'Favorites',
+    profile: 'Profile',
+    language: 'Language',
+    settings: 'Settings',
+    addToFavorites: 'Added to favorites',
+    removeFromFavorites: 'Removed from favorites',
+    verified: 'Verified',
+    loading: 'Loading...',
+    noBusinesses: 'No businesses',
+    hours: 'Hours',
+    noBusinessesInCategory: 'No businesses in this category',
+    signIn: 'Sign In',
+    signUp: 'Sign Up',
+    signOut: 'Sign Out',
+    email: 'Email',
+    password: 'Password',
+    addBusiness: 'Add Business',
+    businessName: 'Business Name',
+    phone: 'Phone',
+    website: 'Website',
+    description: 'Description',
+    address: 'Address',
+    submit: 'Submit',
+    about: 'About',
+    version: 'Version',
+    privacy: 'Privacy Policy',
+    help: 'Help & Support',
+  },
+  de: {
+    title: 'Mallorca Verzeichnis',
+    subtitle: 'Entdecken Sie die besten Geschäfte',
+    search: 'Suchen...',
+    categories: 'Kategorien',
+    favorites: 'Favoriten',
+    profile: 'Profil',
+    language: 'Sprache',
+    settings: 'Einstellungen',
+    addToFavorites: 'Zu Favoriten hinzugefügt',
+    removeFromFavorites: 'Aus Favoriten entfernt',
+    verified: 'Verifiziert',
+    loading: 'Wird geladen...',
+    noBusinesses: 'Keine Unternehmen',
+    hours: 'Öffnungszeiten',
+    noBusinessesInCategory: 'Keine Unternehmen in dieser Kategorie',
+    signIn: 'Anmelden',
+    signUp: 'Registrieren',
+    signOut: 'Abmelden',
+    email: 'E-Mail',
+    password: 'Passwort',
+    addBusiness: 'Unternehmen hinzufügen',
+    businessName: 'Unternehmensname',
+    phone: 'Telefon',
+    website: 'Webseite',
+    description: 'Beschreibung',
+    address: 'Adresse',
+    submit: 'Absenden',
+    about: 'Über',
+    version: 'Version',
+    privacy: 'Datenschutz',
+    help: 'Hilfe & Support',
+  },
+  ru: {
+    title: 'Директория Майорки',
+    subtitle: 'Откройте лучшие заведения',
+    search: 'Поиск...',
+    categories: 'Категории',
+    favorites: 'Избранное',
+    profile: 'Профиль',
+    language: 'Язык',
+    settings: 'Настройки',
+    addToFavorites: 'Добавлено в избранное',
+    removeFromFavorites: 'Удалено из избранного',
+    verified: 'Проверено',
+    loading: 'Загрузка...',
+    noBusinesses: 'Нет заведений',
+    hours: 'Часы работы',
+    noBusinessesInCategory: 'Нет заведений в этой категории',
+    signIn: 'Войти',
+    signUp: 'Регистрация',
+    signOut: 'Выйти',
+    email: 'Email',
+    password: 'Пароль',
+    addBusiness: 'Добавить компанию',
+    businessName: 'Название компании',
+    phone: 'Телефон',
+    website: 'Сайт',
+    description: 'Описание',
+    address: 'Адрес',
+    submit: 'Отправить',
+    about: 'О приложении',
+    version: 'Версия',
+    privacy: 'Политика конфиденциальности',
+    help: 'Помощь и поддержка',
+  },
+};
+
+export const categoryTranslations: Record<string, Record<string, string>> = {
+  es: {
+    restaurants: 'Restaurantes', cafes: 'Cafeterías', hotels: 'Hoteles',
+    beaches: 'Playas', parks: 'Parques', activities: 'Actividades',
+    shopping: 'Tiendas', supermarkets: 'Supermercados', services: 'Servicios',
+    transport: 'Transporte', health: 'Hospitales', pharmacies: 'Farmacias',
+    police: 'Policía', gasstations: 'Gasolineras', veterinarians: 'Veterinarios',
+    banks: 'Bancos', postoffice: 'Correos',
+  },
+  en: {
+    restaurants: 'Restaurants', cafes: 'Cafés', hotels: 'Hotels',
+    beaches: 'Beaches', parks: 'Parks', activities: 'Activities',
+    shopping: 'Shopping', supermarkets: 'Supermarkets', services: 'Services',
+    transport: 'Transport', health: 'Hospitals', pharmacies: 'Pharmacies',
+    police: 'Police', gasstations: 'Gas Stations', veterinarians: 'Veterinarians',
+    banks: 'Banks', postoffice: 'Post Office',
+  },
+  de: {
+    restaurants: 'Restaurants', cafes: 'Cafés', hotels: 'Hotels',
+    beaches: 'Strände', parks: 'Parks', activities: 'Aktivitäten',
+    shopping: 'Einkaufen', supermarkets: 'Supermärkte', services: 'Dienstleistungen',
+    transport: 'Verkehr', health: 'Krankenhäuser', pharmacies: 'Apotheken',
+    police: 'Polizei', gasstations: 'Tankstellen', veterinarians: 'Tierärzte',
+    banks: 'Banken', postoffice: 'Post',
+  },
+  ru: {
+    restaurants: 'Рестораны', cafes: 'Кафе', hotels: 'Отели',
+    beaches: 'Пляжи', parks: 'Парки', activities: 'Развлечения',
+    shopping: 'Магазины', supermarkets: 'Супермаркеты', services: 'Услуги',
+    transport: 'Транспорт', health: 'Больницы', pharmacies: 'Аптеки',
+    police: 'Полиция', gasstations: 'Заправки', veterinarians: 'Ветеринары',
+    banks: 'Банки', postoffice: 'Почта',
+  },
+};

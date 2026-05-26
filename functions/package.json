@@ -1,0 +1,12 @@
+{
+  "name": "mallorca-directory-functions",
+  "version": "1.0.0",
+  "description": "Firebase Cloud Functions for Mallorca Directory auto-import",
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.0.0",
+    "firebase-functions": "^6.0.0",
+    "node-fetch": "^3.3.0"
+  },
+  "private": true
+}
