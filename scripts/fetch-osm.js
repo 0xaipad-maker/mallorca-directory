@@ -85,18 +85,15 @@ function extractBusiness(element, category) {
 
   const hours = tags['opening_hours'] ? { open: tags['opening_hours'].slice(0, 5), close: '' } : undefined;
 
-  return {
-    name,
-    area,
+  const result = {
+    name, area, category, rating, verified: false,
     address: address || area || 'Mallorca',
-    phone,
-    website,
-    category,
-    rating,
-    verified: false,
     location: { lat: Math.round(lat * 1e6) / 1e6, lng: Math.round(lng * 1e6) / 1e6 },
-    hours: hours?.open ? hours : undefined,
   };
+  if (phone) result.phone = phone;
+  if (website) result.website = website;
+  if (hours?.open) result.hours = hours;
+  return result;
 }
 
 async function fetchAll() {
@@ -154,10 +151,13 @@ async function fetchAll() {
     });
     console.log(`Found ${existing.size} existing docs in Firestore`);
 
+    function clean(obj) {
+      return Object.fromEntries(Object.entries(obj).filter(([_, v]) => v !== undefined && v !== null));
+    }
     let added = 0, updated = 0;
     for (const b of businesses) {
       const key = b.name + '|' + b.category;
-      const payload = { ...b, updatedAt: serverTimestamp() };
+      const payload = { ...clean(b), updatedAt: serverTimestamp() };
       try {
         if (existingMap[key]) {
           await updateDoc(doc(db, 'businesses', existingMap[key]), payload);
