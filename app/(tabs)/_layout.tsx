@@ -1,34 +1,60 @@
 import { Tabs } from 'expo-router';
-import { Text, StyleSheet, Platform } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
+import { colors, typography, shadows } from '../../utils/theme';
 
 export default function TabLayout() {
   return (
     <Tabs screenOptions={{
       headerShown: false,
       tabBarStyle: styles.tabBar,
-      tabBarActiveTintColor: '#1e40af',
-      tabBarInactiveTintColor: '#94a3b8',
+      tabBarActiveTintColor: colors.primary,
+      tabBarInactiveTintColor: colors.textMuted,
       tabBarLabelStyle: styles.tabLabel,
     }}>
       <Tabs.Screen name="index" options={{
         title: 'Explore',
-        tabBarIcon: ({ focused }) => <Text style={[styles.tabIcon, { opacity: focused ? 1 : 0.5 }]}>🗺️</Text>,
+        tabBarIcon: ({ focused }) => (
+          <View style={styles.tabIconWrap}>
+            <Text style={[styles.tabIcon, focused && styles.tabIconActive]}>🗺️</Text>
+            {focused && <View style={styles.tabDot} />}
+          </View>
+        ),
       }} />
       <Tabs.Screen name="events" options={{
         title: 'Events',
-        tabBarIcon: ({ focused }) => <Text style={[styles.tabIcon, { opacity: focused ? 1 : 0.5 }]}>📅</Text>,
+        tabBarIcon: ({ focused }) => (
+          <View style={styles.tabIconWrap}>
+            <Text style={[styles.tabIcon, focused && styles.tabIconActive]}>📅</Text>
+            {focused && <View style={styles.tabDot} />}
+          </View>
+        ),
       }} />
       <Tabs.Screen name="guides" options={{
         title: 'Guides',
-        tabBarIcon: ({ focused }) => <Text style={[styles.tabIcon, { opacity: focused ? 1 : 0.5 }]}>📖</Text>,
+        tabBarIcon: ({ focused }) => (
+          <View style={styles.tabIconWrap}>
+            <Text style={[styles.tabIcon, focused && styles.tabIconActive]}>📖</Text>
+            {focused && <View style={styles.tabDot} />}
+          </View>
+        ),
       }} />
       <Tabs.Screen name="favorites" options={{
         title: 'Favorites',
-        tabBarIcon: ({ focused }) => <Text style={[styles.tabIcon, { opacity: focused ? 1 : 0.5 }]}>⭐</Text>,
+        tabBarIcon: ({ focused }) => (
+          <View style={styles.tabIconWrap}>
+            <Text style={[styles.tabIcon, focused && styles.tabIconActive]}>⭐</Text>
+            {focused && <View style={styles.tabDot} />}
+          </View>
+        ),
       }} />
       <Tabs.Screen name="profile" options={{
         title: 'Profile',
-        tabBarIcon: ({ focused }) => <Text style={[styles.tabIcon, { opacity: focused ? 1 : 0.5 }]}>👤</Text>,
+        tabBarIcon: ({ focused }) => (
+          <View style={styles.tabIconWrap}>
+            <Text style={[styles.tabIcon, focused && styles.tabIconActive]}>👤</Text>
+            {focused && <View style={styles.tabDot} />}
+          </View>
+        ),
       }} />
     </Tabs>
   );
@@ -37,22 +63,31 @@ export default function TabLayout() {
 const styles = StyleSheet.create({
   tabBar: {
     backgroundColor: '#fff',
-    height: 60,
+    height: 65,
     paddingBottom: 8,
-    paddingTop: 4,
+    paddingTop: 6,
     borderTopWidth: 1,
-    borderTopColor: '#e2e8f0',
-    elevation: 8,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: -2 },
-    shadowOpacity: 0.08,
-    shadowRadius: 8,
+    borderTopColor: colors.borderLight,
+    ...shadows.lg,
   },
   tabLabel: {
-    fontSize: 11,
-    fontWeight: '600',
+    ...typography.caption,
+    marginTop: 2,
+  },
+  tabIconWrap: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: 4,
   },
   tabIcon: {
     fontSize: 22,
+  },
+  tabIconActive: {},
+  tabDot: {
+    width: 4,
+    height: 4,
+    borderRadius: 2,
+    backgroundColor: colors.primary,
+    marginTop: 2,
   },
 });
