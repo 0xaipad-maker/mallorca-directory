@@ -5,6 +5,7 @@ import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../../utils/firebase';
 import { Business } from '../../types';
 import { useStore, translations } from '../../store/useStore';
+import BusinessMap from '../../components/BusinessMap';
 
 export default function BusinessDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -73,6 +74,8 @@ export default function BusinessDetailScreen() {
           <Text style={styles.infoIcon}>📍</Text>
           <Text style={styles.infoLink}>{business.address}</Text>
         </TouchableOpacity>
+
+        <BusinessMap lat={business.location.lat} lng={business.location.lng} />
 
         {business.phone && (
           <TouchableOpacity style={styles.infoRow} onPress={() => call(business.phone!)}>
