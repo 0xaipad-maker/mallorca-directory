@@ -22,8 +22,8 @@ export default function AreaScreen() {
     const fetch = async () => {
       setLoading(true);
       try {
-        const areaName = areaData?.name || name || '';
-        const q = query(collection(db, 'businesses'), where('area', '==', areaName));
+        const areaId = areaData?.id || name || '';
+        const q = query(collection(db, 'businesses'), where('area', '==', areaId));
         const snapshot = await getDocs(q);
         setBusinesses(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Business)));
       } catch (e) { console.error(e); } finally { setLoading(false); }
@@ -68,7 +68,7 @@ export default function AreaScreen() {
         <View style={styles.grid}>
           {areaCategories.map(cat => (
             <TouchableOpacity key={cat.id} style={[styles.card, { backgroundColor: cat.color }]}
-              onPress={() => router.push(`/list?category=${cat.id}&area=${areaData?.name || name}`)}>
+              onPress={() => router.push(`/list?category=${cat.id}&area=${areaData?.id || name}`)}>
               <Text style={styles.cardEmoji}>{cat.emoji}</Text>
               <Text style={styles.cardName}>{categoryTranslations[language][cat.id] || cat.id}</Text>
               <Text style={styles.cardCount}>{categoryCounts[cat.id]} {t.places?.toLowerCase() || 'places'}</Text>

@@ -113,7 +113,7 @@ export default function HomeScreen() {
           <Text style={styles.sectionTitle}>{t.areas}</Text>
           <View style={styles.areaGrid}>
             {areas.map(area => {
-              const count = areaCounts[area.name] || 0;
+              const count = areaCounts[area.id] || 0;
               return (
                 <TouchableOpacity key={area.id} style={styles.areaCard} onPress={() => router.push(`/area/${area.id}`)}>
                   <Text style={styles.areaEmoji}>{area.emoji}</Text>
