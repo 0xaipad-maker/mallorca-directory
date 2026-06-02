@@ -1,7 +1,7 @@
 import { View, StyleSheet, Platform } from 'react-native';
 import { useRef, useEffect } from 'react';
 
-export default function BusinessMap({ lat, lng, height = 220 }: { lat: number; lng: number; height?: number }) {
+export default function BusinessMap({ lat, lng, height = 480 }: { lat: number; lng: number; height?: number }) {
   const containerRef = useRef<any>(null);
 
   useEffect(() => {
