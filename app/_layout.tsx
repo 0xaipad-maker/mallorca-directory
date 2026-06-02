@@ -9,14 +9,10 @@ export default function RootLayout() {
   useEffect(() => {
     if (Platform.OS === 'web') {
       const base = '/mallorca-directory';
-
       const restoreUrl = () => {
         const cur = window.location.pathname;
-        if (!cur.startsWith(base)) {
-          window.history.replaceState(null, '', base + cur);
-        }
+        if (!cur.startsWith(base)) window.history.replaceState(null, '', base + cur);
       };
-
       window.addEventListener('popstate', restoreUrl);
       restoreUrl();
       SplashScreen.hideAsync();
@@ -31,12 +27,13 @@ export default function RootLayout() {
       <StatusBar style="auto" />
       <Stack
         screenOptions={{
-          headerStyle: { backgroundColor: '#3b82f6' },
+          headerStyle: { backgroundColor: '#1e40af' },
           headerTintColor: '#fff',
           headerTitleStyle: { fontWeight: '600' },
         }}
       >
         <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="area/[name]" options={{ title: 'Area' }} />
         <Stack.Screen name="login" options={{ title: 'Sign In' }} />
         <Stack.Screen name="list" options={{ title: 'Businesses' }} />
         <Stack.Screen name="map" options={{ title: 'Map' }} />
