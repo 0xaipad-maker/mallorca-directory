@@ -1,0 +1,8973 @@
+[
+  {
+    "name": "s'Estiu (Bei Maria)",
+    "area": "Canyamel",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "37, Via de les Coves",
+    "location": {
+      "lat": 39.656748,
+      "lng": 3.437537
+    },
+    "phone": "+34 971841352"
+  },
+  {
+    "name": "El Mesón",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.658036,
+      "lng": 3.440503
+    }
+  },
+  {
+    "name": "Bonanza",
+    "area": "Canyamel",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "52, Via de Melesigeni",
+    "location": {
+      "lat": 39.656282,
+      "lng": 3.438491
+    },
+    "phone": "+34 971841529;+34 679998306",
+    "website": "https://pizzeria-bonanza.negocio.site/",
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Isabel",
+    "area": "Canyamel",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "43, Via de les Coves",
+    "location": {
+      "lat": 39.656236,
+      "lng": 3.437041
+    },
+    "phone": "+34 971841522",
+    "website": "http://www.isabelcanyamel.com/"
+  },
+  {
+    "name": "Carabela",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841615,
+      "lng": 3.129031
+    }
+  },
+  {
+    "name": "Luna",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841908,
+      "lng": 3.12892
+    }
+  },
+  {
+    "name": "La Casa Gallega",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.842272,
+      "lng": 3.132892
+    }
+  },
+  {
+    "name": "Il Postino",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.843786,
+      "lng": 3.132787
+    }
+  },
+  {
+    "name": "New Cacao",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.842769,
+      "lng": 3.133054
+    }
+  },
+  {
+    "name": "Ven Sol",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.842468,
+      "lng": 3.129639
+    }
+  },
+  {
+    "name": "la Villa",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841726,
+      "lng": 3.133913
+    }
+  },
+  {
+    "name": "Dakota",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841837,
+      "lng": 3.132554
+    }
+  },
+  {
+    "name": "Piero Rossi",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.838762,
+      "lng": 3.13205
+    }
+  },
+  {
+    "name": "Aqua",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.837608,
+      "lng": 3.131677
+    }
+  },
+  {
+    "name": "Las Sirenas",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841425,
+      "lng": 3.133915
+    }
+  },
+  {
+    "name": "Garlanda",
+    "area": "Port d'Alcúdia",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Carrer dels Pins",
+    "location": {
+      "lat": 39.841918,
+      "lng": 3.134783
+    }
+  },
+  {
+    "name": "Samira",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.842104,
+      "lng": 3.134789
+    }
+  },
+  {
+    "name": "Donna Julieta",
+    "area": "Port d'Alcúdia",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Carrer dels Pins",
+    "location": {
+      "lat": 39.841848,
+      "lng": 3.134703
+    }
+  },
+  {
+    "name": "La Recgleta",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.842128,
+      "lng": 3.134038
+    }
+  },
+  {
+    "name": "Dulcinea",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841963,
+      "lng": 3.133961
+    }
+  },
+  {
+    "name": "Gran China",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841647,
+      "lng": 3.131609
+    }
+  },
+  {
+    "name": "Bar Playa",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841536,
+      "lng": 3.131958
+    }
+  },
+  {
+    "name": "Pipper's",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.84155,
+      "lng": 3.132082
+    }
+  },
+  {
+    "name": "Sa Taverne des Port",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.839192,
+      "lng": 3.132313
+    }
+  },
+  {
+    "name": "Bistro Mar",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.839471,
+      "lng": 3.132432
+    }
+  },
+  {
+    "name": "sa Gavina",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841581,
+      "lng": 3.131728
+    },
+    "hours": {
+      "open": "Th-Tu",
+      "close": ""
+    }
+  },
+  {
+    "name": "Varadero",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.838988,
+      "lng": 3.132271
+    }
+  },
+  {
+    "name": "s'Espiga",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "18, Passeig Marítim",
+    "location": {
+      "lat": 39.841037,
+      "lng": 3.135476
+    }
+  },
+  {
+    "name": "Sa Bota",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "16, Passeig Marítim",
+    "location": {
+      "lat": 39.841033,
+      "lng": 3.135558
+    }
+  },
+  {
+    "name": "La Cabaña",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "14, Passeig Marítim",
+    "location": {
+      "lat": 39.84101,
+      "lng": 3.135685
+    },
+    "website": "https://www.bocaestudi.com/bocacarta/LA_CABANA_DIGITAL_2020.pdf"
+  },
+  {
+    "name": "Nova Marina",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.8408,
+      "lng": 3.136251
+    }
+  },
+  {
+    "name": "Miramar",
+    "area": "Port d'Alcúdia",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "2, Passeig Marítim",
+    "location": {
+      "lat": 39.840745,
+      "lng": 3.136837
+    },
+    "phone": "+34 971 54 52 93",
+    "website": "http://restaurantmiramar.es"
+  },
+  {
+    "name": "Mar de Brasas",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.839803,
+      "lng": 3.137707
+    }
+  },
+  {
+    "name": "Restaurante El Barquito de Sonia",
+    "area": "Port d'Alcúdia",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "11, Carrer de Gabriel Roca",
+    "location": {
+      "lat": 39.839185,
+      "lng": 3.138253
+    },
+    "phone": "+34 637996245",
+    "hours": {
+      "open": "Tu-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Pollos al Ast",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.838877,
+      "lng": 3.138656
+    }
+  },
+  {
+    "name": "Blau Marítim",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.838747,
+      "lng": 3.138863
+    }
+  },
+  {
+    "name": "Bahía",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.838689,
+      "lng": 3.138991
+    }
+  },
+  {
+    "name": "Bar Lovento",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.838642,
+      "lng": 3.139423
+    }
+  },
+  {
+    "name": "Mònaco",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.767719,
+      "lng": 3.14846
+    }
+  },
+  {
+    "name": "Istanbul pizza & kebab",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.768026,
+      "lng": 3.148617
+    }
+  },
+  {
+    "name": "La Famiglia",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.767097,
+      "lng": 3.147344
+    }
+  },
+  {
+    "name": "China Town",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.767442,
+      "lng": 3.147771
+    }
+  },
+  {
+    "name": "Dakota grill & Bar",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.76795,
+      "lng": 3.148504
+    }
+  },
+  {
+    "name": "Vinicius",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.766821,
+      "lng": 3.14736
+    }
+  },
+  {
+    "name": "Burger King",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.839423,
+      "lng": 3.120504
+    }
+  },
+  {
+    "name": "sa Masia",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.527574,
+      "lng": 2.484259
+    }
+  },
+  {
+    "name": "Miguel",
+    "area": "Santa Ponsa",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "92, avinguda del Rei Jaume I",
+    "location": {
+      "lat": 39.514167,
+      "lng": 2.481416
+    },
+    "website": "http://www.restaurantemiguel-santaponsa.com/"
+  },
+  {
+    "name": "Sa Duaia",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.741688,
+      "lng": 3.404441
+    },
+    "website": "http://www.saduaia.com"
+  },
+  {
+    "name": "Sa Cova",
+    "area": "Cala Ratjada",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Cala Lliteras",
+    "location": {
+      "lat": 39.72028,
+      "lng": 3.461668
+    },
+    "phone": "+34 871902407",
+    "website": "https://sacova-bar.com/",
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "La Concha",
+    "area": "",
+    "category": "restaurants",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.532027,
+      "lng": 2.569685
+    }
+  },
+  {
+    "name": "Es Bolacor",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.614127,
+      "lng": 3.112448
+    }
+  },
+  {
+    "name": "Ca na Maganeta",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.843678,
+      "lng": 3.132433
+    }
+  },
+  {
+    "name": "Corro",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.844044,
+      "lng": 3.132747
+    }
+  },
+  {
+    "name": "Yute",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.842279,
+      "lng": 3.129382
+    }
+  },
+  {
+    "name": "Océano",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841691,
+      "lng": 3.133536
+    }
+  },
+  {
+    "name": "Gregal",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.842022,
+      "lng": 3.133939
+    }
+  },
+  {
+    "name": "La Baguette",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841851,
+      "lng": 3.133813
+    }
+  },
+  {
+    "name": "Port de la Mar",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841617,
+      "lng": 3.135799
+    }
+  },
+  {
+    "name": "L'Illa",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "8, Passeig Marítim",
+    "location": {
+      "lat": 39.840953,
+      "lng": 3.13598
+    }
+  },
+  {
+    "name": "Luna de Miel",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.840866,
+      "lng": 3.13597
+    }
+  },
+  {
+    "name": "Xaloc",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.83964,
+      "lng": 3.137805
+    }
+  },
+  {
+    "name": "s'Embat",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.839145,
+      "lng": 3.138296
+    }
+  },
+  {
+    "name": "ses Arcades",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.838631,
+      "lng": 3.13926
+    }
+  },
+  {
+    "name": "Don Juan",
+    "area": "Can Picafort",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "114, Carrer Isaac Peral",
+    "location": {
+      "lat": 39.759601,
+      "lng": 3.168447
+    }
+  },
+  {
+    "name": "Epcot",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Carretera d'Artà",
+    "location": {
+      "lat": 39.837431,
+      "lng": 3.1192
+    },
+    "phone": "+34 971965195",
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Cappuccino",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.531764,
+      "lng": 2.568
+    }
+  },
+  {
+    "name": "Cafe di Calvari",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.87799,
+      "lng": 3.014844
+    }
+  },
+  {
+    "name": "antic forn",
+    "area": "Selva",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "8, Plaça Major",
+    "location": {
+      "lat": 39.754892,
+      "lng": 2.900507
+    }
+  },
+  {
+    "name": "Hostatgeria",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.732623,
+      "lng": 2.793065
+    }
+  },
+  {
+    "name": "Parisien",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.692753,
+      "lng": 3.349462
+    }
+  },
+  {
+    "name": "Tambucho",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.317108,
+      "lng": 2.997522
+    }
+  },
+  {
+    "name": "Terrassa de sa Feixina",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.571006,
+      "lng": 2.640941
+    }
+  },
+  {
+    "name": "Bosch",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.571275,
+      "lng": 2.647417
+    }
+  },
+  {
+    "name": "Bon Mot",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.331236,
+      "lng": 3.170098
+    }
+  },
+  {
+    "name": "Can Moreno",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.876528,
+      "lng": 3.018173
+    }
+  },
+  {
+    "name": "L'Illa",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.877193,
+      "lng": 3.016471
+    }
+  },
+  {
+    "name": "Bolero",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.52345,
+      "lng": 2.53392
+    }
+  },
+  {
+    "name": "Marbella",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.525304,
+      "lng": 2.536908
+    }
+  },
+  {
+    "name": "la Cartuja",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.525511,
+      "lng": 2.537275
+    }
+  },
+  {
+    "name": "Cayuco",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "14, avinguda de la Platja",
+    "location": {
+      "lat": 39.52628,
+      "lng": 2.538594
+    },
+    "phone": "+34 971 68 25 18",
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Penny Lane",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.526122,
+      "lng": 2.543703
+    }
+  },
+  {
+    "name": "Olivares",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.525989,
+      "lng": 2.543865
+    }
+  },
+  {
+    "name": "Campbell's",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.534868,
+      "lng": 2.721823
+    }
+  },
+  {
+    "name": "La Riviera Food and drinks",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.532468,
+      "lng": 2.72509
+    }
+  },
+  {
+    "name": "Habana Blue",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.535977,
+      "lng": 2.716365
+    }
+  },
+  {
+    "name": "Paraíso",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.535547,
+      "lng": 2.716528
+    }
+  },
+  {
+    "name": "Can Bernat",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.735525,
+      "lng": 3.057577
+    }
+  },
+  {
+    "name": "Can Costitx",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.736179,
+      "lng": 3.057728
+    }
+  },
+  {
+    "name": "Gran Café 1919",
+    "area": "Porto Pollenca",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "2, Passeig Anglada Camarasa",
+    "location": {
+      "lat": 39.906618,
+      "lng": 3.082715
+    },
+    "phone": "+34 971867535"
+  },
+  {
+    "name": "Can Tronca",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.596993,
+      "lng": 3.038702
+    }
+  },
+  {
+    "name": "Mundial",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.490988,
+      "lng": 2.891359
+    }
+  },
+  {
+    "name": "Mercat",
+    "area": "",
+    "category": "cafes",
+    "rating": 0,
+    "verified": false,
+    "address": "21, Plaça d'Espanya",
+    "location": {
+      "lat": 39.490574,
+      "lng": 2.891505
+    }
+  },
+  {
+    "name": "Sol Radiante",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.656544,
+      "lng": 3.437396
+    }
+  },
+  {
+    "name": "Formentor",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.926746,
+      "lng": 3.144832
+    }
+  },
+  {
+    "name": "Botel Alcudiamar Club",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.838608,
+      "lng": 3.131068
+    },
+    "website": "https://www.botelalcudiamar.es/"
+  },
+  {
+    "name": "La Cabaña",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "14, Passeig Marítim",
+    "location": {
+      "lat": 39.84101,
+      "lng": 3.135685
+    },
+    "website": "https://www.bocaestudi.com/bocacarta/LA_CABANA_DIGITAL_2020.pdf"
+  },
+  {
+    "name": "Vista Alegre",
+    "area": "Puerto de Alcudia",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "10, Passeig Marítim",
+    "location": {
+      "lat": 39.84098,
+      "lng": 3.135881
+    },
+    "phone": "+34 971 547347",
+    "website": "https://www.hostalvistaalegre.com/"
+  },
+  {
+    "name": "Hotel Africa Mar",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.766989,
+      "lng": 3.14707
+    }
+  },
+  {
+    "name": "Sant Salvador",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.455339,
+      "lng": 3.185955
+    }
+  },
+  {
+    "name": "Carabela",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.537471,
+      "lng": 2.449126
+    },
+    "phone": "+34971686408",
+    "website": "https://www.hotelcarabela.net/"
+  },
+  {
+    "name": "Los Tilos",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.539037,
+      "lng": 2.451535
+    }
+  },
+  {
+    "name": "Amapola",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.409352,
+      "lng": 3.001672
+    }
+  },
+  {
+    "name": "Protur Vista Badia",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "carrer dels Xiprers",
+    "location": {
+      "lat": 39.57981,
+      "lng": 3.376764
+    },
+    "phone": "+34 971 810 568",
+    "website": "https://protur-hotels.com/"
+  },
+  {
+    "name": "Isla de Cabrera",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.319339,
+      "lng": 2.997783
+    }
+  },
+  {
+    "name": "Hostal San Francisco",
+    "area": "Portocolom",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "3, Carrer de l'Orada",
+    "location": {
+      "lat": 39.414338,
+      "lng": 3.259469
+    },
+    "phone": "+34 971 82 56 14",
+    "website": "http://www.hostalsanfran.com/"
+  },
+  {
+    "name": "Fornalutx",
+    "area": "Fornalutx",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "22, carrer de l'Alba",
+    "location": {
+      "lat": 39.782093,
+      "lng": 2.741443
+    },
+    "phone": "+34 971 631997",
+    "website": "https://www.fornalutxpetithotel.com/"
+  },
+  {
+    "name": "Can Reus",
+    "area": "Fornalutx",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "26, carrer de l'Alba",
+    "location": {
+      "lat": 39.782188,
+      "lng": 2.741603
+    },
+    "phone": "+34 971 631997",
+    "website": "https://www.fornalutxpetithotel.com/"
+  },
+  {
+    "name": "Rodes",
+    "area": "Can Pastilla",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "51, Carrer del Vaixell",
+    "location": {
+      "lat": 39.533927,
+      "lng": 2.722488
+    }
+  },
+  {
+    "name": "Bari",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.535442,
+      "lng": 2.716445
+    }
+  },
+  {
+    "name": "Can Boi",
+    "area": "Deià",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "5, carrer d'es Clot",
+    "location": {
+      "lat": 39.746346,
+      "lng": 2.645557
+    },
+    "phone": "+34 971 636186",
+    "website": "https://caminsdepedra.conselldemallorca.cat/fr/-/can-boi-3"
+  },
+  {
+    "name": "Refugi del Pont Romà",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.882443,
+      "lng": 3.013649
+    },
+    "website": "https://caminsdepedra.conselldemallorca.cat/fr/-/pont-roma-2"
+  },
+  {
+    "name": "Santuari de Lluc",
+    "area": "Escorca",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "1, Plaça dels Peregrins",
+    "location": {
+      "lat": 39.822558,
+      "lng": 2.884402
+    },
+    "phone": "+34 971 871525",
+    "website": "https://www.lluc.net/en/",
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Pinos Playa",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.328998,
+      "lng": 3.146289
+    }
+  },
+  {
+    "name": "Mar Blau",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.329289,
+      "lng": 3.170667
+    }
+  },
+  {
+    "name": "Hostal Cala",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.330634,
+      "lng": 3.170542
+    }
+  },
+  {
+    "name": "Villa Sirena",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.330303,
+      "lng": 3.172472
+    }
+  },
+  {
+    "name": "Figuera Park",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.32943,
+      "lng": 3.165414
+    }
+  },
+  {
+    "name": "Coral",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.519289,
+      "lng": 2.743859
+    }
+  },
+  {
+    "name": "Alcina",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.716712,
+      "lng": 3.460493
+    }
+  },
+  {
+    "name": "Casa Margarita",
+    "area": "Sóller",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "3, Carrer Reial",
+    "location": {
+      "lat": 39.765168,
+      "lng": 2.715784
+    }
+  },
+  {
+    "name": "Es Molí",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.746935,
+      "lng": 2.64329
+    }
+  },
+  {
+    "name": "Planícia",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.67105,
+      "lng": 2.506109
+    }
+  },
+  {
+    "name": "Hostal Nadal",
+    "area": "Sóller",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "29, Carrer de sa Romaguera",
+    "location": {
+      "lat": 39.768166,
+      "lng": 2.714277
+    },
+    "phone": "+34 971631180",
+    "website": "https://hostalnadal.top/"
+  },
+  {
+    "name": "s'Ardeviu",
+    "area": "Sóller",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "14, carrer de Vives",
+    "location": {
+      "lat": 39.767001,
+      "lng": 2.714669
+    },
+    "phone": "+34 971 638326",
+    "website": "https://sardeviu.com/"
+  },
+  {
+    "name": "Read's",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.667852,
+      "lng": 2.779281
+    }
+  },
+  {
+    "name": "Playa Sol",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.506989,
+      "lng": 2.753938
+    }
+  },
+  {
+    "name": "Son Sabater by Zafiro",
+    "area": "Sa Pobla",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Poligono 2, parcela 104",
+    "location": {
+      "lat": 39.798182,
+      "lng": 3.023165
+    },
+    "phone": "+34 871 25 33 44",
+    "website": "https://www.zafirohotels.com/son-sabater-by-zafiro/",
+    "hours": {
+      "open": "24/7",
+      "close": ""
+    }
+  },
+  {
+    "name": "Santanyí",
+    "area": "Santanyí, Mallorca",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "7, plaça de la Constitució",
+    "location": {
+      "lat": 39.35535,
+      "lng": 3.129164
+    }
+  },
+  {
+    "name": "Gugulutx",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.330123,
+      "lng": 3.152635
+    }
+  },
+  {
+    "name": "Club Calimera Es Talaial",
+    "area": "Cala d'Or",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "20, Avinguda d'es Fortí",
+    "location": {
+      "lat": 39.364967,
+      "lng": 3.228591
+    },
+    "phone": "+34 971 65 73 49",
+    "website": "https://www.calimera.com/reiseziele/spanien/club-calimera-auf-mallorca"
+  },
+  {
+    "name": "Jaime III",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.572926,
+      "lng": 2.642615
+    }
+  },
+  {
+    "name": "Globales Torrenova",
+    "area": "Torrenova",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "6, carrer Sant Miquel de Llíria",
+    "location": {
+      "lat": 39.510975,
+      "lng": 2.541658
+    },
+    "phone": "+34 971 68 13 50",
+    "website": "https://www.globales.com/en/hotels/spain/majorca/palmanova/globales-torrenova/"
+  },
+  {
+    "name": "Rupit",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.376112,
+      "lng": 3.228926
+    },
+    "website": "http://hostalbienvenidos.com/"
+  },
+  {
+    "name": "Costa d'Or",
+    "area": "Deià",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Carrer de Llucalcari",
+    "location": {
+      "lat": 39.765197,
+      "lng": 2.653111
+    },
+    "phone": "+34 971 639025",
+    "website": "https://www.hoposa.es/"
+  },
+  {
+    "name": "Don Carlos",
+    "area": "Peguera",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "22, carrer de les Malgrats",
+    "location": {
+      "lat": 39.539621,
+      "lng": 2.448797
+    }
+  },
+  {
+    "name": "Apuntadors",
+    "area": "Palma de Mallorca",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "8, Carrer dels Apuntadors",
+    "location": {
+      "lat": 39.568981,
+      "lng": 2.645771
+    },
+    "phone": "+34 971 71 34 91",
+    "website": "http://www.hostalapuntadores.com/"
+  },
+  {
+    "name": "Hostal Triunfo",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.509516,
+      "lng": 2.75218
+    }
+  },
+  {
+    "name": "Es Pla de Llodrà",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.532724,
+      "lng": 3.188977
+    }
+  },
+  {
+    "name": "Casa Bougainvillea",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.768659,
+      "lng": 2.711799
+    }
+  },
+  {
+    "name": "Hostal Marina",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.712036,
+      "lng": 3.464987
+    }
+  },
+  {
+    "name": "Blue Beach",
+    "area": "",
+    "category": "hotels",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.769823,
+      "lng": 3.14938
+    }
+  },
+  {
+    "name": "Cala s'Arralot",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.756158,
+      "lng": 3.177798
+    }
+  },
+  {
+    "name": "Folies",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.506985,
+      "lng": 2.534542
+    }
+  },
+  {
+    "name": "sa Cala de s'Art",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.472857,
+      "lng": 2.487282
+    }
+  },
+  {
+    "name": "Cala Xada",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.479037,
+      "lng": 2.525611
+    }
+  },
+  {
+    "name": "S'Arenalet de Son Colom",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.746766,
+      "lng": 3.293664
+    }
+  },
+  {
+    "name": "Caló de ses Lleonardes",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.484588,
+      "lng": 2.735801
+    }
+  },
+  {
+    "name": "Cala de s'Escar",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.762722,
+      "lng": 3.164683
+    }
+  },
+  {
+    "name": "Platja Petita",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.765448,
+      "lng": 3.157954
+    }
+  },
+  {
+    "name": "Platja de Ca'n Picafort",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.769311,
+      "lng": 3.150533
+    },
+    "website": "http://canpicafort.es/que-fer/platges/"
+  },
+  {
+    "name": "Platja de Son Bauló",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.759087,
+      "lng": 3.170349
+    },
+    "website": "http://canpicafort.es/que-fer/platges/"
+  },
+  {
+    "name": "Platja de Son Serra de Marina",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.732209,
+      "lng": 3.236205
+    },
+    "website": "http://canpicafort.es/que-fer/platges/"
+  },
+  {
+    "name": "Platja de Ciutat Jardí",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.552286,
+      "lng": 2.689386
+    }
+  },
+  {
+    "name": "Platja des Molinar",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.555906,
+      "lng": 2.681196
+    }
+  },
+  {
+    "name": "Platja des Portitxolet",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.559949,
+      "lng": 2.67252
+    }
+  },
+  {
+    "name": "Platja de Can Pere Antoni",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.562516,
+      "lng": 2.661966
+    }
+  },
+  {
+    "name": "Platja de Santa Margalida",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.767256,
+      "lng": 3.154544
+    }
+  },
+  {
+    "name": "Platja de Capellans",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.774434,
+      "lng": 3.144117
+    }
+  },
+  {
+    "name": "Platja de Can Pastilla",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.534533,
+      "lng": 2.718282
+    }
+  },
+  {
+    "name": "Platja de Palma",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.531253,
+      "lng": 2.726527
+    }
+  },
+  {
+    "name": "Platja de les Meravelles",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.52169,
+      "lng": 2.73837
+    }
+  },
+  {
+    "name": "Platja de s'Arenal",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.513234,
+      "lng": 2.746732
+    }
+  },
+  {
+    "name": "Platja de s'Arenal de Llucmajor",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.502365,
+      "lng": 2.750374
+    }
+  },
+  {
+    "name": "Platja d'es Port",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.317115,
+      "lng": 2.998259
+    }
+  },
+  {
+    "name": "Platja de Santa Ponça",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.516188,
+      "lng": 2.480132
+    }
+  },
+  {
+    "name": "Cala de s'Estany d'en Mas",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.516444,
+      "lng": 3.309774
+    }
+  },
+  {
+    "name": "Caló d'en Pellicer",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.511786,
+      "lng": 2.473301
+    }
+  },
+  {
+    "name": "Platja de Punta Portals",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.531826,
+      "lng": 2.56437
+    }
+  },
+  {
+    "name": "Cala Torta",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.749834,
+      "lng": 3.417304
+    }
+  },
+  {
+    "name": "S'Amarador",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.349745,
+      "lng": 3.185672
+    }
+  },
+  {
+    "name": "Cala Anguila",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.52318,
+      "lng": 3.317839
+    }
+  },
+  {
+    "name": "Cala Mendia",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.520474,
+      "lng": 3.313648
+    }
+  },
+  {
+    "name": "Cala Portals Vells",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.472321,
+      "lng": 2.520179
+    }
+  },
+  {
+    "name": "Platja del Toro",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.491504,
+      "lng": 2.478895
+    }
+  },
+  {
+    "name": "Cala Moltó",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.725935,
+      "lng": 3.452068
+    }
+  },
+  {
+    "name": "Platja d'es Dolç",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.316225,
+      "lng": 3.004374
+    }
+  },
+  {
+    "name": "platja de Can Curt",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.312243,
+      "lng": 3.005974
+    }
+  },
+  {
+    "name": "Platja des Estanys",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.326922,
+      "lng": 2.989222
+    }
+  },
+  {
+    "name": "Ses Fonts de n'Alis",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.352357,
+      "lng": 3.188345
+    }
+  },
+  {
+    "name": "Cala Petita",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.548424,
+      "lng": 3.352988
+    }
+  },
+  {
+    "name": "Platja d'es Trenc",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.343318,
+      "lng": 2.982762
+    },
+    "hours": {
+      "open": "24/7",
+      "close": ""
+    }
+  },
+  {
+    "name": "Cala de sa Font",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.681877,
+      "lng": 3.451984
+    }
+  },
+  {
+    "name": "cala de n´Aladern",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.683878,
+      "lng": 3.454911
+    }
+  },
+  {
+    "name": "Cala Santanyí",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.330569,
+      "lng": 3.146299
+    }
+  },
+  {
+    "name": "Cala Llombards",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.323828,
+      "lng": 3.13869
+    }
+  },
+  {
+    "name": "Caló des Moro",
+    "area": "",
+    "category": "beaches",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.313703,
+      "lng": 3.121621
+    }
+  },
+  {
+    "name": "Parque Ca les Munnares",
+    "area": "",
+    "category": "parks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.877077,
+      "lng": 3.018385
+    }
+  },
+  {
+    "name": "Plaça Amego Segarro",
+    "area": "",
+    "category": "parks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.575111,
+      "lng": 2.663973
+    }
+  },
+  {
+    "name": "El Bosquet de sa Serra",
+    "area": "",
+    "category": "parks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.667395,
+      "lng": 3.042544
+    }
+  },
+  {
+    "name": "Plaça des Torrent",
+    "area": "",
+    "category": "parks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.758133,
+      "lng": 3.168844
+    }
+  },
+  {
+    "name": "Passeig des Torrent",
+    "area": "",
+    "category": "parks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.758495,
+      "lng": 3.1696
+    }
+  },
+  {
+    "name": "Plaça de Son Bauló",
+    "area": "",
+    "category": "parks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.759468,
+      "lng": 3.168449
+    }
+  },
+  {
+    "name": "Parc de la Mar",
+    "area": "",
+    "category": "parks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.565828,
+      "lng": 2.650928
+    }
+  },
+  {
+    "name": "Plaça de sa Feixina",
+    "area": "",
+    "category": "parks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.5706,
+      "lng": 2.640438
+    }
+  },
+  {
+    "name": "Porta de Santa Catalina",
+    "area": "",
+    "category": "parks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.570942,
+      "lng": 2.642073
+    }
+  },
+  {
+    "name": "Parc de convivència La Ribera",
+    "area": "",
+    "category": "parks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.529615,
+      "lng": 2.733026
+    }
+  },
+  {
+    "name": "Plaça de Sa Cabana",
+    "area": "",
+    "category": "parks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.603048,
+      "lng": 2.690198
+    }
+  },
+  {
+    "name": "parc del carrer del Crèdit Balear",
+    "area": "",
+    "category": "parks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.585955,
+      "lng": 2.686328
+    }
+  },
+  {
+    "name": "Parc de Son Gibert",
+    "area": "",
+    "category": "parks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.583796,
+      "lng": 2.684246
+    }
+  },
+  {
+    "name": "Parc de Kristian Kreković",
+    "area": "",
+    "category": "parks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.567721,
+      "lng": 2.664851
+    }
+  },
+  {
+    "name": "Parc de les Veles",
+    "area": "",
+    "category": "parks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.566194,
+      "lng": 2.659917
+    }
+  },
+  {
+    "name": "Golf Canyamel",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.672993,
+      "lng": 3.43271
+    }
+  },
+  {
+    "name": "Coves d'Artà",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.656095,
+      "lng": 3.450983
+    },
+    "phone": "+34 971 841 293",
+    "website": "https://cuevasdearta.com/",
+    "hours": {
+      "open": "May-O",
+      "close": ""
+    }
+  },
+  {
+    "name": "Fonts Ufanes",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.803671,
+      "lng": 2.962237
+    }
+  },
+  {
+    "name": "Far de Formentor",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.961368,
+      "lng": 3.212287
+    }
+  },
+  {
+    "name": "Coves del Drach",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.535812,
+      "lng": 3.330254
+    },
+    "website": "https://www.cuevasdeldrach.com"
+  },
+  {
+    "name": "Oli Caimari",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.76634,
+      "lng": 2.901783
+    },
+    "website": "https://www.aceites-olicaimari.com/"
+  },
+  {
+    "name": "Via Verda",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.690965,
+      "lng": 3.348368
+    }
+  },
+  {
+    "name": "Raixa",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.68047,
+      "lng": 2.672789
+    },
+    "website": "http://www.raixa.cat",
+    "hours": {
+      "open": "Sa,Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Capocorb Vell",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.397643,
+      "lng": 2.824541
+    }
+  },
+  {
+    "name": "Banys de sa Font Santa",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.354084,
+      "lng": 3.01576
+    }
+  },
+  {
+    "name": "es Camell",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.823684,
+      "lng": 2.890635
+    }
+  },
+  {
+    "name": "Font de s'Avenc",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.802404,
+      "lng": 2.857189
+    }
+  },
+  {
+    "name": "Necròpolis de Son Real",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.754958,
+      "lng": 3.182199
+    }
+  },
+  {
+    "name": "Ca na Martina",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.356527,
+      "lng": 3.190257
+    }
+  },
+  {
+    "name": "Coves dels Hams",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.544983,
+      "lng": 3.320117
+    },
+    "website": "https://cuevasdelshams.com",
+    "hours": {
+      "open": "We-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Cases de Neu",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.845283,
+      "lng": 2.939427
+    }
+  },
+  {
+    "name": "Banys Àrabs",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "7, Carrer de Can Serra",
+    "location": {
+      "lat": 39.566814,
+      "lng": 2.650986
+    },
+    "phone": "+34 637 04 65 34",
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Cova Tancada des Cap de Menorca",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.854152,
+      "lng": 3.191229
+    }
+  },
+  {
+    "name": "Cova de ses Bruixes",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.900502,
+      "lng": 2.92232
+    }
+  },
+  {
+    "name": "Son Real",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.737028,
+      "lng": 3.182411
+    }
+  },
+  {
+    "name": "Palau del Rei Sanç",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.709215,
+      "lng": 2.622915
+    }
+  },
+  {
+    "name": "Nus de sa Corbata",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.832337,
+      "lng": 2.815977
+    }
+  },
+  {
+    "name": "Castell d'Alaró",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.732526,
+      "lng": 2.793591
+    }
+  },
+  {
+    "name": "La Cova de davant l'Illa des Porros",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.753143,
+      "lng": 3.185666
+    }
+  },
+  {
+    "name": "es Drac de na Coca",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.567086,
+      "lng": 2.649169
+    }
+  },
+  {
+    "name": "Sínia del Hio",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.54594,
+      "lng": 2.391877
+    }
+  },
+  {
+    "name": "Sínia del Maa",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.546383,
+      "lng": 2.392632
+    }
+  },
+  {
+    "name": "Cristóbal",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.587498,
+      "lng": 3.382403
+    }
+  },
+  {
+    "name": "Driving Range",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.589648,
+      "lng": 2.787594
+    }
+  },
+  {
+    "name": "Chipping Area",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.589144,
+      "lng": 2.788645
+    }
+  },
+  {
+    "name": "Manxa de Son Corb",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.706754,
+      "lng": 2.79178
+    }
+  },
+  {
+    "name": "Rentador de Son Rafalet",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.709409,
+      "lng": 2.783678
+    }
+  },
+  {
+    "name": "Manxa de Can Pintat",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.704944,
+      "lng": 2.790552
+    }
+  },
+  {
+    "name": "Castell de Santueri",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.432024,
+      "lng": 3.187816
+    },
+    "website": "https://www.santueri.org/"
+  },
+  {
+    "name": "Es Salt des Freu",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.723843,
+      "lng": 2.747045
+    }
+  },
+  {
+    "name": "Casino De Mallorca",
+    "area": "Palma de Mallorca",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Palma de Mallorca",
+    "location": {
+      "lat": 39.551415,
+      "lng": 2.620266
+    },
+    "website": "https://www.casinodemallorca.com/"
+  },
+  {
+    "name": "Font de la Plaça",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.705769,
+      "lng": 2.78922
+    }
+  },
+  {
+    "name": "Manxa del Porrossar",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.705151,
+      "lng": 2.786436
+    }
+  },
+  {
+    "name": "Jungle Park Junior",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.539837,
+      "lng": 2.585285
+    }
+  },
+  {
+    "name": "Adventure",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.377898,
+      "lng": 3.235399
+    }
+  },
+  {
+    "name": "Forestal park",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.518928,
+      "lng": 2.751531
+    },
+    "phone": "+34 606816249",
+    "website": "http://www.forestalparkmallorca.com"
+  },
+  {
+    "name": "Via Verda",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.573627,
+      "lng": 3.217413
+    }
+  },
+  {
+    "name": "Can Barceló",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "28, carrer des Barracar",
+    "location": {
+      "lat": 39.572505,
+      "lng": 3.213274
+    },
+    "website": "http://nerea.cat"
+  },
+  {
+    "name": "Platja d'es Trenc",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.338234,
+      "lng": 2.990078
+    }
+  },
+  {
+    "name": "Horse to Castle",
+    "area": "",
+    "category": "activities",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.577228,
+      "lng": 3.378691
+    }
+  },
+  {
+    "name": "Blanc du Nil",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.692598,
+      "lng": 3.349565
+    }
+  },
+  {
+    "name": "huerzeler",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.80645,
+      "lng": 3.117423
+    }
+  },
+  {
+    "name": "Eurolux",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.651429,
+      "lng": 3.113423
+    }
+  },
+  {
+    "name": "Tràmit",
+    "area": "Palma",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "74, Carrer del Sindicat",
+    "location": {
+      "lat": 39.572291,
+      "lng": 2.65628
+    }
+  },
+  {
+    "name": "Milar",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.573693,
+      "lng": 2.658005
+    }
+  },
+  {
+    "name": "Sundancer",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.419238,
+      "lng": 3.261097
+    }
+  },
+  {
+    "name": "Típika",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.568381,
+      "lng": 2.65073
+    }
+  },
+  {
+    "name": "JLluLLs",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.569928,
+      "lng": 2.650062
+    }
+  },
+  {
+    "name": "Comercial Colau",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.546977,
+      "lng": 3.334496
+    }
+  },
+  {
+    "name": "Expert",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.542971,
+      "lng": 3.332781
+    }
+  },
+  {
+    "name": "Gambo",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.541883,
+      "lng": 3.333501
+    }
+  },
+  {
+    "name": "Gambo",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.54193,
+      "lng": 3.333621
+    }
+  },
+  {
+    "name": "Temtacions",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.543112,
+      "lng": 3.332844
+    }
+  },
+  {
+    "name": "Store & more",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "6, Carrer Binicanella",
+    "location": {
+      "lat": 39.6023,
+      "lng": 3.384267
+    }
+  },
+  {
+    "name": "Ceràmiques Mallorca",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.687413,
+      "lng": 2.514082
+    }
+  },
+  {
+    "name": "Estel@rt",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.653589,
+      "lng": 2.483134
+    }
+  },
+  {
+    "name": "Can Tàpera",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.552731,
+      "lng": 2.598419
+    }
+  },
+  {
+    "name": "Sony",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.609491,
+      "lng": 3.39007
+    }
+  },
+  {
+    "name": "San Remo",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.609238,
+      "lng": 3.390149
+    }
+  },
+  {
+    "name": "Regalos",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.60891,
+      "lng": 3.390019
+    }
+  },
+  {
+    "name": "Claudia's shop",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.608831,
+      "lng": 3.389978
+    }
+  },
+  {
+    "name": "sa Sala",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.609826,
+      "lng": 3.389909
+    }
+  },
+  {
+    "name": "S-WAY",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.59755,
+      "lng": 3.382548
+    }
+  },
+  {
+    "name": "lemon",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.597988,
+      "lng": 3.382733
+    }
+  },
+  {
+    "name": "Salas",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.597772,
+      "lng": 3.382687
+    }
+  },
+  {
+    "name": "7 Colors",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.597309,
+      "lng": 3.382513
+    }
+  },
+  {
+    "name": "#6",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.709733,
+      "lng": 3.459116
+    }
+  },
+  {
+    "name": "Comercial Mediterráneo",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.547226,
+      "lng": 3.336939
+    }
+  },
+  {
+    "name": "MediaMarkt",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.595369,
+      "lng": 2.648126
+    }
+  },
+  {
+    "name": "Golfos",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.569957,
+      "lng": 2.649173
+    }
+  },
+  {
+    "name": "Barry's",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.574896,
+      "lng": 2.648857
+    }
+  },
+  {
+    "name": "Instants",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.645928,
+      "lng": 3.009632
+    }
+  },
+  {
+    "name": "Ca Na Lluïsa",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.643485,
+      "lng": 3.010788
+    }
+  },
+  {
+    "name": "Superskunk",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.546386,
+      "lng": 2.733261
+    }
+  },
+  {
+    "name": "TV Peguera",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.537182,
+      "lng": 2.442334
+    }
+  },
+  {
+    "name": "Boutique Europa",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.537899,
+      "lng": 2.451542
+    }
+  },
+  {
+    "name": "X-Over",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "13, Carrer de Sant Domingo",
+    "location": {
+      "lat": 39.5694,
+      "lng": 2.648503
+    },
+    "website": "https://www.x-over-store.com/"
+  },
+  {
+    "name": "Aire Chic",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.596033,
+      "lng": 3.381945
+    }
+  },
+  {
+    "name": "Código",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.59598,
+      "lng": 3.381901
+    }
+  },
+  {
+    "name": "Cool Shirts",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.596346,
+      "lng": 3.38196
+    }
+  },
+  {
+    "name": "Leo",
+    "area": "",
+    "category": "shopping",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.597418,
+      "lng": 3.38256
+    }
+  },
+  {
+    "name": "Bip Bip",
+    "area": "Canyamel",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "19, plaça de Nuredduna",
+    "location": {
+      "lat": 39.658013,
+      "lng": 3.440134
+    },
+    "phone": "+34 971841027"
+  },
+  {
+    "name": "Spar",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841686,
+      "lng": 3.128996
+    }
+  },
+  {
+    "name": "Spar",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.842345,
+      "lng": 3.128781
+    }
+  },
+  {
+    "name": "Little Britain",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.842606,
+      "lng": 3.13277
+    }
+  },
+  {
+    "name": "Spar",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.842098,
+      "lng": 3.129747
+    }
+  },
+  {
+    "name": "Banana Beach",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841807,
+      "lng": 3.131362
+    }
+  },
+  {
+    "name": "Spar",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841988,
+      "lng": 3.131876
+    }
+  },
+  {
+    "name": "Schlecker",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.838817,
+      "lng": 3.138738
+    }
+  },
+  {
+    "name": "Spar",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.718704,
+      "lng": 3.458876
+    }
+  },
+  {
+    "name": "Eroski",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.528612,
+      "lng": 2.733066
+    }
+  },
+  {
+    "name": "Mar Menor",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.519881,
+      "lng": 2.742447
+    }
+  },
+  {
+    "name": "Deutscher Supermarkt",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "15, Carrer de Marbella",
+    "location": {
+      "lat": 39.52777,
+      "lng": 2.734008
+    },
+    "website": "http://www.gourmetmarkt.biz/"
+  },
+  {
+    "name": "Eroski",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.840769,
+      "lng": 3.1238
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Spar",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.537091,
+      "lng": 2.45527
+    }
+  },
+  {
+    "name": "Spar",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.536467,
+      "lng": 2.457482
+    }
+  },
+  {
+    "name": "Onkar",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.537482,
+      "lng": 2.448519
+    }
+  },
+  {
+    "name": "Spar",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.815441,
+      "lng": 3.113995
+    }
+  },
+  {
+    "name": "Super Playa",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.522762,
+      "lng": 3.311638
+    }
+  },
+  {
+    "name": "Spar",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.540998,
+      "lng": 3.334258
+    }
+  },
+  {
+    "name": "Bioladen",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.69338,
+      "lng": 3.347747
+    }
+  },
+  {
+    "name": "Spar",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.736281,
+      "lng": 3.275328
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Bip Bip",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.613722,
+      "lng": 3.390053
+    }
+  },
+  {
+    "name": "Hey! market",
+    "area": "Colònia de Sant Jordi",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "16, Avinguda Primavera",
+    "location": {
+      "lat": 39.323018,
+      "lng": 2.988273
+    },
+    "phone": "+34971655116",
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Spar",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.570273,
+      "lng": 3.375349
+    }
+  },
+  {
+    "name": "Carrefour",
+    "area": "Coll d'en Rabassa",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "168, Carrer del Cardenal Rossell",
+    "location": {
+      "lat": 39.552517,
+      "lng": 2.706316
+    },
+    "phone": "+34 914 908900",
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Spar",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.43387,
+      "lng": 2.754653
+    }
+  },
+  {
+    "name": "Eroski",
+    "area": "Santanyí",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "133, Carrer de Palma",
+    "location": {
+      "lat": 39.358662,
+      "lng": 3.124488
+    },
+    "phone": "+34 971 64 21 60",
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Spar",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.330064,
+      "lng": 3.145326
+    },
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Schlecker",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.467597,
+      "lng": 3.14505
+    }
+  },
+  {
+    "name": "Coaliment",
+    "area": "Sóller",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "62, Carrer Isabel II",
+    "location": {
+      "lat": 39.763798,
+      "lng": 2.712616
+    }
+  },
+  {
+    "name": "Spar",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.610863,
+      "lng": 3.285789
+    }
+  },
+  {
+    "name": "Eurocop",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.73854,
+      "lng": 3.279963
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Eurocop",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.578742,
+      "lng": 2.352513
+    }
+  },
+  {
+    "name": "San Telmo",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.579082,
+      "lng": 2.352649
+    }
+  },
+  {
+    "name": "Spar",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.522388,
+      "lng": 2.537851
+    }
+  },
+  {
+    "name": "Supermarket Tolo",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.53321,
+      "lng": 2.723704
+    }
+  },
+  {
+    "name": "Narvarez",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.531688,
+      "lng": 2.72655
+    }
+  },
+  {
+    "name": "Eroski",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.535633,
+      "lng": 2.718014
+    },
+    "phone": "+34 971745710",
+    "website": "https://www.eroski.es/localizador-de-tiendas/supermercado/baleares/palma/eroskicity-can-pastilla",
+    "hours": {
+      "open": "09:00",
+      "close": ""
+    }
+  },
+  {
+    "name": "Spar",
+    "area": "Can Pastilla",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Avinguda de Bartomeu Riutort",
+    "location": {
+      "lat": 39.536574,
+      "lng": 2.717017
+    },
+    "phone": "+34 971 26 74 05",
+    "website": "https://spar.es",
+    "hours": {
+      "open": "09:00",
+      "close": ""
+    }
+  },
+  {
+    "name": "Spar",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.735024,
+      "lng": 3.057642
+    }
+  },
+  {
+    "name": "Aprop",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Cab Blanc",
+    "location": {
+      "lat": 39.45606,
+      "lng": 2.752416
+    }
+  },
+  {
+    "name": "Eroski",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.851722,
+      "lng": 3.118925
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Spar",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.363913,
+      "lng": 2.941491
+    }
+  },
+  {
+    "name": "Aprop",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.597152,
+      "lng": 3.044243
+    }
+  },
+  {
+    "name": "Proxim",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.596449,
+      "lng": 3.041239
+    }
+  },
+  {
+    "name": "Alcampo",
+    "area": "Marratxí",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "address": "Marratxí",
+    "location": {
+      "lat": 39.616416,
+      "lng": 2.705613
+    },
+    "phone": "+34 971 604121",
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Bergas",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.652079,
+      "lng": 3.112946
+    }
+  },
+  {
+    "name": "Mestral",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.708473,
+      "lng": 3.455605
+    }
+  },
+  {
+    "name": "Cristina Moreno",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.573555,
+      "lng": 2.65438
+    }
+  },
+  {
+    "name": "Tot Estil",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.87858,
+      "lng": 3.015991
+    }
+  },
+  {
+    "name": "Estilista Emma",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.414752,
+      "lng": 3.258784
+    }
+  },
+  {
+    "name": "Adrover",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.419348,
+      "lng": 3.26125
+    }
+  },
+  {
+    "name": "Miguel",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.542734,
+      "lng": 3.333115
+    }
+  },
+  {
+    "name": "Marga",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.54224,
+      "lng": 3.333431
+    }
+  },
+  {
+    "name": "Marian",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.546461,
+      "lng": 3.338404
+    }
+  },
+  {
+    "name": "Quetglas",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.544575,
+      "lng": 3.331892
+    }
+  },
+  {
+    "name": "V&M",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.545665,
+      "lng": 3.334466
+    }
+  },
+  {
+    "name": "Varela",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.542609,
+      "lng": 3.333179
+    }
+  },
+  {
+    "name": "Yavara",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.515991,
+      "lng": 2.534099
+    }
+  },
+  {
+    "name": "Pedro's",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.511368,
+      "lng": 2.541025
+    }
+  },
+  {
+    "name": "Lavandería La Real",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.597558,
+      "lng": 2.616938
+    }
+  },
+  {
+    "name": "Docter Fish",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.595537,
+      "lng": 3.381254
+    }
+  },
+  {
+    "name": "Terrassa",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.773532,
+      "lng": 3.019151
+    }
+  },
+  {
+    "name": "Port d'Alcúdia",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.84271,
+      "lng": 3.13447
+    }
+  },
+  {
+    "name": "lavaxpres",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.57696,
+      "lng": 2.663489
+    }
+  },
+  {
+    "name": "Onda 10",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.570499,
+      "lng": 2.653547
+    },
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Mame Diara Hair",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.596391,
+      "lng": 3.381991
+    }
+  },
+  {
+    "name": "Tabatha",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.58867,
+      "lng": 2.61215
+    }
+  },
+  {
+    "name": "Cherry's",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.589697,
+      "lng": 2.624068
+    }
+  },
+  {
+    "name": "MoVerd",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.585184,
+      "lng": 2.653871
+    }
+  },
+  {
+    "name": "Clean & Go",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "3, Carrer Santa Margalida",
+    "location": {
+      "lat": 39.645867,
+      "lng": 3.014033
+    }
+  },
+  {
+    "name": "Carmen Hidalgo",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.704652,
+      "lng": 2.790109
+    },
+    "phone": "+34 971510610",
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Taller Guardiola",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.705871,
+      "lng": 2.797018
+    },
+    "phone": "+34 971518088",
+    "hours": {
+      "open": "Mo-Th",
+      "close": ""
+    }
+  },
+  {
+    "name": "Sebastiana",
+    "area": "Peguera",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "2, carrer de les Gavines",
+    "location": {
+      "lat": 39.537008,
+      "lng": 2.455186
+    }
+  },
+  {
+    "name": "Conchil",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.719053,
+      "lng": 3.459116
+    }
+  },
+  {
+    "name": "Hair",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.712423,
+      "lng": 3.459071
+    }
+  },
+  {
+    "name": "Tupelu",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.718597,
+      "lng": 3.459269
+    }
+  },
+  {
+    "name": "Garaje Liesegang",
+    "area": "Cala Rajada",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Cala Rajada",
+    "location": {
+      "lat": 39.713003,
+      "lng": 3.460901
+    }
+  },
+  {
+    "name": "Tino",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.712074,
+      "lng": 3.461793
+    }
+  },
+  {
+    "name": "Fleur de la mar",
+    "area": "",
+    "category": "services",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.329468,
+      "lng": 3.150601
+    }
+  },
+  {
+    "name": "Moll Antic (Palma)",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.559925,
+      "lng": 2.63601
+    }
+  },
+  {
+    "name": "Sa Pinada (Santa Ponça)",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.514686,
+      "lng": 2.482631
+    },
+    "website": "https://www.tib.org/portal/de/web/ctm/parades/-/parada/11089"
+  },
+  {
+    "name": "Ca Madò Pilla 1 (Valldemossa)",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.735004,
+      "lng": 2.612559
+    }
+  },
+  {
+    "name": "Ermita de la Trinitat 1 (Valldemossa)",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.723592,
+      "lng": 2.605895
+    }
+  },
+  {
+    "name": "Torà (Peguera)",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.536502,
+      "lng": 2.456161
+    }
+  },
+  {
+    "name": "Palmira 1 (Peguera)",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.537362,
+      "lng": 2.448546
+    }
+  },
+  {
+    "name": "Cala Mondragó",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.352591,
+      "lng": 3.189167
+    },
+    "website": "https://www.tib.org/ca/parades/-/parada/57024"
+  },
+  {
+    "name": "Savines",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.571685,
+      "lng": 3.373262
+    },
+    "website": "https://www.tib.org/ca/parades/-/parada/51002"
+  },
+  {
+    "name": "Primavera",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.321531,
+      "lng": 2.989949
+    },
+    "website": "https://www.tib.org/ca/parades/-/parada/59006"
+  },
+  {
+    "name": "Marquès del Palmer",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.319393,
+      "lng": 2.998325
+    },
+    "website": "https://www.tib.org/ca/parades/-/parada/59013"
+  },
+  {
+    "name": "Sa Síquia",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.322343,
+      "lng": 2.994293
+    },
+    "website": "https://www.tib.org/ca/parades/-/parada/59005"
+  },
+  {
+    "name": "Sa Font de sa Cala",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.682215,
+      "lng": 3.450965
+    },
+    "website": "https://www.tib.org/ca/parades/-/parada/14038"
+  },
+  {
+    "name": "Son Moll (Cala Rajada)",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.706149,
+      "lng": 3.455911
+    },
+    "website": "https://www.tib.org/ca/parades/-/parada/14011"
+  },
+  {
+    "name": "Hotel na Taconera",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.686887,
+      "lng": 3.450347
+    }
+  },
+  {
+    "name": "Santa Ponça est 1 (Santa Ponça)",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.517593,
+      "lng": 2.488378
+    }
+  },
+  {
+    "name": "Santa Ponça est 2 (Santa Ponça)",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.517485,
+      "lng": 2.487519
+    },
+    "website": "https://www.tib.org/portal/de/web/ctm/parades/-/parada/11091"
+  },
+  {
+    "name": "Palmira 2 (Peguera)",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.537795,
+      "lng": 2.451538
+    }
+  },
+  {
+    "name": "Camp de Mar",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.540595,
+      "lng": 2.423273
+    }
+  },
+  {
+    "name": "Llotja (Port d'Andratx)",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.545583,
+      "lng": 2.390153
+    }
+  },
+  {
+    "name": "Cementeri de s'Arracó",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.580262,
+      "lng": 2.378938
+    }
+  },
+  {
+    "name": "Son Caliu 1 (Son Caliu)",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.528181,
+      "lng": 2.54412
+    }
+  },
+  {
+    "name": "Sant Elm 1 (Sant Elm)",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.578004,
+      "lng": 2.354314
+    }
+  },
+  {
+    "name": "S'Algar (Sant Elm)",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.581324,
+      "lng": 2.350061
+    }
+  },
+  {
+    "name": "Llibertat - Sant Ferran",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.578005,
+      "lng": 2.631673
+    }
+  },
+  {
+    "name": "Àrea d'intercanvi Ocimax",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.593307,
+      "lng": 2.647702
+    }
+  },
+  {
+    "name": "Plaça d'Espanya",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.575584,
+      "lng": 2.653902
+    }
+  },
+  {
+    "name": "Sindicat - Àrea d'intercanvi Sindicat",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.572266,
+      "lng": 2.655681
+    }
+  },
+  {
+    "name": "Dragonera - Clínica Juaneda",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.579089,
+      "lng": 2.627672
+    }
+  },
+  {
+    "name": "Policlínica",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.583613,
+      "lng": 2.630396
+    }
+  },
+  {
+    "name": "Can Pastilla - ses Fontanelles",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.535276,
+      "lng": 2.723649
+    }
+  },
+  {
+    "name": "Can Pastilla - ses Fontanelles",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.535426,
+      "lng": 2.722858
+    }
+  },
+  {
+    "name": "C/ Xàbec - Av. Bartomeu Riutort (Can Pastilla)",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.535602,
+      "lng": 2.718958
+    }
+  },
+  {
+    "name": "Can Capdebou (Alcúdia)",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.863475,
+      "lng": 3.093663
+    }
+  },
+  {
+    "name": "Parc Bit",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.637421,
+      "lng": 2.633633
+    }
+  },
+  {
+    "name": "31 de desembre, 13",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.578814,
+      "lng": 2.652244
+    }
+  },
+  {
+    "name": "31 de desembre, 33",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.580759,
+      "lng": 2.652322
+    }
+  },
+  {
+    "name": "31 de desembre, 34",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.580656,
+      "lng": 2.652494
+    }
+  },
+  {
+    "name": "31 de desembre, 16",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.57867,
+      "lng": 2.652434
+    }
+  },
+  {
+    "name": "Aeroport - Arribades",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.547352,
+      "lng": 2.728819
+    }
+  },
+  {
+    "name": "Aeroport - Sortides",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.547841,
+      "lng": 2.730315
+    }
+  },
+  {
+    "name": "Almadrà",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.588444,
+      "lng": 2.596848
+    }
+  },
+  {
+    "name": "Amadip",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.588043,
+      "lng": 2.713181
+    }
+  },
+  {
+    "name": "Ambulatori de Son Ferriol",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.574472,
+      "lng": 2.713974
+    }
+  },
+  {
+    "name": "Son Ferriol",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.571516,
+      "lng": 2.712909
+    }
+  },
+  {
+    "name": "Andrea Doria, 22",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.570642,
+      "lng": 2.628974
+    }
+  },
+  {
+    "name": "Andrea Doria, 25",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.570495,
+      "lng": 2.628613
+    }
+  },
+  {
+    "name": "Andrea Doria, 41",
+    "area": "",
+    "category": "transport",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.570977,
+      "lng": 2.62622
+    }
+  },
+  {
+    "name": "Creu Roja",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.765975,
+      "lng": 2.715773
+    }
+  },
+  {
+    "name": "Clinic Balear",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "13, ronda de l'Institut",
+    "location": {
+      "lat": 39.565591,
+      "lng": 3.215543
+    }
+  },
+  {
+    "name": "Clínica Morán",
+    "area": "Marratxí",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "6, avinguda d'Antoni Maura",
+    "location": {
+      "lat": 39.596712,
+      "lng": 2.691263
+    },
+    "phone": "+34 971 794036",
+    "website": "https://www.clinicamoran.es/",
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "ambulatori de sa Coma",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.5812,
+      "lng": 3.372576
+    }
+  },
+  {
+    "name": "centre sanitari",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.366537,
+      "lng": 2.932911
+    }
+  },
+  {
+    "name": "denthos",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.588466,
+      "lng": 3.382548
+    }
+  },
+  {
+    "name": "Clínica Dental Alaró",
+    "area": "Alaro",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "2, Carrer de la Verge del Refugi",
+    "location": {
+      "lat": 39.706097,
+      "lng": 2.788978
+    },
+    "phone": "+34 971510811",
+    "hours": {
+      "open": "Mo 09",
+      "close": ""
+    }
+  },
+  {
+    "name": "Unitat Bàsica de Salut",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.705616,
+      "lng": 2.792573
+    }
+  },
+  {
+    "name": "Jordà & Llinàs",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.703425,
+      "lng": 2.792975
+    },
+    "hours": {
+      "open": "Mo,Th",
+      "close": ""
+    }
+  },
+  {
+    "name": "Ambulatori",
+    "area": "caimari",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "carrer de ses Escoles",
+    "location": {
+      "lat": 39.771048,
+      "lng": 2.903959
+    }
+  },
+  {
+    "name": "Centro de salud Casa del Mar",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.565291,
+      "lng": 2.642532
+    }
+  },
+  {
+    "name": "Clinic Santa Maria",
+    "area": "Santa Maria del Camí",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "15b, Carrer de Bernat de Santa Eugènia",
+    "location": {
+      "lat": 39.652354,
+      "lng": 2.775786
+    },
+    "phone": "+34871737178",
+    "website": "https://www.clinicsantamaria.com",
+    "hours": {
+      "open": "Th,Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Doctor Guillermo Picotto",
+    "area": "Santa Maria del Camí",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "24, Plaça dels Hostals",
+    "location": {
+      "lat": 39.650727,
+      "lng": 2.772762
+    }
+  },
+  {
+    "name": "Platón Dental",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "3, carrer de Pius XII",
+    "location": {
+      "lat": 39.569942,
+      "lng": 3.209955
+    },
+    "website": "https://platondental.com/"
+  },
+  {
+    "name": "Juaneda",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "1, carrer Olivera",
+    "location": {
+      "lat": 39.537623,
+      "lng": 2.444779
+    }
+  },
+  {
+    "name": "Anter Dental",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.583468,
+      "lng": 2.656873
+    },
+    "hours": {
+      "open": "Mo 11",
+      "close": ""
+    }
+  },
+  {
+    "name": "unitat sanitària",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.594634,
+      "lng": 3.038647
+    }
+  },
+  {
+    "name": "Martínez-Almoyna",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.58223,
+      "lng": 2.652893
+    }
+  },
+  {
+    "name": "unitat de salut",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.597925,
+      "lng": 2.706096
+    }
+  },
+  {
+    "name": "Vitaldent",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.565858,
+      "lng": 3.213088
+    }
+  },
+  {
+    "name": "Mútua Balear",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.721284,
+      "lng": 2.902337
+    }
+  },
+  {
+    "name": "Clínica Dental Porreres",
+    "area": "Porreres",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "16b, ronda de l'Estació",
+    "location": {
+      "lat": 39.511272,
+      "lng": 3.02101
+    }
+  },
+  {
+    "name": "Lutz M. Meyer",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.712076,
+      "lng": 3.461031
+    }
+  },
+  {
+    "name": "Juaneda",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.767287,
+      "lng": 3.017868
+    }
+  },
+  {
+    "name": "Vitaldent",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.717639,
+      "lng": 2.912424
+    }
+  },
+  {
+    "name": "Centro de Salud de Montuïri",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.566089,
+      "lng": 2.979291
+    }
+  },
+  {
+    "name": "Art",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.489937,
+      "lng": 2.481141
+    }
+  },
+  {
+    "name": "Clinic Balear",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "4, Carrer de Nuredduna",
+    "location": {
+      "lat": 39.572644,
+      "lng": 2.65784
+    },
+    "phone": "+34 971 46 62 62",
+    "website": "https://clinicbalear.com/",
+    "hours": {
+      "open": "24/7",
+      "close": ""
+    }
+  },
+  {
+    "name": "Vitaldent",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.569831,
+      "lng": 2.657533
+    }
+  },
+  {
+    "name": "Quirosalud",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.529266,
+      "lng": 2.540473
+    },
+    "phone": "+34 971 682 020;+34 971 466 262"
+  },
+  {
+    "name": "UBS Port de Sóller",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.795705,
+      "lng": 2.698205
+    }
+  },
+  {
+    "name": "Paguera",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.537225,
+      "lng": 2.447301
+    },
+    "phone": "+34 971 689 585"
+  },
+  {
+    "name": "Dental Mir",
+    "area": "",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "carrer Ramon Llull",
+    "location": {
+      "lat": 39.719076,
+      "lng": 2.909328
+    },
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Excelent Dent",
+    "area": "Cala d‘Or",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "23, Avinguda dels Benvinguts",
+    "location": {
+      "lat": 39.376292,
+      "lng": 3.228237
+    },
+    "phone": "+34 971 659 713"
+  },
+  {
+    "name": "Dentálita",
+    "area": "Palma de Mallorca",
+    "category": "health",
+    "rating": 0,
+    "verified": false,
+    "address": "13, Carretera de Valldemossa",
+    "location": {
+      "lat": 39.586518,
+      "lng": 2.650483
+    }
+  },
+  {
+    "name": "Farmacia Lda. Cristina Antich",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.658056,
+      "lng": 3.440052
+    },
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Ll. Pascual Oliver",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.840447,
+      "lng": 3.137373
+    }
+  },
+  {
+    "name": "Salom",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.692661,
+      "lng": 3.349827
+    }
+  },
+  {
+    "name": "Bonet",
+    "area": "Peguera",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "1, carrer Olivera",
+    "location": {
+      "lat": 39.537511,
+      "lng": 2.44472
+    }
+  },
+  {
+    "name": "José Ramón Bauzá",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.605353,
+      "lng": 2.700546
+    }
+  },
+  {
+    "name": "Rossella Rovira",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.519147,
+      "lng": 2.741893
+    }
+  },
+  {
+    "name": "Son Dameto",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.581946,
+      "lng": 2.627494
+    }
+  },
+  {
+    "name": "Ladària",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.569665,
+      "lng": 3.209308
+    }
+  },
+  {
+    "name": "Oliver",
+    "area": "Can Pastilla",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "Avinguda de Bartomeu Riutort",
+    "location": {
+      "lat": 39.533607,
+      "lng": 2.723022
+    }
+  },
+  {
+    "name": "Farmacia Sa Rapita",
+    "area": "Campos",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "62, Avinguda Miramar",
+    "location": {
+      "lat": 39.363682,
+      "lng": 2.942281
+    }
+  },
+  {
+    "name": "Plaça d'Espanya",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.576026,
+      "lng": 2.655602
+    }
+  },
+  {
+    "name": "Oliver",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.330232,
+      "lng": 3.168202
+    },
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Ribot",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.499674,
+      "lng": 2.754029
+    }
+  },
+  {
+    "name": "Lda. Mónica Castillo de Mattei",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.594776,
+      "lng": 2.617445
+    }
+  },
+  {
+    "name": "Belen Arsuaga",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.538853,
+      "lng": 2.422631
+    },
+    "hours": {
+      "open": "Mo,Tu",
+      "close": ""
+    }
+  },
+  {
+    "name": "Rosselló Picornell",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "13, avinguda d'Antoni Maura",
+    "location": {
+      "lat": 39.596827,
+      "lng": 2.691123
+    }
+  },
+  {
+    "name": "Alzamora",
+    "area": "Palma de Mallorca",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "298, Carrer d'Aragó",
+    "location": {
+      "lat": 39.592928,
+      "lng": 2.683284
+    }
+  },
+  {
+    "name": "Apotecaria A. J. Corro Moya",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.750272,
+      "lng": 2.87237
+    }
+  },
+  {
+    "name": "Vaquer",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.581843,
+      "lng": 2.64491
+    }
+  },
+  {
+    "name": "Grau",
+    "area": "Sóller",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "3, Carrer Joan Bautista Ensenyat",
+    "location": {
+      "lat": 39.766008,
+      "lng": 2.715721
+    }
+  },
+  {
+    "name": "Mulet & Mascarell",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "39 I, Avinguda de s'Albufera",
+    "location": {
+      "lat": 39.810396,
+      "lng": 3.115523
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Moll",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "7, Carrer de Colom",
+    "location": {
+      "lat": 39.570161,
+      "lng": 2.650719
+    }
+  },
+  {
+    "name": "Vidal",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.353962,
+      "lng": 3.12853
+    },
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "s'Apotecaria",
+    "area": "",
+    "category": "pharmacies",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.607697,
+      "lng": 2.636002
+    }
+  },
+  {
+    "name": "Policia Local de Capdepera",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.656345,
+      "lng": 3.437991
+    }
+  },
+  {
+    "name": "Guardia Civil",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.807932,
+      "lng": 3.116155
+    }
+  },
+  {
+    "name": "Guàrdia Civil",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.691227,
+      "lng": 3.348033
+    }
+  },
+  {
+    "name": "Policia Local",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.766094,
+      "lng": 2.71515
+    }
+  },
+  {
+    "name": "Policia Local",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.762456,
+      "lng": 3.16269
+    }
+  },
+  {
+    "name": "Policia Local de Palma",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.512362,
+      "lng": 2.75334
+    }
+  },
+  {
+    "name": "Guàrdia Civil",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.500226,
+      "lng": 2.755882
+    }
+  },
+  {
+    "name": "Guardia Civil",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.56605,
+      "lng": 2.643727
+    }
+  },
+  {
+    "name": "Policia Local. Secció Muntada",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.562998,
+      "lng": 2.617377
+    }
+  },
+  {
+    "name": "Policia local",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.540336,
+      "lng": 3.332604
+    }
+  },
+  {
+    "name": "Policia Nacional",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.56561,
+      "lng": 3.21273
+    },
+    "hours": {
+      "open": "24/7",
+      "close": ""
+    }
+  },
+  {
+    "name": "Guàrdia Civil",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "14",
+    "location": {
+      "lat": 39.773195,
+      "lng": 3.015947
+    }
+  },
+  {
+    "name": "Policia local",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.576624,
+      "lng": 2.424678
+    }
+  },
+  {
+    "name": "CNP - Comisaria Oest",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.585979,
+      "lng": 2.650663
+    }
+  },
+  {
+    "name": "Policia Local",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.710988,
+      "lng": 2.618701
+    }
+  },
+  {
+    "name": "Policia Local",
+    "area": "Santa Maria del Camí",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "carrer de l'Església",
+    "location": {
+      "lat": 39.647386,
+      "lng": 2.778635
+    }
+  },
+  {
+    "name": "Policia Local",
+    "area": "Selva",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "2, carrer dels Àngels",
+    "location": {
+      "lat": 39.754445,
+      "lng": 2.901156
+    }
+  },
+  {
+    "name": "Policia Local",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.705779,
+      "lng": 2.789274
+    }
+  },
+  {
+    "name": "policia local",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.877108,
+      "lng": 3.017837
+    }
+  },
+  {
+    "name": "policia local",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.503343,
+      "lng": 2.751375
+    }
+  },
+  {
+    "name": "Guardia Civil",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.508808,
+      "lng": 2.535268
+    }
+  },
+  {
+    "name": "Policía Local",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.782968,
+      "lng": 2.742376
+    }
+  },
+  {
+    "name": "Policia Local",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.575978,
+      "lng": 2.654508
+    }
+  },
+  {
+    "name": "Policia Local",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.856547,
+      "lng": 3.121863
+    }
+  },
+  {
+    "name": "Guardia Civil",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.842593,
+      "lng": 3.122984
+    }
+  },
+  {
+    "name": "Policia Local",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.579444,
+      "lng": 2.673838
+    }
+  },
+  {
+    "name": "Guàrdia Civil",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.637085,
+      "lng": 3.008354
+    }
+  },
+  {
+    "name": "Guàrdia civil",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.371456,
+      "lng": 3.224409
+    }
+  },
+  {
+    "name": "Policia local",
+    "area": "Cala d'Or",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "11, Avinguda des Sementer",
+    "location": {
+      "lat": 39.365987,
+      "lng": 3.218543
+    }
+  },
+  {
+    "name": "Guardia Civil",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.527157,
+      "lng": 2.506855
+    }
+  },
+  {
+    "name": "Policia Local de Calvià",
+    "area": "Son Bugadelles",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "36, carrer d'Alacant",
+    "location": {
+      "lat": 39.527921,
+      "lng": 2.507744
+    },
+    "hours": {
+      "open": "24/7",
+      "close": ""
+    }
+  },
+  {
+    "name": "Guàrdia Civil",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.358287,
+      "lng": 3.12972
+    }
+  },
+  {
+    "name": "Ca'n Bril (antiga escola)",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.645893,
+      "lng": 2.897375
+    }
+  },
+  {
+    "name": "Guàrdia Civil",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.558137,
+      "lng": 2.897287
+    }
+  },
+  {
+    "name": "Guàrdia Civil",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.574412,
+      "lng": 2.422902
+    }
+  },
+  {
+    "name": "Policia local",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.702884,
+      "lng": 3.427019
+    }
+  },
+  {
+    "name": "policia local",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.691434,
+      "lng": 3.347489
+    }
+  },
+  {
+    "name": "Guàrdia Civil",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.685407,
+      "lng": 2.848697
+    }
+  },
+  {
+    "name": "policia local",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.623842,
+      "lng": 2.52751
+    }
+  },
+  {
+    "name": "Policia local",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.713896,
+      "lng": 2.908876
+    },
+    "hours": {
+      "open": "24/7",
+      "close": ""
+    }
+  },
+  {
+    "name": "Guàrdia civil de trànsit",
+    "area": "",
+    "category": "police",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.714915,
+      "lng": 2.903649
+    }
+  },
+  {
+    "name": "Moeve",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.707703,
+      "lng": 2.865416
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.629944,
+      "lng": 2.664072
+    },
+    "hours": {
+      "open": "07:00",
+      "close": ""
+    }
+  },
+  {
+    "name": "Moeve",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.712781,
+      "lng": 2.690277
+    },
+    "hours": {
+      "open": "06:00",
+      "close": ""
+    }
+  },
+  {
+    "name": "Shell",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.712793,
+      "lng": 2.609748
+    },
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Moeve",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.904748,
+      "lng": 3.077353
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.703074,
+      "lng": 3.225999
+    }
+  },
+  {
+    "name": "Moeve",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.775496,
+      "lng": 2.989461
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.648265,
+      "lng": 2.756763
+    },
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "BP",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.51182,
+      "lng": 2.753063
+    },
+    "hours": {
+      "open": "24/7",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.545988,
+      "lng": 2.722467
+    },
+    "phone": "+34971787901",
+    "hours": {
+      "open": "05:00",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "CR C-715, Nº 336 (C-715 KM 5.7)",
+    "location": {
+      "lat": 39.571093,
+      "lng": 2.72106
+    },
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.765946,
+      "lng": 2.708444
+    },
+    "hours": {
+      "open": "24/7",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.576103,
+      "lng": 2.68543
+    },
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.574235,
+      "lng": 2.676046
+    },
+    "hours": {
+      "open": "24/7",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "CALLE CAMI VELL DE NUBYOLA, S/N",
+    "location": {
+      "lat": 39.602327,
+      "lng": 2.67457
+    },
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "CL ARAGON, 180A",
+    "location": {
+      "lat": 39.584261,
+      "lng": 2.671523
+    },
+    "hours": {
+      "open": "24/7",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.586427,
+      "lng": 2.652859
+    },
+    "hours": {
+      "open": "24/7",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.873911,
+      "lng": 3.016022
+    },
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "BP",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "CR PM-503 MONTU KM 5.5",
+    "location": {
+      "lat": 39.52021,
+      "lng": 3.019696
+    },
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.426388,
+      "lng": 3.024106
+    },
+    "hours": {
+      "open": "06:00",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.5675,
+      "lng": 2.895924
+    },
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.812549,
+      "lng": 2.889904
+    },
+    "hours": {
+      "open": "24/7",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "CARRETERA SANTA MARIA-SENCELLES KM 9.9",
+    "location": {
+      "lat": 39.645565,
+      "lng": 2.878598
+    },
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "5, CR PM-602",
+    "location": {
+      "lat": 39.484377,
+      "lng": 2.832204
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.689802,
+      "lng": 3.346885
+    },
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.569819,
+      "lng": 3.068018
+    },
+    "hours": {
+      "open": "24/7",
+      "close": ""
+    }
+  },
+  {
+    "name": "BP Gelabert 2",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.765694,
+      "lng": 3.02982
+    },
+    "hours": {
+      "open": "24/7",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "CR PM-512, 11,1",
+    "location": {
+      "lat": 39.465485,
+      "lng": 3.138027
+    },
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "C-712 KM 22.3",
+    "location": {
+      "lat": 39.763139,
+      "lng": 3.15075
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "BP",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "CR PM-510, 12,1",
+    "location": {
+      "lat": 39.475011,
+      "lng": 3.143768
+    },
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "BP Ca s'Estrella",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "CR ART-ALCUDIA (C/PIZARRO Y C/MAR)",
+    "location": {
+      "lat": 39.762011,
+      "lng": 3.152466
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "VIA CORNELI ATIC, Nº 5",
+    "location": {
+      "lat": 39.843469,
+      "lng": 3.123459
+    },
+    "hours": {
+      "open": "24/7",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.574241,
+      "lng": 3.200646
+    },
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.566948,
+      "lng": 3.220333
+    },
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Petronor",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "CR PM-401, 0,4",
+    "location": {
+      "lat": 39.473922,
+      "lng": 3.158824
+    },
+    "hours": {
+      "open": "24/7",
+      "close": ""
+    }
+  },
+  {
+    "name": "Moeve",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.437601,
+      "lng": 3.004684
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.526533,
+      "lng": 2.486648
+    }
+  },
+  {
+    "name": "BP",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.536374,
+      "lng": 2.72054
+    }
+  },
+  {
+    "name": "Moeve",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.485876,
+      "lng": 2.895401
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.543048,
+      "lng": 2.59198
+    }
+  },
+  {
+    "name": "Moeve",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.385144,
+      "lng": 3.160623
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.443578,
+      "lng": 3.235461
+    }
+  },
+  {
+    "name": "Moeve",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.846969,
+      "lng": 3.099127
+    },
+    "hours": {
+      "open": "06:00",
+      "close": ""
+    }
+  },
+  {
+    "name": "Can Parrino",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.600791,
+      "lng": 3.27073
+    }
+  },
+  {
+    "name": "Moeve",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.477886,
+      "lng": 2.745829
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.358277,
+      "lng": 3.125346
+    },
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Repsol",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.686849,
+      "lng": 2.83995
+    },
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Marivent",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.552097,
+      "lng": 2.616119
+    }
+  },
+  {
+    "name": "Son Oliva",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.586613,
+      "lng": 2.662025
+    },
+    "hours": {
+      "open": "24/7",
+      "close": ""
+    }
+  },
+  {
+    "name": "Moeve",
+    "area": "",
+    "category": "gasstations",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.501016,
+      "lng": 2.759735
+    }
+  },
+  {
+    "name": "Tierklinik",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.546907,
+      "lng": 3.336099
+    }
+  },
+  {
+    "name": "Solvet",
+    "area": "Alcudia",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "1, carrer del Sol",
+    "location": {
+      "lat": 39.8514,
+      "lng": 3.126164
+    },
+    "phone": "+34 971546809",
+    "website": "http://www.alcudiamagatzem.com",
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Veterinària de Pòrtol",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.618644,
+      "lng": 2.772126
+    }
+  },
+  {
+    "name": "San Fernando",
+    "area": "Palma",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "49, Avinguda de Sant Ferran",
+    "location": {
+      "lat": 39.577985,
+      "lng": 2.634012
+    },
+    "phone": "+34 629 323 444",
+    "website": "https://www.cvsanfernando.com/",
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Veterinària Consell",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.668516,
+      "lng": 2.811291
+    }
+  },
+  {
+    "name": "Amic meu",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.667374,
+      "lng": 2.809788
+    }
+  },
+  {
+    "name": "Animal Dharma",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.714504,
+      "lng": 2.903127
+    }
+  },
+  {
+    "name": "Vivero",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.591829,
+      "lng": 2.683078
+    }
+  },
+  {
+    "name": "Kami",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.490792,
+      "lng": 2.88336
+    }
+  },
+  {
+    "name": "Simarro",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.768531,
+      "lng": 2.711137
+    }
+  },
+  {
+    "name": "Aragó",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.586452,
+      "lng": 2.67478
+    }
+  },
+  {
+    "name": "Camp Redó",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.58422,
+      "lng": 2.650056
+    }
+  },
+  {
+    "name": "Seguí",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.574797,
+      "lng": 2.629442
+    }
+  },
+  {
+    "name": "sa Riera",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.575316,
+      "lng": 2.642757
+    }
+  },
+  {
+    "name": "Clínica veterinària Arxiduc",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.585551,
+      "lng": 2.657711
+    },
+    "hours": {
+      "open": "Mo-Th",
+      "close": ""
+    }
+  },
+  {
+    "name": "Pets & friends",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.718525,
+      "lng": 2.916031
+    }
+  },
+  {
+    "name": "Rubinca",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.715607,
+      "lng": 2.902254
+    }
+  },
+  {
+    "name": "Ciutat d'Inca",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.713986,
+      "lng": 2.90404
+    }
+  },
+  {
+    "name": "Port d'Alcúdia",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.826156,
+      "lng": 3.115884
+    }
+  },
+  {
+    "name": "Amics",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.767144,
+      "lng": 2.708808
+    }
+  },
+  {
+    "name": "Navarro",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.596735,
+      "lng": 2.708974
+    }
+  },
+  {
+    "name": "es Raiguer",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.723497,
+      "lng": 2.916629
+    }
+  },
+  {
+    "name": "Las Columnas",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.572727,
+      "lng": 2.660521
+    }
+  },
+  {
+    "name": "Cas Menescal",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.610591,
+      "lng": 2.686362
+    }
+  },
+  {
+    "name": "Mallorca Veterinaris",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.488405,
+      "lng": 2.898086
+    }
+  },
+  {
+    "name": "Eurotierklinik",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.50108,
+      "lng": 2.75873
+    }
+  },
+  {
+    "name": "Vida animal",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.49434,
+      "lng": 2.501339
+    }
+  },
+  {
+    "name": "Portitxol",
+    "area": "",
+    "category": "veterinarians",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.561293,
+      "lng": 2.671489
+    },
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Telebanco 4B",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841696,
+      "lng": 3.13238
+    },
+    "hours": {
+      "open": "24/7",
+      "close": ""
+    }
+  },
+  {
+    "name": "BBVA",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841716,
+      "lng": 3.13282
+    }
+  },
+  {
+    "name": "Banco Santander",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841083,
+      "lng": 3.13513
+    }
+  },
+  {
+    "name": "Banco Santander",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.841218,
+      "lng": 3.134514
+    }
+  },
+  {
+    "name": "Banca March",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.842847,
+      "lng": 3.134304
+    }
+  },
+  {
+    "name": "Deutsche Bank",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.84058,
+      "lng": 3.137287
+    },
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Caixabank",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.840345,
+      "lng": 3.137426
+    },
+    "website": "https://www.caixabank.es"
+  },
+  {
+    "name": "Caixabank",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.422165,
+      "lng": 3.261393
+    },
+    "website": "https://www.caixabank.es"
+  },
+  {
+    "name": "Banca March",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.56907,
+      "lng": 3.088425
+    }
+  },
+  {
+    "name": "Banca March",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.831433,
+      "lng": 3.113061
+    }
+  },
+  {
+    "name": "Banca March",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.804404,
+      "lng": 3.117431
+    }
+  },
+  {
+    "name": "Caixabank",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.610268,
+      "lng": 3.284062
+    },
+    "website": "https://www.caixabank.es"
+  },
+  {
+    "name": "Targobank",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.536793,
+      "lng": 2.455108
+    }
+  },
+  {
+    "name": "Deutsche Bank",
+    "area": "Paguera",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "2, carrer de la Savina",
+    "location": {
+      "lat": 39.53751,
+      "lng": 2.444529
+    }
+  },
+  {
+    "name": "Caixabank",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.737988,
+      "lng": 3.276816
+    },
+    "website": "https://www.caixabank.es"
+  },
+  {
+    "name": "Banco Santander",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.765705,
+      "lng": 2.71593
+    }
+  },
+  {
+    "name": "Caixabank",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.52903,
+      "lng": 2.540597
+    },
+    "website": "https://www.caixabank.es"
+  },
+  {
+    "name": "Banca March",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.754654,
+      "lng": 2.900709
+    }
+  },
+  {
+    "name": "Caixabank",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.755102,
+      "lng": 2.900652
+    },
+    "website": "https://www.caixabank.es"
+  },
+  {
+    "name": "Caixabank",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.647261,
+      "lng": 2.898473
+    },
+    "website": "https://www.caixabank.es"
+  },
+  {
+    "name": "Banca March",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.536114,
+      "lng": 2.717501
+    }
+  },
+  {
+    "name": "BBVA",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.536291,
+      "lng": 2.717396
+    }
+  },
+  {
+    "name": "Banco Santander",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.73565,
+      "lng": 3.057844
+    }
+  },
+  {
+    "name": "Caixabank",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.767818,
+      "lng": 3.150415
+    },
+    "website": "https://www.caixabank.es"
+  },
+  {
+    "name": "Colonya",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.87732,
+      "lng": 3.016421
+    }
+  },
+  {
+    "name": "Caixabank",
+    "area": "Ariany",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "1, Carrer Major",
+    "location": {
+      "lat": 39.649805,
+      "lng": 3.111327
+    },
+    "website": "https://www.caixabank.es"
+  },
+  {
+    "name": "Caixabank",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.594598,
+      "lng": 2.61727
+    },
+    "website": "https://www.caixabank.es",
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Banca March",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.354443,
+      "lng": 3.128768
+    },
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Caixabank",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.56953,
+      "lng": 2.660479
+    },
+    "website": "https://www.caixabank.es"
+  },
+  {
+    "name": "Banca March",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.519541,
+      "lng": 2.741326
+    }
+  },
+  {
+    "name": "Caixabank",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.521697,
+      "lng": 2.740757
+    },
+    "website": "https://www.caixabank.es"
+  },
+  {
+    "name": "BBVA",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.540147,
+      "lng": 3.333227
+    }
+  },
+  {
+    "name": "Banca March",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.54119,
+      "lng": 3.333963
+    }
+  },
+  {
+    "name": "Banco Santander",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.540448,
+      "lng": 3.333027
+    }
+  },
+  {
+    "name": "Banca March",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.853276,
+      "lng": 3.121736
+    }
+  },
+  {
+    "name": "Caixabank",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.575357,
+      "lng": 2.632921
+    },
+    "website": "https://www.caixabank.es"
+  },
+  {
+    "name": "Bancaja",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.573843,
+      "lng": 2.638946
+    }
+  },
+  {
+    "name": "Banco Santander",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.572667,
+      "lng": 2.656497
+    }
+  },
+  {
+    "name": "Bankinter",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.57235,
+      "lng": 2.655643
+    }
+  },
+  {
+    "name": "Caixa Rural",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.573269,
+      "lng": 2.655214
+    }
+  },
+  {
+    "name": "Banca March",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.876129,
+      "lng": 3.017345
+    }
+  },
+  {
+    "name": "Banco Santander",
+    "area": "",
+    "category": "banks",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.87602,
+      "lng": 3.017539
+    }
+  },
+  {
+    "name": "Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.748476,
+      "lng": 2.64832
+    }
+  },
+  {
+    "name": "Correos Santa Ponsa",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.518994,
+      "lng": 2.48806
+    }
+  },
+  {
+    "name": "Oficina de Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.692442,
+      "lng": 3.349182
+    },
+    "website": "https://www.correos.es",
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Oficina Central de Correus",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "6, Carrer de la Constitució",
+    "location": {
+      "lat": 39.569383,
+      "lng": 2.647508
+    },
+    "website": "https://www.correos.es"
+  },
+  {
+    "name": "Oficina de Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.85007,
+      "lng": 3.126915
+    }
+  },
+  {
+    "name": "Oficina de Correus",
+    "area": "Santa Maria del Camí",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "41, Carrer de Bernat de Santa Eugènia",
+    "location": {
+      "lat": 39.650418,
+      "lng": 2.772041
+    },
+    "website": "https://www.correos.es"
+  },
+  {
+    "name": "Oficina de Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.648953,
+      "lng": 3.110352
+    },
+    "website": "https://www.correos.es"
+  },
+  {
+    "name": "Oficina de Correus d'Es Fortí",
+    "area": "Palma",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "12, Carrer de Pau Piferrer",
+    "location": {
+      "lat": 39.577814,
+      "lng": 2.642497
+    },
+    "website": "https://www.correos.es",
+    "hours": {
+      "open": "Dec-F",
+      "close": ""
+    }
+  },
+  {
+    "name": "Oficina de Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.568235,
+      "lng": 3.207638
+    },
+    "website": "https://www.correos.es"
+  },
+  {
+    "name": "Oficina de Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.572491,
+      "lng": 2.635871
+    },
+    "website": "https://www.correos.es"
+  },
+  {
+    "name": "Oficina de Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.668184,
+      "lng": 2.577654
+    },
+    "website": "https://www.correos.es",
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Oficina de Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.80791,
+      "lng": 3.116205
+    },
+    "website": "https://www.correos.es"
+  },
+  {
+    "name": "Oficina de Portocolom",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.411807,
+      "lng": 3.26014
+    }
+  },
+  {
+    "name": "Oficina de Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.9087,
+      "lng": 3.0811
+    },
+    "website": "https://www.correos.es"
+  },
+  {
+    "name": "Oficina de Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.908657,
+      "lng": 3.083361
+    },
+    "website": "https://www.correos.es"
+  },
+  {
+    "name": "Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.315741,
+      "lng": 2.996406
+    }
+  },
+  {
+    "name": "Correus",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.551772,
+      "lng": 2.699289
+    },
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.701982,
+      "lng": 3.433686
+    }
+  },
+  {
+    "name": "Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.765975,
+      "lng": 2.713548
+    }
+  },
+  {
+    "name": "Oficina de Correos",
+    "area": "Palma de Mallorca",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "13, Carretera de Valldemossa",
+    "location": {
+      "lat": 39.586786,
+      "lng": 2.650392
+    },
+    "phone": "+34971724219",
+    "website": "https://www.correos.es",
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Oficina de Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.704225,
+      "lng": 2.792322
+    },
+    "website": "https://www.correos.es",
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Oficina de Correus",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.667984,
+      "lng": 2.813633
+    },
+    "website": "https://www.correos.es"
+  },
+  {
+    "name": "Oficina de Correus",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.771387,
+      "lng": 2.903442
+    },
+    "website": "https://www.correos.es",
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Oficina de Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.6031,
+      "lng": 2.672302
+    }
+  },
+  {
+    "name": "Oficina de Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.569173,
+      "lng": 3.216858
+    }
+  },
+  {
+    "name": "Oficina de Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.713179,
+      "lng": 3.46417
+    },
+    "website": "https://www.correos.es"
+  },
+  {
+    "name": "Oficina de Correus",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "97",
+    "location": {
+      "lat": 39.768582,
+      "lng": 3.024547
+    },
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Oficina de Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.429511,
+      "lng": 3.018201
+    }
+  },
+  {
+    "name": "Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.597712,
+      "lng": 3.382187
+    },
+    "website": "https://www.correos.es/",
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Oficina de Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "42, carrer de Tramuntana",
+    "location": {
+      "lat": 39.645641,
+      "lng": 3.00925
+    },
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.558386,
+      "lng": 2.62431
+    }
+  },
+  {
+    "name": "Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.356119,
+      "lng": 3.1262
+    },
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Oficina de Correos",
+    "area": "",
+    "category": "postoffice",
+    "rating": 0,
+    "verified": false,
+    "address": "12, Avinguda d'Alexandre Rosselló",
+    "location": {
+      "lat": 39.5736,
+      "lng": 2.656579
+    },
+    "phone": "+34 971 77 74 87",
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Escorxador Aviram",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.718323,
+      "lng": 2.923029
+    }
+  },
+  {
+    "name": "Son Rossinyol",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.603221,
+      "lng": 2.657661
+    }
+  },
+  {
+    "name": "Son Valentí",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.592662,
+      "lng": 2.636167
+    }
+  },
+  {
+    "name": "depuradora de Peguera",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.542429,
+      "lng": 2.464889
+    }
+  },
+  {
+    "name": "Polígon industrial de Son Bugadelles",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.528432,
+      "lng": 2.50673
+    }
+  },
+  {
+    "name": "Polígon industrial d'Es Cós",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.680593,
+      "lng": 2.834485
+    }
+  },
+  {
+    "name": "Parc Bit",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.63516,
+      "lng": 2.632186
+    }
+  },
+  {
+    "name": "Ses Veles",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.653685,
+      "lng": 2.687642
+    }
+  },
+  {
+    "name": "Polígon Industrial de Manacor",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.570871,
+      "lng": 3.184648
+    }
+  },
+  {
+    "name": "Polígon industrial de Son Morro",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.572431,
+      "lng": 2.690284
+    }
+  },
+  {
+    "name": "Dipòsits reguladors de Son Tugores",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.607298,
+      "lng": 2.64866
+    }
+  },
+  {
+    "name": "Laboratori de Son Anglada",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.614963,
+      "lng": 2.617382
+    }
+  },
+  {
+    "name": "Estació de tractament d'aigua potable",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.730074,
+      "lng": 2.834238
+    }
+  },
+  {
+    "name": "polígon industrial d'Es Pujols",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.69183,
+      "lng": 3.360804
+    }
+  },
+  {
+    "name": "Estació de transferència de residus",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.593457,
+      "lng": 3.261687
+    }
+  },
+  {
+    "name": "Factoria de Repsol butà",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.840261,
+      "lng": 3.148508
+    }
+  },
+  {
+    "name": "Antiga central tèrmica Alcúdia 1",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.836089,
+      "lng": 3.144673
+    }
+  },
+  {
+    "name": "Central Tèrmica d'es Murterar",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.810011,
+      "lng": 3.091013
+    }
+  },
+  {
+    "name": "EDAR de Alcúdia",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.836551,
+      "lng": 3.101063
+    }
+  },
+  {
+    "name": "Son Llaüt",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.656119,
+      "lng": 2.791044
+    }
+  },
+  {
+    "name": "Polígon de Can Tro",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.775141,
+      "lng": 3.026143
+    }
+  },
+  {
+    "name": "Depuradora Ibasan",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.511349,
+      "lng": 3.302611
+    }
+  },
+  {
+    "name": "Polígon Ca na Lloreta",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.814708,
+      "lng": 3.100746
+    }
+  },
+  {
+    "name": "polígon industrial de Can Llarg",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.701613,
+      "lng": 2.869923
+    }
+  },
+  {
+    "name": "depuradora",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.66132,
+      "lng": 3.434673
+    }
+  },
+  {
+    "name": "Depuradora de Sant Jordi",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.547931,
+      "lng": 2.767244
+    }
+  },
+  {
+    "name": "Estació elèctrica de Son Reus",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.64828,
+      "lng": 2.680588
+    }
+  },
+  {
+    "name": "Planta incineradora de Son Reus",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.644324,
+      "lng": 2.681297
+    }
+  },
+  {
+    "name": "Son Oms",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.539435,
+      "lng": 2.738661
+    }
+  },
+  {
+    "name": "Vipsa",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.58615,
+      "lng": 3.232354
+    }
+  },
+  {
+    "name": "depuradora de Santa Ponça",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.521112,
+      "lng": 2.512618
+    }
+  },
+  {
+    "name": "Parc fotovoltaic de Son Falconer",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.644143,
+      "lng": 2.704426
+    }
+  },
+  {
+    "name": "Polígon Industrial Sa Vileta",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.760768,
+      "lng": 3.0336
+    }
+  },
+  {
+    "name": "Depuradora de Bendinat",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.537975,
+      "lng": 2.584052
+    }
+  },
+  {
+    "name": "Parc fotovoltaic",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.744096,
+      "lng": 3.150338
+    }
+  },
+  {
+    "name": "Parc fotovoltaic",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.74892,
+      "lng": 3.158665
+    }
+  },
+  {
+    "name": "Recinte municipal de Son Pacs",
+    "area": "",
+    "category": "industrial",
+    "rating": 0,
+    "verified": false,
+    "address": "Mallorca",
+    "location": {
+      "lat": 39.606195,
+      "lng": 2.652954
+    }
+  }
+]

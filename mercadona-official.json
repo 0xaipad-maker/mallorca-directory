@@ -1,0 +1,895 @@
+[
+  {
+    "name": "Mercadona",
+    "address": "C/ POLLENTIA, 57, Alcúdia, Illes Balears",
+    "area": "alcudia",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.85029435,
+      "lng": 3.12705667
+    },
+    "phone": "971547623",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ SON LLUÍS, S/N, Andratx, Illes Balears",
+    "area": "andratx",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.57556885,
+      "lng": 2.42566131
+    },
+    "phone": "971145801",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ ZARAGOZA, 1 (POL. SON CALIU), Calvià, Illes Balears",
+    "area": "calvia",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.52887794,
+      "lng": 2.54563024
+    },
+    "phone": "971683366",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C.º VELL DE CIUTAT, 41, Campos, Illes Balears",
+    "area": "campos",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.43779,
+      "lng": 3.00231
+    },
+    "phone": "971663022",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "AVDA. JUAN CARLOS I, 89, Capdepera, Illes Balears",
+    "area": "capdepera",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.70426729,
+      "lng": 3.44895956
+    },
+    "phone": "971663389",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "CTRA. CIUTADELLA A MAÓ, S/N, Ciutadella de Menorca, Illes Balears",
+    "area": "capdepera",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 40.00542564,
+      "lng": 3.85452516
+    },
+    "phone": "971776151",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "AVDA. GENERAL LUQUE, 396, Inca, Illes Balears",
+    "area": "inca",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.71357425,
+      "lng": 2.90365288
+    },
+    "phone": "971503104",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ REI JAUME II, 50, Inca, Illes Balears",
+    "area": "inca",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.72174819,
+      "lng": 2.91894241
+    },
+    "phone": "871001907",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ DE LA FALSIA, 8 (URB. PUIG DE RÓS), Llucmajor, Illes Balears",
+    "area": "llucmajor",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.44927375,
+      "lng": 2.75408163
+    },
+    "phone": "971786069",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ TERRAL, S/N, Llucmajor, Illes Balears",
+    "area": "llucmajor",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.49991352,
+      "lng": 2.75548102
+    },
+    "phone": "971268063",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "P.º JAUME III, 36, Llucmajor, Illes Balears",
+    "area": "llucmajor",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.4875884,
+      "lng": 2.88610079
+    },
+    "phone": "971661704",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "P.º S'ESTACIÓ, S/N, Manacor, Illes Balears",
+    "area": "manacor",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.57074337,
+      "lng": 3.20268271
+    },
+    "phone": "971844585",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "PZA. RAMÓN LLULL, 14, Manacor, Illes Balears",
+    "area": "manacor",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.56641241,
+      "lng": 3.21203636
+    },
+    "phone": "971845619",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "AVDA. EUROPA, 1, Maó, Illes Balears",
+    "area": "capdepera",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.88507005,
+      "lng": 4.23697251
+    },
+    "phone": "971776150",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ CÓS DE GRÀCIA, 157, Maó, Illes Balears",
+    "area": "capdepera",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.88466942,
+      "lng": 4.26380609
+    },
+    "phone": "971776820",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "AVDA. DE LES FLORS, S/N, Marratxí, Illes Balears",
+    "area": "marratxi",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.61198328,
+      "lng": 2.68966842
+    },
+    "phone": "971122299",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "AVDA. PRÍNCEPS D'ESPANYA, 5, Marratxí, Illes Balears",
+    "area": "marratxi",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.62094313,
+      "lng": 2.72414586
+    },
+    "phone": "871004321",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ FRANCESC SALVA I PIZA, S/N, Marratxí, Illes Balears",
+    "area": "marratxi",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.59508629,
+      "lng": 2.69083181
+    },
+    "phone": "971601851",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "AVDA. AMÉRICA, 13, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.51200177,
+      "lng": 2.75358533
+    },
+    "phone": "971266118",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "AVDA. ARGENTINA, 83, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.57599,
+      "lng": 2.64071
+    },
+    "phone": "971455506",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ ARAGÓN, 26, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.57492124,
+      "lng": 2.65932041
+    },
+    "phone": "971771070",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ ARCHIDUQUE LUIS SALVADOR, 29, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.58015856,
+      "lng": 2.65445303
+    },
+    "phone": "971752792",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ BARTOLOMÉ SUREDA I MISSEROL, 4, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.58896201,
+      "lng": 2.62227437
+    },
+    "phone": "971606930",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ BINIAMAR, 14, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.58203837,
+      "lng": 2.67929207
+    },
+    "phone": "971472604",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ COTLLIURE, 23, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.59041,
+      "lng": 2.64681
+    },
+    "phone": "971755545",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ EUSEBIO ESTADA, 80, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.5840396,
+      "lng": 2.66242808
+    },
+    "phone": "971755154",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ GABRIEL ALZAMORA, 11, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.5877649,
+      "lng": 2.67298705
+    },
+    "phone": "971626423",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ GENERAL RIERA, 20, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.58007543,
+      "lng": 2.64799717
+    },
+    "phone": "971750914",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ GÉNOVA, 2, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.57239962,
+      "lng": 2.62001866
+    },
+    "phone": "971736249",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ GEORGE SAND, 2, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.57534182,
+      "lng": 2.67907808
+    },
+    "phone": "971145800",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ JOAN MIRÓ, 4, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.56763699,
+      "lng": 2.62781621
+    },
+    "phone": "971456316",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ MANACOR, 22, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.57130371,
+      "lng": 2.66088169
+    },
+    "phone": "971463953",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ MAQUINÀRIA, 11, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.59310394,
+      "lng": 2.63512447
+    },
+    "phone": "971625055",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ MÉDICO JOSÉ DARDER, 12, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.57802385,
+      "lng": 2.66447079
+    },
+    "phone": "971278104",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C.º CAN PASTILLA, 33, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.54896418,
+      "lng": 2.70161332
+    },
+    "phone": "971623583",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ PASQUAL RIBOT, 52, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.58116542,
+      "lng": 2.63331675
+    },
+    "phone": "971285133",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ PERE CAFFARO, 11, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.5911841,
+      "lng": 2.65406148
+    },
+    "phone": "971292420",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ SAMIL, 25 (SAL. 10 AUTOVÍA LLEVANT), Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.52974146,
+      "lng": 2.737833
+    },
+    "phone": "971266568",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "PZA. DEL OLIVAR, 1, Palma, Illes Balears",
+    "area": "palma",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.57368021,
+      "lng": 2.65357767
+    },
+    "phone": "971717519",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ MARÍA VILLANGÓMEZ, 4, Santa Eulària des Riu, Illes Balears",
+    "area": "andratx",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 38.98909827,
+      "lng": 1.54389927
+    },
+    "phone": "871901830",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "URB. S'OLIVERA, S/N, Santa Eulària des Riu, Illes Balears",
+    "area": "andratx",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 38.9224175,
+      "lng": 1.433184
+    },
+    "phone": "871901221",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "CTRA. D'ARTÀ A PORT ALCÚDIA, S/N, Santa Margalida, Illes Balears",
+    "area": "alcudia",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.76249815,
+      "lng": 3.15084254
+    },
+    "phone": "971851872",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ JOHANN SEBASTIÁN BACH, S/N, Sant Antoni de Portmany, Illes Balears",
+    "area": "andratx",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 38.98632065,
+      "lng": 1.30600825
+    },
+    "phone": "871901233",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "C/ DELS COMELLARS, 17, Santanyí, Illes Balears",
+    "area": "santanyi",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.37421872,
+      "lng": 3.22207578
+    },
+    "phone": "971627855",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "CTRA. EIVISSA A S. JOSEP, S/N, Sant Josep de sa Talaia, Illes Balears",
+    "area": "andratx",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 38.90265591,
+      "lng": 1.39614254
+    },
+    "phone": "871901220",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "AVDA. DES BON TEMPS, 5, Sant Llorenç des Cardassar, Illes Balears",
+    "area": "son-servera",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.59231961,
+      "lng": 3.3784423
+    },
+    "phone": "971663388",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  },
+  {
+    "name": "Mercadona",
+    "address": "CTRA. D'INCA, 48, Sa Pobla, Illes Balears",
+    "area": "inca",
+    "category": "supermarkets",
+    "subcategory": "",
+    "rating": 0,
+    "verified": true,
+    "location": {
+      "lat": 39.7720711,
+      "lng": 3.0148377
+    },
+    "phone": "971627924",
+    "hours": {
+      "open": "09:00",
+      "close": "21:30"
+    },
+    "source": "mercadona-official"
+  }
+]

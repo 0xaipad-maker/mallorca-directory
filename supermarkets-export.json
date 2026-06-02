@@ -1,0 +1,692 @@
+[
+  {
+    "name": "Mercadona",
+    "address": "Mallorca",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.850452,
+      "lng": 3.127407
+    }
+  },
+  {
+    "name": "Mercadona",
+    "address": "26, Carrer d'Aragó, Palma de Mallorca",
+    "area": "Palma de Mallorca",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.575108,
+      "lng": 2.659301
+    },
+    "phone": "+34 971 77 10 70",
+    "website": "https://www.mercadona.es"
+  },
+  {
+    "name": "Mercadona",
+    "address": "396, Carrer del General Luque",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.713639,
+      "lng": 2.903598
+    },
+    "phone": "+34971503104",
+    "website": "https://www.mercadona.es",
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Mercadona",
+    "address": "86-90, Avinguda de Joan Carles I, Capdepera",
+    "area": "Capdepera",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.704204,
+      "lng": 3.449219
+    },
+    "phone": "+34 971663389",
+    "website": "https://www.mercadona.es",
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Mercadona",
+    "address": "Carrer de Francesc Salvà i Pizà, escultor, Marratxí",
+    "area": "Marratxí",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.595064,
+      "lng": 2.690802
+    },
+    "website": "https://www.mercadona.es"
+  },
+  {
+    "name": "Mercadona",
+    "address": "avinguda d'Amèrica",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.512068,
+      "lng": 2.753836
+    },
+    "phone": "+34971266118",
+    "website": "https://www.mercadona.es",
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Mercadona",
+    "address": "Carrer de Bartomeu Sureda Miserol",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.589096,
+      "lng": 2.622411
+    },
+    "website": "https://www.mercadona.es"
+  },
+  {
+    "name": "Mercadona",
+    "address": "11, carrer de la Maquinària, Palma",
+    "area": "Palma",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.592953,
+      "lng": 2.634569
+    }
+  },
+  {
+    "name": "Mercadona",
+    "address": "92, Carretera d'Artà, Can Picafort",
+    "area": "Can Picafort",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.762506,
+      "lng": 3.150817
+    },
+    "phone": "+34971851872",
+    "website": "https://www.mercadona.es",
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Mercadona",
+    "address": "57, carrer de Pol·lèntia",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.850506,
+      "lng": 3.127137
+    },
+    "website": "https://www.mercadona.es",
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Mercadona",
+    "address": "Avinguda de Joan Miró, Palma de Mallorca",
+    "area": "Palma de Mallorca",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.567992,
+      "lng": 2.627732
+    },
+    "website": "https://www.mercadona.es"
+  },
+  {
+    "name": "Mercadona",
+    "address": "5, Avinguda Prínceps d'Espanya, Marratxí",
+    "area": "Marratxí",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.62137,
+      "lng": 2.724619
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Mercadona",
+    "address": "33, Camí de Can Pastilla",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.549142,
+      "lng": 2.701272
+    },
+    "phone": "+34971623583",
+    "website": "https://www.mercadona.es",
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Mercadona",
+    "address": "Carretera d'Inca, Sa Pobla",
+    "area": "Sa Pobla",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.7724,
+      "lng": 3.015262
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Lidl",
+    "address": "Santanyí",
+    "area": "Santanyí",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.362068,
+      "lng": 3.121631
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Lidl",
+    "address": "Mallorca",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.756052,
+      "lng": 3.157086
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Lidl",
+    "address": "42, Carrer d'Aragó, Palma",
+    "area": "Palma",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.576948,
+      "lng": 2.660512
+    },
+    "website": "https://www.lidl.es/",
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Lidl",
+    "address": "5a, Avinguda de Mèxic, Palma",
+    "area": "Palma",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.566202,
+      "lng": 2.6681
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Lidl",
+    "address": "6, carrer de Còrdova, Palmanova",
+    "area": "Palmanova",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.530434,
+      "lng": 2.540807
+    },
+    "website": "www.lidl.es",
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Lidl",
+    "address": "28, Carrer dels Pagesos, Inca",
+    "area": "Inca",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.711575,
+      "lng": 2.910766
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Lidl",
+    "address": "58, Avinguda de Joan Carles I",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.70354,
+      "lng": 3.445636
+    },
+    "phone": "+34 900958311",
+    "website": "http://lidl.es/",
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Lidl",
+    "address": "Via de Corneli Àtic",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.840398,
+      "lng": 3.120888
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Lidl",
+    "address": "2, Bulevard de Peguera, Peguera",
+    "area": "Peguera",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.537016,
+      "lng": 2.440126
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Eroski",
+    "address": "Mallorca",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.528612,
+      "lng": 2.733066
+    }
+  },
+  {
+    "name": "Eroski",
+    "address": "133, Carrer de Palma, Santanyí",
+    "area": "Santanyí",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.358662,
+      "lng": 3.124488
+    },
+    "phone": "+34 971 64 21 60",
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Eroski",
+    "address": "general ricardo ortega",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.570108,
+      "lng": 2.658304
+    }
+  },
+  {
+    "name": "Eroski",
+    "address": "25b, Plaça dels Hostals, Santa Maria del Camí",
+    "area": "Santa Maria del Camí",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.650898,
+      "lng": 2.773127
+    }
+  },
+  {
+    "name": "Eroski",
+    "address": "5a, Plaça Nova, Santa Maria del Camí",
+    "area": "Santa Maria del Camí",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.649009,
+      "lng": 2.778372
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Eroski",
+    "address": "1, plaça de Nuredduna, Canyamel",
+    "area": "Canyamel",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.657784,
+      "lng": 3.440445
+    },
+    "phone": "+34 648523225",
+    "website": "https://eroski.es",
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Eroski",
+    "address": "51, Carrer dels Reis Catòlics",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.573941,
+      "lng": 2.669765
+    },
+    "website": "https://eroski.es",
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Eroski",
+    "address": "44, Carrer d'en Trobat",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.720187,
+      "lng": 2.907884
+    },
+    "phone": "+34971500067",
+    "website": "https://eroski.es/",
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Eroski",
+    "address": "Llucmajor",
+    "area": "Llucmajor",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.486489,
+      "lng": 2.89499
+    }
+  },
+  {
+    "name": "Eroski",
+    "address": "Carretera de Arta al Puerto Alcudia",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.770881,
+      "lng": 3.141978
+    },
+    "phone": "+34971852692",
+    "website": "https://www.eroski.es/",
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Eroski",
+    "address": "24, Bulevard de Peguera",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.537041,
+      "lng": 2.444299
+    }
+  },
+  {
+    "name": "Eroski",
+    "address": "Avinguda dels Benvinguts, Cala d'Or",
+    "area": "Cala d'Or",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.378688,
+      "lng": 3.22588
+    },
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Eroski",
+    "address": "Passatge de sa Rota",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.546461,
+      "lng": 3.33882
+    },
+    "hours": {
+      "open": "Mo-Fr",
+      "close": ""
+    }
+  },
+  {
+    "name": "Eroski",
+    "address": "35, Avinguda del Tucà",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.837899,
+      "lng": 3.109379
+    },
+    "phone": "+34971892220",
+    "website": "https://eroski.es/",
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Eroski",
+    "address": "carrer de la Prosperitat, Sóller",
+    "area": "Sóller",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.768901,
+      "lng": 2.709854
+    }
+  },
+  {
+    "name": "Aldi",
+    "address": "137, Carrer de l'Arxiduc Lluís Salvador, Palma",
+    "area": "Palma",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.588132,
+      "lng": 2.659366
+    }
+  },
+  {
+    "name": "Aldi",
+    "address": "199, Carretera Militar, Playa de Palma",
+    "area": "Playa de Palma",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.51146,
+      "lng": 2.757281
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Aldi",
+    "address": "2, Carrer Teixidors, Inca",
+    "area": "Inca",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.711133,
+      "lng": 2.908056
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Aldi",
+    "address": "Mallorca",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.628741,
+      "lng": 2.733849
+    }
+  },
+  {
+    "name": "Aldi",
+    "address": "203, Carrer d'Aragó",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.58726,
+      "lng": 2.673545
+    },
+    "hours": {
+      "open": "Mo-Sa",
+      "close": ""
+    }
+  },
+  {
+    "name": "Aldi",
+    "address": "Manacor",
+    "area": "Manacor",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.571909,
+      "lng": 3.192815
+    },
+    "hours": {
+      "open": "Mo-Su",
+      "close": ""
+    }
+  },
+  {
+    "name": "Aldi",
+    "address": "59A, carrer de Campos",
+    "area": "",
+    "category": "supermarkets",
+    "rating": 0,
+    "verified": false,
+    "location": {
+      "lat": 39.466522,
+      "lng": 3.142306
+    }
+  }
+]

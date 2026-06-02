@@ -32,15 +32,17 @@ export default function RootLayout() {
           headerTitleStyle: { fontWeight: '600' },
         }}
       >
-        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="area/[name]" options={{ title: 'Area' }} />
-        <Stack.Screen name="login" options={{ title: 'Sign In' }} />
         <Stack.Screen name="list" options={{ title: 'Businesses' }} />
-        <Stack.Screen name="map" options={{ title: 'Map' }} />
-        <Stack.Screen name="favorites" options={{ title: 'Favorites' }} />
-        <Stack.Screen name="profile" options={{ title: 'Profile' }} />
+        <Stack.Screen name="login" options={{ title: 'Sign In' }} />
         <Stack.Screen name="add-business" options={{ title: 'Add Business' }} />
+        <Stack.Screen name="add-event" options={{ title: 'Add Event' }} />
+        <Stack.Screen name="claim-business" options={{ title: 'Claim Business' }} />
         <Stack.Screen name="business/[id]" options={{ title: 'Details' }} />
+        <Stack.Screen name="events/[id]" options={{ title: 'Event' }} />
+        <Stack.Screen name="guides/[slug]" options={{ title: 'Guide' }} />
+        <Stack.Screen name="edit-business/[id]" options={{ title: 'Edit Business' }} />
       </Stack>
     </>
   );
