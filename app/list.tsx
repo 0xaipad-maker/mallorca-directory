@@ -21,11 +21,12 @@ export default function ListScreen() {
   const [showMap, setShowMap] = useState(true);
   const [searchQ, setSearchQ] = useState('');
   const [subcatFilter, setSubcatFilter] = useState('');
-  const [areaFilter, setAreaFilter] = useState(area || '');
+  const [areaFilter, setAreaFilter] = useState(areaName);
 
   const cat = categories.find(c => c.id === category);
   const areaData = areas.find(a => a.id === area || a.name === area);
-  const catName = cat ? (categoryTranslations[language]?.[cat.id] || cat.name) : (areaData?.name || 'All');
+  const areaName = areaData?.name || area || '';
+  const catName = cat ? (categoryTranslations[language]?.[cat.id] || cat.name) : (areaName || 'All');
 
   useEffect(() => {
     (async () => {
@@ -33,8 +34,8 @@ export default function ListScreen() {
         let q;
         if (category) {
           q = query(collection(db, 'businesses'), where('category', '==', category));
-        } else if (area) {
-          q = query(collection(db, 'businesses'), where('area', '==', area));
+        } else if (areaName) {
+          q = query(collection(db, 'businesses'), where('area', '==', areaName));
         } else {
           q = query(collection(db, 'businesses'));
         }
@@ -153,10 +154,10 @@ export default function ListScreen() {
                   </TouchableOpacity>
                 </>
               )}
-              {areaFilter && (
+              {areaData && (
                 <>
                   <Text style={styles.breadcrumbSep}>›</Text>
-                  <Text style={styles.breadcrumbCurrent}>{areaFilter}</Text>
+                  <Text style={styles.breadcrumbCurrent}>{areaData.name}</Text>
                 </>
               )}
               {subcatFilter && (
