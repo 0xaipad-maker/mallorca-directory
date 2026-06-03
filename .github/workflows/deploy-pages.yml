@@ -45,6 +45,7 @@ jobs:
           set +o histexpand
           sed -i 's|href="/favicon.ico"|href="/mallorca-directory/favicon.ico"|g' dist/index.html
           sed -i 's|src="/_expo/static|src="/mallorca-directory/_expo/static|g' dist/index.html
+          sed -i 's|href="/_expo/static|href="/mallorca-directory/_expo/static|g' dist/index.html
           # Inject URL normalization + history interception for Expo Router
           # Strips /mallorca-directory prefix before router init, wraps push/replaceState to keep prefix
           node -e "
@@ -60,6 +61,8 @@ jobs:
           # Copy PWA assets to dist
           cp public/manifest.json dist/
           cp public/sw.js dist/
+          mkdir -p dist/assets
+          cp assets/icon.png dist/assets/
           # Inject manifest + meta + sw registration into index.html
           node -e "
           const fs = require('fs');
