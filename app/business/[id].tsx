@@ -7,6 +7,7 @@ import { Business } from '../../types';
 import { useStore, translations, categoryTranslations, subcategoryTranslations } from '../../store/useStore';
 import { categories } from '../../utils/categories';
 import { colors, spacing, borderRadius, typography, shadows } from '../../utils/theme';
+import LeafletMap from '../../components/LeafletMap';
 
 interface Review {
   id: string; businessId: string; userId: string; userName: string; rating: number; text: string; createdAt: string;
@@ -208,6 +209,13 @@ export default function BusinessDetailScreen() {
           </TouchableOpacity>
         </View>
 
+        <View style={s.mapCard}>
+          <LeafletMap mode="single" height={300} lat={business.location.lat} lng={business.location.lng} businessName={business.name} />
+          <TouchableOpacity style={s.mapOverlay} onPress={() => openMap(business.location.lat, business.location.lng)}>
+            <Text style={s.mapOverlayText}>🧭 {t.getDirections} →</Text>
+          </TouchableOpacity>
+        </View>
+
         {business.hours && (
           <View style={s.card}>
             <Text style={s.label}>🕐 {t.hours}</Text>
@@ -398,4 +406,7 @@ const s = StyleSheet.create({
   claimSub: { ...typography.bodySmall, color: colors.textMuted, textAlign: 'center' },
   editBtn: { backgroundColor: colors.primary, borderRadius: borderRadius.lg, padding: spacing.lg, alignItems: 'center', marginBottom: spacing.xxl },
   editText: { ...typography.bodySmall, color: colors.textInverse, fontWeight: '700' },
+  mapCard: { backgroundColor: colors.surface, borderRadius: borderRadius.lg, overflow: 'hidden', marginBottom: spacing.lg, ...shadows.md, borderWidth: 1, borderColor: colors.border },
+  mapOverlay: { backgroundColor: colors.primary, paddingVertical: spacing.md, paddingHorizontal: spacing.lg, alignItems: 'center' },
+  mapOverlayText: { ...typography.bodySmall, color: colors.textInverse, fontWeight: '700' },
 });
