@@ -118,6 +118,8 @@ export const translations = {
     title: 'Directorio Mallorca',
     subtitle: 'Descubre los mejores negocios',
     search: 'Buscar...',
+    explore: 'Explorar',
+    all: 'Todo',
     categories: 'Categorías',
     favorites: 'Favoritos',
     profile: 'Perfil',

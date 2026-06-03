@@ -13,6 +13,7 @@
     "expo-splash-screen": "~56.0.10",
     "expo-status-bar": "~56.0.4",
     "firebase": "^11.0.0",
+    "leaflet": "^1.9.4",
     "nativewind": "^4.1.23",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -22,6 +23,7 @@
     "zustand": "^5.0.0"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.21",
     "@types/react": "~19.2.2",
     "typescript": "~6.0.3"
   },

@@ -18,9 +18,10 @@ export default function ListScreen() {
   const t = translations[language];
   const [allBusinesses, setAllBusinesses] = useState<Business[]>([]);
   const [loading, setLoading] = useState(true);
-  const [showMap, setShowMap] = useState(false);
+  const [showMap, setShowMap] = useState(true);
   const [searchQ, setSearchQ] = useState('');
   const [subcatFilter, setSubcatFilter] = useState('');
+  const [areaFilter, setAreaFilter] = useState(area || '');
 
   const cat = categories.find(c => c.id === category);
   const areaData = areas.find(a => a.id === area || a.name === area);
@@ -57,8 +58,11 @@ export default function ListScreen() {
     if (subcatFilter) {
       list = list.filter(b => b.subcategory === subcatFilter);
     }
+    if (areaFilter) {
+      list = list.filter(b => b.area === areaFilter);
+    }
     return list;
-  }, [allBusinesses, searchQ, subcatFilter]);
+  }, [allBusinesses, searchQ, subcatFilter, areaFilter]);
 
   const renderStars = (n?: number) => {
     if (!n) return '';
@@ -149,10 +153,10 @@ export default function ListScreen() {
                   </TouchableOpacity>
                 </>
               )}
-              {areaData && (
+              {areaFilter && (
                 <>
                   <Text style={styles.breadcrumbSep}>›</Text>
-                  <Text style={styles.breadcrumbCurrent}>{areaData.name}</Text>
+                  <Text style={styles.breadcrumbCurrent}>{areaFilter}</Text>
                 </>
               )}
               {subcatFilter && (
@@ -205,13 +209,27 @@ export default function ListScreen() {
               </ScrollView>
             )}
 
+            {/* Area filter */}
+            {allBusinesses.length > 0 && (
+              <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.subcatRow}>
+                <TouchableOpacity style={[styles.subcatChip, !areaFilter && styles.subcatChipActive]} onPress={() => setAreaFilter('')}>
+                  <Text style={[styles.subcatChipText, !areaFilter && styles.subcatChipTextActive]}>{t.allAreas || 'All areas'}</Text>
+                </TouchableOpacity>
+                {[...new Set(allBusinesses.map(b => b.area).filter(Boolean))].sort().map(area => (
+                  <TouchableOpacity key={area} style={[styles.subcatChip, areaFilter === area && styles.subcatChipActive]} onPress={() => setAreaFilter(area)}>
+                    <Text style={[styles.subcatChipText, areaFilter === area && styles.subcatChipTextActive]}>{area}</Text>
+                  </TouchableOpacity>
+                ))}
+              </ScrollView>
+            )}
+
             {/* Map */}
-            {showMap && allBusinesses.length > 0 && (
+            {showMap && filtered.length > 0 && (
               <View style={styles.mapWrap}>
                 <LeafletMap
                   mode="multiple"
                   height={300}
-                  businesses={allBusinesses}
+                  businesses={filtered.map(b => ({ ...b, lat: b.location.lat, lng: b.location.lng }))}
                   businessName={catName}
                 />
               </View>

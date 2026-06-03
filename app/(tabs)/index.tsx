@@ -269,7 +269,7 @@ export default function HomeScreen() {
           <Text style={styles.sectionTitle}>{t.exploreByArea || 'Explore by Area'}</Text>
           <View style={styles.areasGrid}>
             {areas.slice(0, 8).map(area => (
-              <TouchableOpacity key={area.id} style={styles.areaCard} onPress={() => router.push(`/area/${area.id}`)}>
+              <TouchableOpacity key={area.id} style={styles.areaCard} onPress={() => router.push(`/list?area=${area.id}`)}>
                 <Text style={styles.areaEmoji}>{area.emoji}</Text>
                 <Text style={styles.areaName}>{area.name}</Text>
               </TouchableOpacity>

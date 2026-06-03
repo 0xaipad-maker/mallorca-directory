@@ -3,6 +3,10 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import { Platform } from 'react-native';
 
+if (Platform.OS === 'web') {
+  require('leaflet/dist/leaflet.css');
+}
+
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
