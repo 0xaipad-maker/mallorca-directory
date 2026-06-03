@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
+import { TripPlan } from '../types';
 
 interface User {
   uid: string;
@@ -11,15 +12,20 @@ interface StoreState {
   language: 'es' | 'en' | 'de' | 'ru';
   favorites: string[];
   user: User | null;
-  plannedDays: string[];
+  tripPlans: TripPlan[];
+  activePlanId: string | null;
   setLanguage: (lang: 'es' | 'en' | 'de' | 'ru') => void;
   addToFavorites: (id: string) => void;
   removeFromFavorites: (id: string) => void;
   isFavorite: (id: string) => boolean;
-  addToPlanned: (dayId: string) => void;
-  removeFromPlanned: (dayId: string) => void;
-  isPlanned: (dayId: string) => boolean;
   setUser: (user: User | null) => void;
+  createPlan: (name: string, startDate: string, endDate: string) => string;
+  deletePlan: (planId: string) => void;
+  setActivePlan: (planId: string | null) => void;
+  addBusinessToDay: (planId: string, dayId: string, businessId: string) => void;
+  removeBusinessFromDay: (planId: string, dayId: string, businessId: string) => void;
+  updateDayNotes: (planId: string, dayId: string, notes: string) => void;
+  renamePlan: (planId: string, name: string) => void;
 }
 
 export const useStore = create<StoreState>()(
@@ -28,15 +34,74 @@ export const useStore = create<StoreState>()(
       language: 'en',
       favorites: [],
       user: null,
-      plannedDays: [],
+      tripPlans: [],
+      activePlanId: null,
       setLanguage: (lang) => set({ language: lang }),
       addToFavorites: (id) => set((state) => ({ favorites: [...state.favorites, id] })),
       removeFromFavorites: (id) => set((state) => ({ favorites: state.favorites.filter((f) => f !== id) })),
       isFavorite: (id) => get().favorites.includes(id),
-      addToPlanned: (dayId) => set((state) => ({ plannedDays: [...state.plannedDays, dayId] })),
-      removeFromPlanned: (dayId) => set((state) => ({ plannedDays: state.plannedDays.filter((d) => d !== dayId) })),
-      isPlanned: (dayId) => get().plannedDays.includes(dayId),
       setUser: (user) => set({ user }),
+      createPlan: (name, startDate, endDate) => {
+        const id = 'plan_' + Date.now();
+        const start = new Date(startDate);
+        const end = new Date(endDate);
+        const days: TripPlan['days'] = [];
+        const dayLabels = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        const current = new Date(start);
+        while (current <= end) {
+          const dateStr = current.toISOString().split('T')[0];
+          days.push({
+            id: 'day_' + dateStr,
+            date: dateStr,
+            label: dayLabels[current.getDay()],
+            businessIds: [],
+          });
+          current.setDate(current.getDate() + 1);
+        }
+        const plan: TripPlan = { id, name, startDate, endDate, days, createdAt: new Date().toISOString() };
+        set((state) => ({ tripPlans: [...state.tripPlans, plan], activePlanId: id }));
+        return id;
+      },
+      deletePlan: (planId) => set((state) => ({
+        tripPlans: state.tripPlans.filter((p) => p.id !== planId),
+        activePlanId: state.activePlanId === planId ? null : state.activePlanId,
+      })),
+      setActivePlan: (planId) => set({ activePlanId: planId }),
+      addBusinessToDay: (planId, dayId, businessId) => set((state) => ({
+        tripPlans: state.tripPlans.map((p) =>
+          p.id !== planId ? p : {
+            ...p,
+            days: p.days.map((d) =>
+              d.id !== dayId ? d : { ...d, businessIds: [...new Set([...d.businessIds, businessId])] }
+            ),
+          }
+        ),
+      })),
+      removeBusinessFromDay: (planId, dayId, businessId) => set((state) => ({
+        tripPlans: state.tripPlans.map((p) =>
+          p.id !== planId ? p : {
+            ...p,
+            days: p.days.map((d) =>
+              d.id !== dayId ? d : { ...d, businessIds: d.businessIds.filter((b) => b !== businessId) }
+            ),
+          }
+        ),
+      })),
+      updateDayNotes: (planId, dayId, notes) => set((state) => ({
+        tripPlans: state.tripPlans.map((p) =>
+          p.id !== planId ? p : {
+            ...p,
+            days: p.days.map((d) =>
+              d.id !== dayId ? d : { ...d, notes }
+            ),
+          }
+        ),
+      })),
+      renamePlan: (planId, name) => set((state) => ({
+        tripPlans: state.tripPlans.map((p) =>
+          p.id !== planId ? p : { ...p, name }
+        ),
+      })),
     }),
     { name: 'mallorca-storage' }
   )
@@ -82,6 +147,26 @@ export const translations = {
     events: 'Eventos',
     guides: 'Guías',
     tripPlanner: 'Planificador',
+    planner: 'Plan de Viaje',
+    plannerSub: 'Organiza tus días en Mallorca',
+    newPlan: 'Nuevo Plan',
+    planName: 'Nombre del viaje...',
+    noPlans: 'Sin planes aún',
+    noPlansSub: 'Crea tu primer plan de viaje',
+    deletePlan: 'Eliminar Plan',
+    deletePlanConfirm: '¿Estás seguro? Esta acción no se puede deshacer.',
+    plannerDateError: 'La fecha de inicio debe ser anterior a la fecha de fin',
+    dayEmpty: 'Nada planificado aún',
+    dayEmptySub: 'Toca + para añadir negocios y eventos a este día',
+    addPlace: 'Añadir Lugar',
+    viewDetails: 'Ver detalles',
+    editNotes: 'Editar notas',
+    addNotes: 'Añadir notas',
+    notesPlaceholder: 'Escribe tus notas aquí...',
+    noResults: 'Sin resultados',
+    savedPlaces: 'lugares guardados',
+    noFavorites: 'Sin favoritos',
+    noFavoritesSub: 'Empieza a explorar y guarda tus sitios favoritos',
     premium: 'Premium',
     claim: 'Reclamar negocio',
     claimed: 'Reclamado',
@@ -153,6 +238,12 @@ export const translations = {
     footerGooglePlay: 'Google Play',
     footerImprint: 'Aviso Legal',
     footerCopyright: 'Reservados todos los derechos',
+    open: 'Abrir',
+    back: 'Atrás',
+    delete: 'Eliminar',
+    create: 'Crear',
+    save: 'Guardar',
+    cancel: 'Cancelar',
   },
   en: {
     title: 'Mallorca Directory',
@@ -193,6 +284,26 @@ export const translations = {
     events: 'Events',
     guides: 'Guides',
     tripPlanner: 'Trip Planner',
+    planner: 'Trip Plan',
+    plannerSub: 'Organize your days on Mallorca',
+    newPlan: 'New Plan',
+    planName: 'Trip name...',
+    noPlans: 'No plans yet',
+    noPlansSub: 'Create your first trip plan to get started',
+    deletePlan: 'Delete Plan',
+    deletePlanConfirm: 'Are you sure? This cannot be undone.',
+    plannerDateError: 'Start date must be before end date',
+    dayEmpty: 'Nothing planned yet',
+    dayEmptySub: 'Tap + to add businesses and events to this day',
+    addPlace: 'Add Place',
+    viewDetails: 'View details',
+    editNotes: 'Edit notes',
+    addNotes: 'Add notes',
+    notesPlaceholder: 'Write your notes here...',
+    noResults: 'No results found',
+    savedPlaces: 'saved places',
+    noFavorites: 'No favorites yet',
+    noFavoritesSub: 'Start exploring and save your favorite places',
     premium: 'Premium',
     claim: 'Claim Business',
     claimed: 'Claimed',
@@ -264,6 +375,12 @@ export const translations = {
     footerGooglePlay: 'Google Play',
     footerImprint: 'Imprint',
     footerCopyright: 'All rights reserved',
+    open: 'Open',
+    back: 'Back',
+    delete: 'Delete',
+    create: 'Create',
+    save: 'Save',
+    cancel: 'Cancel',
   },
   de: {
     title: 'Mallorca Verzeichnis',
@@ -304,6 +421,26 @@ export const translations = {
     events: 'Veranstaltungen',
     guides: 'Ratgeber',
     tripPlanner: 'Reiseplaner',
+    planner: 'Reiseplan',
+    plannerSub: 'Organisieren Sie Ihre Tage auf Mallorca',
+    newPlan: 'Neuer Plan',
+    planName: 'Reisename...',
+    noPlans: 'Noch keine Pläne',
+    noPlansSub: 'Erstellen Sie Ihren ersten Reiseplan',
+    deletePlan: 'Plan löschen',
+    deletePlanConfirm: 'Sind Sie sicher? Dies kann nicht rückgängig gemacht werden.',
+    plannerDateError: 'Startdatum muss vor Enddatum liegen',
+    dayEmpty: 'Noch nichts geplant',
+    dayEmptySub: 'Tippen Sie auf +, um Unternehmen und Veranstaltungen hinzuzufügen',
+    addPlace: 'Ort hinzufügen',
+    viewDetails: 'Details anzeigen',
+    editNotes: 'Notizen bearbeiten',
+    addNotes: 'Notizen hinzufügen',
+    notesPlaceholder: 'Schreiben Sie Ihre Notizen hier...',
+    noResults: 'Keine Ergebnisse gefunden',
+    savedPlaces: 'gespeicherte Orte',
+    noFavorites: 'Keine Favoriten',
+    noFavoritesSub: 'Beginnen Sie mit der Erkundung und speichern Sie Ihre Lieblingsorte',
     premium: 'Premium',
     claim: 'Unternehmen beanspruchen',
     claimed: 'Beansprucht',
@@ -375,6 +512,12 @@ export const translations = {
     footerGooglePlay: 'Google Play',
     footerImprint: 'Impressum',
     footerCopyright: 'Alle Rechte vorbehalten',
+    open: 'Öffnen',
+    back: 'Zurück',
+    delete: 'Löschen',
+    create: 'Erstellen',
+    save: 'Speichern',
+    cancel: 'Abbrechen',
   },
   ru: {
     title: 'Директория Майорки',
@@ -415,6 +558,26 @@ export const translations = {
     events: 'События',
     guides: 'Гайды',
     tripPlanner: 'Планировщик',
+    planner: 'План поездки',
+    plannerSub: 'Организуйте свои дни на Мальорке',
+    newPlan: 'Новый план',
+    planName: 'Название поездки...',
+    noPlans: 'Пока нет планов',
+    noPlansSub: 'Создайте свой первый план поездки',
+    deletePlan: 'Удалить план',
+    deletePlanConfirm: 'Вы уверены? Это действие нельзя отменить.',
+    plannerDateError: 'Дата начала должна быть раньше даты окончания',
+    dayEmpty: 'Пока ничего не запланировано',
+    dayEmptySub: 'Нажмите +, чтобы добавить места и события в этот день',
+    addPlace: 'Добавить место',
+    viewDetails: 'Подробнее',
+    editNotes: 'Редактировать заметки',
+    addNotes: 'Добавить заметки',
+    notesPlaceholder: 'Напишите свои заметки здесь...',
+    noResults: 'Ничего не найдено',
+    savedPlaces: 'сохранённых мест',
+    noFavorites: 'Нет избранного',
+    noFavoritesSub: 'Начните исследовать и сохраняйте любимые места',
     premium: 'Премиум',
     claim: 'Заявить бизнес',
     claimed: 'Заявлено',
@@ -486,6 +649,12 @@ export const translations = {
     footerGooglePlay: 'Google Play',
     footerImprint: 'Выходные данные',
     footerCopyright: 'Все права защищены',
+    open: 'Открыть',
+    back: 'Назад',
+    delete: 'Удалить',
+    create: 'Создать',
+    save: 'Сохранить',
+    cancel: 'Отмена',
   },
 };
 

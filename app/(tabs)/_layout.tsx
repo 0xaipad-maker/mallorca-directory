@@ -32,6 +32,15 @@ export default function TabLayout() {
           </View>
         ),
       }} />
+      <Tabs.Screen name="planner" options={{
+        title: t.tripPlanner || 'Planner',
+        tabBarIcon: ({ focused }) => (
+          <View style={styles.tabIconWrap}>
+            <Text style={[styles.tabIcon, focused && styles.tabIconActive]}>📋</Text>
+            {focused && <View style={styles.tabDot} />}
+          </View>
+        ),
+      }} />
       <Tabs.Screen name="guides" options={{
         title: t.guides || 'Guides',
         tabBarIcon: ({ focused }) => (

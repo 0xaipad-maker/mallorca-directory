@@ -75,8 +75,19 @@ export interface Guide {
 export interface TripDay {
   id: string;
   date: string;
+  label: string;
   businessIds: string[];
+  events?: Array<{ id: string; time?: string }>;
   notes?: string;
+}
+
+export interface TripPlan {
+  id: string;
+  name: string;
+  startDate: string;
+  endDate: string;
+  days: TripDay[];
+  createdAt: string;
 }
 
 export interface ClaimRequest {
