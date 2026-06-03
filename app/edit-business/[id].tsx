@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Alert, ActivityIndicator, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Alert, ActivityIndicator, ScrollView, StyleSheet, Image, Platform } from 'react-native';
 import { useRouter, useLocalSearchParams, Stack } from 'expo-router';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { db } from '../../utils/firebase';
 import { Business } from '../../types';
 import { useStore, translations } from '../../store/useStore';
@@ -17,6 +18,8 @@ export default function EditBusinessScreen() {
   const [saving, setSaving] = useState(false);
   const [authorized, setAuthorized] = useState(false);
   const [business, setBusiness] = useState<Business | null>(null);
+  const [photos, setPhotos] = useState<string[]>([]);
+  const [uploading, setUploading] = useState(false);
   const [form, setForm] = useState({
     name: '',
     address: '',
@@ -51,28 +54,53 @@ export default function EditBusinessScreen() {
         }
         setAuthorized(true);
         setBusiness(data);
+        setPhotos(data.photos || []);
         setForm({
           name: data.name || '',
           address: data.address || '',
           phone: data.phone || '',
           website: data.website || '',
           email: data.email || '',
-          description: data.description?.[language] || '',
+          description: data.description?.en || data.description || '',
           category: data.category || '',
           subcategory: data.subcategory || '',
-          hoursOpen: data.hours?.open || '',
-          hoursClose: data.hours?.close || '',
+          hoursOpen: (data.hours as any)?.open || '',
+          hoursClose: (data.hours as any)?.close || '',
           premium: data.premium || false,
           premiumType: data.premiumType || 'starter',
         });
-      } catch (e: any) {
-        Alert.alert('Error', e.message);
-      } finally {
+        setAuthorized(true);
         setLoading(false);
-      }
+      } catch (e) { console.error(e); setLoading(false); }
     };
     fetch();
   }, [id, user]);
+
+  const handleUploadPhoto = () => {
+    if (Platform.OS !== 'web') {
+      Alert.alert('', t.photoUploadMobile || 'Photo upload is only available on the web version');
+      return;
+    }
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.onchange = async (e: any) => {
+      const file = e.target?.files?.[0];
+      if (!file) return;
+      setUploading(true);
+      try {
+        const storage = getStorage();
+        const storageRef = ref(storage, `businesses/${id}/${Date.now()}_${file.name}`);
+        const snapshot = await uploadBytes(storageRef, file);
+        const url = await getDownloadURL(snapshot.ref);
+        setPhotos(prev => [...prev, url]);
+      } catch (e: any) {
+        Alert.alert('Error', e.message);
+      }
+      setUploading(false);
+    };
+    input.click();
+  };
 
   const handleSave = async () => {
     if (!id) return;
@@ -89,6 +117,7 @@ export default function EditBusinessScreen() {
         hours: { open: form.hoursOpen, close: form.hoursClose },
         premium: form.premium,
         premiumType: form.premiumType,
+        photos,
         updatedAt: new Date().toISOString(),
       };
       updateData[`description.${language}`] = form.description;
@@ -267,6 +296,22 @@ export default function EditBusinessScreen() {
         </TouchableOpacity>
       )}
 
+      {/* Photo upload */}
+      <Text style={[styles.sectionTitle, { marginTop: 24 }]}>{t.photos || 'Photos'}</Text>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.photoStrip}>
+        {photos.map((url, i) => (
+          <View key={i} style={styles.photoItem}>
+            <Image source={{ uri: url }} style={styles.photoThumb} />
+            <TouchableOpacity style={styles.photoRemove} onPress={() => setPhotos(prev => prev.filter((_, idx) => idx !== i))}>
+              <Text style={styles.photoRemoveText}>✕</Text>
+            </TouchableOpacity>
+          </View>
+        ))}
+        <TouchableOpacity style={styles.photoAdd} onPress={handleUploadPhoto} disabled={uploading}>
+          <Text style={styles.photoAddText}>{uploading ? '...' : '+'}</Text>
+        </TouchableOpacity>
+      </ScrollView>
+
       <TouchableOpacity
         style={styles.submitButton}
         onPress={handleSave}
@@ -302,4 +347,11 @@ const styles = StyleSheet.create({
   premiumToggleText: { color: '#92400e', fontWeight: '600', fontSize: 16 },
   submitButton: { backgroundColor: '#3b82f6', borderRadius: 8, padding: 16, alignItems: 'center', marginTop: 8, marginBottom: 32 },
   submitText: { color: '#fff', fontWeight: '600', fontSize: 18 },
+  photoStrip: { marginBottom: 12 },
+  photoItem: { position: 'relative', marginRight: 8 },
+  photoThumb: { width: 80, height: 80, borderRadius: 8, backgroundColor: '#e5e7eb' },
+  photoRemove: { position: 'absolute', top: -6, right: -6, width: 22, height: 22, borderRadius: 11, backgroundColor: '#ef4444', justifyContent: 'center', alignItems: 'center' },
+  photoRemoveText: { fontSize: 10, color: '#fff', fontWeight: '700' },
+  photoAdd: { width: 80, height: 80, borderRadius: 8, backgroundColor: '#e5e7eb', justifyContent: 'center', alignItems: 'center', borderWidth: 2, borderColor: '#d1d5db', borderStyle: 'dashed' },
+  photoAddText: { fontSize: 28, color: '#9ca3af' },
 });

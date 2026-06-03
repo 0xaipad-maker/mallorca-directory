@@ -43,6 +43,7 @@ export default function RootLayout() {
         <Stack.Screen name="events/[id]" options={{ title: 'Event' }} />
         <Stack.Screen name="guides/[slug]" options={{ title: 'Guide' }} />
         <Stack.Screen name="edit-business/[id]" options={{ title: 'Edit Business' }} />
+        <Stack.Screen name="gallery/[id]" options={{ title: 'Gallery', headerShown: false }} />
       </Stack>
     </>
   );
