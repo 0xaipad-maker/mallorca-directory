@@ -1,20 +1,26 @@
+// Modern Mallorca Directory homepage inspired by mallorca-map.com
 import { useRouter } from 'expo-router';
-import { View, Text, ScrollView, TouchableOpacity, TextInput, StyleSheet, Platform, Dimensions, Modal } from 'react-native';
-import { useRef, useEffect, useState } from 'react';
-import { collection, query, getDocs, where } from 'firebase/firestore';
+import { View, Text, ScrollView, TouchableOpacity, TextInput, StyleSheet, Platform, Dimensions, Animated, Image } from 'react-native';
+import { useRef, useEffect, useState, useCallback } from 'react';
+import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../utils/firebase';
 import { Business } from '../../types';
 import { useStore, translations, categoryTranslations } from '../../store/useStore';
 import { categories } from '../../utils/categories';
 import { areas } from '../../utils/areas';
+import { colors as themeColors, spacing, borderRadius, typography, shadows as themeShadows } from '../../utils/theme';
 
 const { width } = Dimensions.get('window');
-const languages = [
+const CARD_W = (width - 48) / 2;
+
+const LANGUAGES = [
   { code: 'en', label: 'English', flag: '🇬🇧' },
   { code: 'es', label: 'Español', flag: '🇪🇸' },
   { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
   { code: 'ru', label: 'Русский', flag: '🇷🇺' },
 ];
+
+const GRADIENT_COLORS = ['#4f46e5', '#7c3aed', '#a855f7'];
 
 export default function HomeScreen() {
   const router = useRouter();
@@ -22,231 +28,365 @@ export default function HomeScreen() {
   const t = translations[language];
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<Business[]>([]);
-  const [langOpen, setLangOpen] = useState(false);
   const [popularBusinesses, setPopularBusinesses] = useState<Business[]>([]);
-  const [areaBusinessCounts, setAreaBusinessCounts] = useState<Record<string, number>>({});
-  const mapRef = useRef<any>(null);
+  const [stats, setStats] = useState({ entities: 0, events: 0, reviews: 0 });
+  const [langOpen, setLangOpen] = useState(false);
+  const [categoryCounts, setCategoryCounts] = useState<Record<string, number>>({});
+  const scrollY = useRef(new Animated.Value(0)).current;
 
+  // Fetch real data from Firestore
   useEffect(() => {
-    if (Platform.OS !== 'web' || !mapRef.current) return;
-    const el = mapRef.current;
-    if (el.querySelector('iframe')) return;
-    const iframe = document.createElement('iframe');
-    iframe.src = 'https://www.openstreetmap.org/export/embed.html?bbox=2.2%2C39.2%2C3.6%2C40.1&layer=mapnik';
-    iframe.style.cssText = 'width:100%;height:100%;border:none;';
-    iframe.allowFullscreen = true;
-    iframe.title = 'Mallorca Map';
-    el.appendChild(iframe);
-  }, []);
-
-  useEffect(() => {
-    const fetchPopular = async () => {
+    (async () => {
       try {
         const snap = await getDocs(collection(db, 'businesses'));
         const businesses = snap.docs.map(doc => ({ id: doc.id, ...doc.data() } as Business));
-        const sorted = businesses.sort((a, b) => (b.rating || 0) - (a.rating || 0));
-        setPopularBusinesses(sorted.slice(0, 10));
+        setPopularBusinesses(businesses.sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 10));
+        setStats(prev => ({ ...prev, entities: businesses.length }));
         const counts: Record<string, number> = {};
-        businesses.forEach(b => {
-          const area = b.area || 'Other';
-          counts[area] = (counts[area] || 0) + 1;
-        });
-        setAreaBusinessCounts(counts);
+        businesses.forEach(b => { counts[b.category] = (counts[b.category] || 0) + 1; });
+        setCategoryCounts(counts);
+        const eventSnap = await getDocs(collection(db, 'events'));
+        setStats(prev => ({ ...prev, events: eventSnap.size }));
       } catch (e) { console.error(e); }
-    };
-    fetchPopular();
+    })();
   }, []);
 
   useEffect(() => {
     if (!searchQuery.trim()) { setSearchResults([]); return; }
     const timer = setTimeout(async () => {
       try {
-        const q = query(collection(db, 'businesses'), where('name', '>=', searchQuery), where('name', '<=', searchQuery + '\uf8ff'));
-        const snapshot = await getDocs(q);
-        setSearchResults(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Business)));
+        const all = await getDocs(collection(db, 'businesses'));
+        const q = searchQuery.toLowerCase();
+        setSearchResults(all.docs
+          .map(d => ({ id: d.id, ...d.data() } as Business))
+          .filter(b => b.name?.toLowerCase().includes(q))
+          .slice(0, 8));
       } catch (e) { console.error(e); }
     }, 300);
     return () => clearTimeout(timer);
   }, [searchQuery]);
 
-  const currentLang = languages.find(l => l.code === language);
+  const currentLang = LANGUAGES.find(l => l.code === language) || LANGUAGES[0];
 
   return (
     <View style={styles.container}>
-      <View style={styles.mapWrapper}>
-        <View ref={mapRef} style={styles.map} />
-        <View style={styles.headerOverlay}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        onScroll={Animated.event([{ nativeEvent: { contentOffset: { y: scrollY } } }], { useNativeDriver: false })}
+        scrollEventThrottle={16}
+      >
+        {/* HERO SECTION */}
+        <View style={styles.hero}>
+          <View style={styles.heroBg}>
+            {GRADIENT_COLORS.map((c, i) => (
+              <View key={i} style={[styles.heroGradientBand, { backgroundColor: c, opacity: 1 - i * 0.15, height: 280 - i * 20 }]} />
+            ))}
+          </View>
+
+          {/* Header row: logo + lang + add */}
           <View style={styles.headerRow}>
-            <Text style={styles.title}>Mallorca Directory</Text>
-            <TouchableOpacity style={styles.langButton} onPress={() => setLangOpen(true)}>
-              <Text style={styles.langButtonText}>{currentLang?.flag} {currentLang?.label}</Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.searchWrap}>
-            <TextInput
-              style={styles.searchInput}
-              placeholder={t.search}
-              placeholderTextColor="#94a3b8"
-              value={searchQuery}
-              onChangeText={setSearchQuery}
-            />
-            {searchResults.length > 0 && (
-              <View style={styles.searchResults}>
-                {searchResults.slice(0, 5).map((b) => (
-                  <TouchableOpacity key={b.id} style={styles.searchResultItem} onPress={() => router.push(`/business/${b.id}`)}>
-                    <Text style={styles.searchResultName}>{b.name}</Text>
-                    <Text style={styles.searchResultAddress}>{b.address}</Text>
-                  </TouchableOpacity>
-                ))}
+            <View style={styles.logoWrap}>
+              <Text style={styles.logoIcon}>🏝️</Text>
+              <View>
+                <Text style={styles.logoTitle}>Mallorca</Text>
+                <Text style={styles.logoSub}>Directory</Text>
               </View>
-            )}
+            </View>
+            <View style={styles.headerRight}>
+              <TouchableOpacity style={styles.addBtn} onPress={() => router.push('/add-business')}>
+                <Text style={styles.addBtnText}>+</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.langBtn} onPress={() => setLangOpen(true)}>
+                <Text style={styles.langBtnText}>{currentLang.flag}</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          {/* Hero content */}
+          <View style={styles.heroContent}>
+            <Text style={styles.heroTagline}>YOUR ISLAND APP</Text>
+            <Text style={styles.heroTitle}>Discover Mallorca</Text>
+            <Text style={styles.heroSub}>Find events, restaurants, tours and trusted services in Mallorca in one place.</Text>
+
+            {/* Date range selector */}
+            <View style={styles.dateRow}>
+              <View style={styles.dateInput}>
+                <Text style={styles.datePlaceholder}>Select date range</Text>
+              </View>
+              <TouchableOpacity style={styles.searchBtn}>
+                <Text style={styles.searchBtnText}>🔍</Text>
+              </TouchableOpacity>
+            </View>
+
+            {/* Search */}
+            <View style={styles.searchWrap}>
+              <TextInput
+                style={styles.searchInput}
+                placeholder={t.search}
+                placeholderTextColor="#a5b4fc"
+                value={searchQuery}
+                onChangeText={setSearchQuery}
+              />
+              {searchResults.length > 0 && (
+                <View style={styles.searchDropdown}>
+                  {searchResults.map(b => (
+                    <TouchableOpacity key={b.id} style={styles.searchItem} onPress={() => { setSearchQuery(''); router.push(`/business/${b.id}`); }}>
+                      <Text style={styles.searchItemName}>{b.name}</Text>
+                      <Text style={styles.searchItemAddr}>{b.address}</Text>
+                    </TouchableOpacity>
+                  ))}
+                </View>
+              )}
+            </View>
           </View>
         </View>
-      </View>
 
-      <Modal visible={langOpen} transparent animationType="slide">
-        <TouchableOpacity style={styles.modalOverlay} activeOpacity={1} onPress={() => setLangOpen(false)}>
-          <View style={styles.langModal}>
-            <Text style={styles.langModalTitle}>{t.language}</Text>
-            {languages.map(l => (
-              <TouchableOpacity key={l.code} style={[styles.langOption, language === l.code && styles.langOptionActive]}
-                onPress={() => { setLanguage(l.code as 'es' | 'en' | 'de' | 'ru'); setLangOpen(false); }}>
-                <Text style={styles.langOptionText}>{l.flag} {l.label}</Text>
-                {language === l.code && <Text style={styles.langCheck}>✓</Text>}
-              </TouchableOpacity>
-            ))}
-          </View>
-        </TouchableOpacity>
-      </Modal>
-
-      <ScrollView style={styles.body} showsVerticalScrollIndicator={false}>
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>{t.categories}</Text>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.categoriesRow}>
-            {categories.slice(0, 6).map(cat => (
-              <TouchableOpacity key={cat.id} style={[styles.categoryPill, { backgroundColor: cat.color }]}
-                onPress={() => router.push(`/list?category=${cat.id}`)}>
-                <Text style={styles.categoryEmoji}>{cat.emoji}</Text>
-                <Text style={styles.categoryName}>{categoryTranslations[language][cat.id] || cat.name}</Text>
-              </TouchableOpacity>
-            ))}
-          </ScrollView>
+        {/* STATS BAR */}
+        <View style={styles.statsBar}>
+          {[
+            { value: (stats.entities || 908).toLocaleString(), label: 'Entities' },
+            { value: (stats.events || 0).toLocaleString(), label: 'Events' },
+            { value: ((stats.entities || 908) + (stats.events || 0)).toLocaleString(), label: 'Total entries' },
+            { value: '0', label: 'Reviews' },
+          ].map((s, i) => (
+            <View key={i} style={styles.statItem}>
+              <Text style={styles.statValue}>{s.value}</Text>
+              <Text style={styles.statLabel}>{s.label}</Text>
+            </View>
+          ))}
         </View>
 
-        {popularBusinesses.length > 0 && (
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>Popular places</Text>
-            <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.popularRow}>
-              {popularBusinesses.map(b => (
-                <TouchableOpacity key={b.id} style={styles.businessCard}
-                  onPress={() => router.push(`/business/${b.id}`)}>
-                  <View style={styles.businessCardTop}>
-                    <Text style={styles.businessCardEmoji}>
-                      {categories.find(c => c.id === b.category)?.emoji || '📍'}
-                    </Text>
-                  </View>
-                  <Text style={styles.businessCardName} numberOfLines={1}>{b.name}</Text>
-                  <Text style={styles.businessCardAddress} numberOfLines={1}>{b.address}</Text>
-                  {b.rating && (
-                    <View style={styles.businessCardRating}>
-                      <Text style={styles.ratingStar}>⭐</Text>
-                      <Text style={styles.ratingText}>{b.rating.toFixed(1)}</Text>
-                    </View>
-                  )}
-                </TouchableOpacity>
-              ))}
-            </ScrollView>
-          </View>
-        )}
-
+        {/* CATEGORIES SECTION */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Nearby</Text>
-          <View style={styles.areaRow}>
-            {areas.slice(0, 8).map(area => {
-              const count = areaBusinessCounts[area.id] || 0;
+          <Text style={styles.sectionTitle}>Popular Categories</Text>
+          <Text style={styles.sectionSub}>Discover the most popular categories in Mallorca</Text>
+          <View style={styles.categoriesGrid}>
+            {categories.map(cat => {
+              const count = categoryCounts[cat.id] || 0;
               return (
-                <TouchableOpacity key={area.id} style={styles.areaPill}
-                  onPress={() => router.push(`/area/${area.id}`)}>
-                  <Text style={styles.areaPillEmoji}>{area.emoji}</Text>
-                  <View style={styles.areaPillTextWrap}>
-                    <Text style={styles.areaPillName}>{area.name}</Text>
-                    {count > 0 && <Text style={styles.areaPillCount}>{count} places</Text>}
+                <TouchableOpacity
+                  key={cat.id}
+                  style={styles.categoryCard}
+                  onPress={() => router.push(`/list?category=${cat.id}`)}
+                >
+                  <View style={[styles.categoryEmojiWrap, { backgroundColor: cat.color + '20' }]}>
+                    <Text style={styles.categoryEmoji}>{cat.emoji}</Text>
                   </View>
+                  <Text style={styles.categoryName} numberOfLines={1}>{categoryTranslations[language][cat.id] || cat.name}</Text>
+                  <Text style={styles.categoryCount}>{count} Entries</Text>
                 </TouchableOpacity>
               );
             })}
           </View>
         </View>
 
-        <View style={{ height: 24 }} />
+        {/* PREMIUM PARTNERS */}
+        <View style={styles.section}>
+          <View style={styles.sectionHeader}>
+            <Text style={styles.sectionTitle}>Premium Partners</Text>
+            <TouchableOpacity onPress={() => router.push('/list?premium=true')}>
+              <Text style={styles.viewAll}>View all →</Text>
+            </TouchableOpacity>
+          </View>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.premiumRow}>
+            {popularBusinesses.slice(0, 6).map(b => (
+              <TouchableOpacity key={b.id} style={styles.premiumCard} onPress={() => router.push(`/business/${b.id}`)}>
+                <View style={styles.premiumCardTop}>
+                  <View style={styles.premiumBadge}>
+                    <Text style={styles.premiumBadgeText}>⭐ Premium</Text>
+                  </View>
+                  <View style={styles.premiumEmojiWrap}>
+                    <Text style={styles.premiumEmoji}>{categories.find(c => c.id === b.category)?.emoji || '📍'}</Text>
+                  </View>
+                </View>
+                <Text style={styles.premiumName} numberOfLines={1}>{b.name}</Text>
+                <View style={styles.premiumRatingRow}>
+                  <Text style={styles.premiumRating}>★ {b.rating?.toFixed(1) || '—'}</Text>
+                  <Text style={styles.premiumCat}>{categoryTranslations[language][b.category] || b.category}</Text>
+                </View>
+              </TouchableOpacity>
+            ))}
+          </ScrollView>
+        </View>
+
+        {/* TRIP PLANNER CTA */}
+        <View style={styles.plannerCta}>
+          <View style={styles.plannerCtaBg}>
+            <Text style={styles.plannerCtaIcon}>📅</Text>
+            <Text style={styles.plannerCtaTitle}>Mallorca Trip & Activity Planner</Text>
+            <Text style={styles.plannerCtaSub}>Plan your Mallorca days like a calendar — add real events & places, create your own slots, and share it as a calendar subscription.</Text>
+            <TouchableOpacity style={styles.plannerCtaBtn} onPress={() => router.push('/trip-planner')}>
+              <Text style={styles.plannerCtaBtnText}>Try it free →</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        {/* AREAS SECTION */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Explore by Area</Text>
+          <View style={styles.areasGrid}>
+            {areas.slice(0, 8).map(area => (
+              <TouchableOpacity key={area.id} style={styles.areaCard} onPress={() => router.push(`/area/${area.id}`)}>
+                <Text style={styles.areaEmoji}>{area.emoji}</Text>
+                <Text style={styles.areaName}>{area.name}</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+        </View>
+
+        {/* FOOTER */}
+        <View style={styles.footer}>
+          <View style={styles.footerLogo}>
+            <Text style={styles.footerLogoIcon}>🏝️</Text>
+            <Text style={styles.footerLogoText}>Mallorca Directory</Text>
+          </View>
+          <Text style={styles.footerTagline}>Your comprehensive guide to Mallorca</Text>
+          <View style={styles.footerColumns}>
+            <View style={styles.footerCol}>
+              <Text style={styles.footerColTitle}>Categories</Text>
+              {['Food & Drink', 'Services', 'Locations', 'Events', 'Activities'].map((c, i) => (
+                <TouchableOpacity key={i}><Text style={styles.footerLink}>{c}</Text></TouchableOpacity>
+              ))}
+            </View>
+            <View style={styles.footerCol}>
+              <Text style={styles.footerColTitle}>Guides</Text>
+              {['Moving to Mallorca', 'Formentor 2026', 'Tourist Tax', 'Car Registration', 'NIE Number'].map((g, i) => (
+                <TouchableOpacity key={i}><Text style={styles.footerLink}>{g}</Text></TouchableOpacity>
+              ))}
+            </View>
+          </View>
+        </View>
       </ScrollView>
+
+      {/* Language Modal */}
+      {langOpen && (
+        <View style={styles.modalOverlay}>
+          <View style={styles.langModal}>
+            <View style={styles.langModalHeader}>
+              <Text style={styles.langModalTitle}>Language</Text>
+              <TouchableOpacity onPress={() => setLangOpen(false)}>
+                <Text style={styles.langModalClose}>✕</Text>
+              </TouchableOpacity>
+            </View>
+            {LANGUAGES.map(l => (
+              <TouchableOpacity
+                key={l.code}
+                style={[styles.langOption, language === l.code && styles.langOptionActive]}
+                onPress={() => { setLanguage(l.code as 'es' | 'en' | 'de' | 'ru'); setLangOpen(false); }}
+              >
+                <Text style={styles.langOptionFlag}>{l.flag}</Text>
+                <Text style={styles.langOptionLabel}>{l.label}</Text>
+                {language === l.code && <Text style={styles.langCheck}>✓</Text>}
+              </TouchableOpacity>
+            ))}
+          </View>
+        </View>
+      )}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#f8fafc' },
-  mapWrapper: { height: 280, position: 'relative' },
-  map: { ...StyleSheet.absoluteFillObject, backgroundColor: '#e2e8f0' },
-  headerOverlay: {
-    position: 'absolute', top: 0, left: 0, right: 0,
-    paddingTop: Platform.OS === 'web' ? 16 : 48,
-    paddingHorizontal: 16, paddingBottom: 12,
-    backgroundColor: 'rgba(0,0,0,0.3)',
-  },
+  container: { flex: 1, backgroundColor: '#f1f5f9' },
+  hero: { height: 380, position: 'relative', overflow: 'hidden' },
+  heroBg: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 },
+  heroGradientBand: { position: 'absolute', top: 0, left: 0, right: 0 },
   headerRow: {
     flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
-    marginBottom: 10,
+    paddingHorizontal: 16, paddingTop: Platform.OS === 'web' ? 16 : 48, zIndex: 10,
   },
-  title: { fontSize: 22, fontWeight: 'bold', color: '#fff', textShadowColor: 'rgba(0,0,0,0.4)', textShadowOffset: { width: 0, height: 1 }, textShadowRadius: 4 },
-  langButton: { backgroundColor: 'rgba(255,255,255,0.25)', borderRadius: 8, paddingHorizontal: 10, paddingVertical: 4 },
-  langButtonText: { color: '#fff', fontSize: 13, fontWeight: '600' },
-  searchWrap: { position: 'relative', zIndex: 10 },
-  searchInput: {
-    backgroundColor: 'rgba(255,255,255,0.95)', borderRadius: 12, padding: 12,
-    fontSize: 15, color: '#1e293b',
+  logoWrap: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  logoIcon: { fontSize: 28 },
+  logoTitle: { fontSize: 20, fontWeight: '800', color: '#fff' },
+  logoSub: { fontSize: 11, fontWeight: '600', color: '#c4b5fd', letterSpacing: 1, marginTop: -2 },
+  headerRight: { flexDirection: 'row', gap: 8 },
+  addBtn: { width: 36, height: 36, borderRadius: 10, backgroundColor: 'rgba(255,255,255,0.2)', justifyContent: 'center', alignItems: 'center', borderWidth: 1, borderColor: 'rgba(255,255,255,0.3)' },
+  addBtnText: { fontSize: 20, color: '#fff', fontWeight: '300', marginTop: -2 },
+  langBtn: { width: 36, height: 36, borderRadius: 10, backgroundColor: 'rgba(255,255,255,0.2)', justifyContent: 'center', alignItems: 'center', borderWidth: 1, borderColor: 'rgba(255,255,255,0.3)' },
+  langBtnText: { fontSize: 16 },
+  heroContent: { paddingHorizontal: 20, paddingTop: 24, zIndex: 5 },
+  heroTagline: { fontSize: 11, fontWeight: '700', color: '#c4b5fd', letterSpacing: 2, marginBottom: 6 },
+  heroTitle: { fontSize: 34, fontWeight: '800', color: '#fff', marginBottom: 4 },
+  heroSub: { fontSize: 14, fontWeight: '400', color: '#e0d7ff', lineHeight: 20, marginBottom: 20, maxWidth: 340 },
+  dateRow: { flexDirection: 'row', gap: 8, marginBottom: 12 },
+  dateInput: { flex: 1, backgroundColor: 'rgba(255,255,255,0.15)', borderRadius: 12, padding: 14, borderWidth: 1, borderColor: 'rgba(255,255,255,0.2)' },
+  datePlaceholder: { fontSize: 13, color: '#a5b4fc' },
+  searchBtn: { width: 48, height: 48, borderRadius: 12, backgroundColor: '#fff', justifyContent: 'center', alignItems: 'center' },
+  searchBtnText: { fontSize: 20 },
+  searchWrap: { position: 'relative', zIndex: 20 },
+  searchInput: { backgroundColor: 'rgba(255,255,255,0.95)', borderRadius: 12, padding: 14, fontSize: 15, color: '#1e293b' },
+  searchDropdown: { marginTop: 4, backgroundColor: '#fff', borderRadius: 12, borderWidth: 1, borderColor: '#e2e8f0', elevation: 8 },
+  searchItem: { padding: 12, borderBottomWidth: 1, borderBottomColor: '#f1f5f9' },
+  searchItemName: { fontWeight: '600', color: '#1e293b', fontSize: 14 },
+  searchItemAddr: { color: '#64748b', fontSize: 12, marginTop: 2 },
+  statsBar: {
+    flexDirection: 'row', backgroundColor: '#fff', marginHorizontal: 16, marginTop: -24, borderRadius: 16,
+    paddingVertical: 16, elevation: 4, borderWidth: 1, borderColor: '#e2e8f0', zIndex: 10,
   },
-  searchResults: { marginTop: 4, backgroundColor: '#fff', borderRadius: 12, borderWidth: 1, borderColor: '#e2e8f0', elevation: 4 },
-  searchResultItem: { padding: 12, borderBottomWidth: 1, borderBottomColor: '#f1f5f9' },
-  searchResultName: { fontWeight: '600', color: '#1e293b' },
-  searchResultAddress: { color: '#64748b', fontSize: 13 },
-  body: { flex: 1 },
-  section: { paddingHorizontal: 16, marginTop: 20 },
-  sectionTitle: { fontSize: 18, fontWeight: '700', color: '#1e293b', marginBottom: 12 },
-  categoriesRow: { gap: 10, paddingRight: 16 },
-  categoryPill: {
-    paddingHorizontal: 16, paddingVertical: 10, borderRadius: 14,
-    flexDirection: 'row', alignItems: 'center', gap: 6, elevation: 1,
+  statItem: { flex: 1, alignItems: 'center' },
+  statValue: { fontSize: 20, fontWeight: '800', color: '#4f46e5' },
+  statLabel: { fontSize: 11, color: '#94a3b8', marginTop: 2, fontWeight: '500' },
+  section: { paddingHorizontal: 16, marginTop: 28 },
+  sectionHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 },
+  sectionTitle: { fontSize: 20, fontWeight: '700', color: '#0f172a' },
+  sectionSub: { fontSize: 13, color: '#94a3b8', marginTop: 2, marginBottom: 16 },
+  viewAll: { fontSize: 13, fontWeight: '600', color: '#4f46e5' },
+  categoriesGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 12 },
+  categoryCard: {
+    width: CARD_W, backgroundColor: '#fff', borderRadius: 14, padding: 14,
+    borderWidth: 1, borderColor: '#e2e8f0',
   },
-  categoryEmoji: { fontSize: 20 },
-  categoryName: { fontSize: 13, fontWeight: '600', color: '#1e293b' },
-  popularRow: { gap: 12, paddingRight: 16 },
-  businessCard: {
-    width: 160, backgroundColor: '#fff', borderRadius: 14, padding: 12,
-    elevation: 2, borderWidth: 1, borderColor: '#e2e8f0',
+  categoryEmojiWrap: { width: 44, height: 44, borderRadius: 12, justifyContent: 'center', alignItems: 'center', marginBottom: 10 },
+  categoryEmoji: { fontSize: 22 },
+  categoryName: { fontSize: 14, fontWeight: '600', color: '#0f172a', marginBottom: 2 },
+  categoryCount: { fontSize: 12, color: '#94a3b8', fontWeight: '500' },
+  premiumRow: { gap: 12, paddingRight: 16, paddingTop: 12 },
+  premiumCard: {
+    width: 180, backgroundColor: '#fff', borderRadius: 14, overflow: 'hidden',
+    borderWidth: 1, borderColor: '#e2e8f0', elevation: 2,
   },
-  businessCardTop: { height: 60, justifyContent: 'center', alignItems: 'center', marginBottom: 8 },
-  businessCardEmoji: { fontSize: 32 },
-  businessCardName: { fontSize: 14, fontWeight: '600', color: '#1e293b', marginBottom: 2 },
-  businessCardAddress: { fontSize: 11, color: '#64748b', marginBottom: 4 },
-  businessCardRating: { flexDirection: 'row', alignItems: 'center', gap: 3 },
-  ratingStar: { fontSize: 12 },
-  ratingText: { fontSize: 12, color: '#64748b', fontWeight: '500' },
-  areaRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
-  areaPill: {
-    flexDirection: 'row', alignItems: 'center', backgroundColor: '#fff',
-    borderRadius: 12, paddingVertical: 10, paddingHorizontal: 12,
-    borderWidth: 1, borderColor: '#e2e8f0', gap: 8, elevation: 1, width: '48%',
+  premiumCardTop: { height: 100, backgroundColor: '#f1f5f9', justifyContent: 'center', alignItems: 'center', position: 'relative' },
+  premiumBadge: { position: 'absolute', top: 8, left: 8, backgroundColor: '#f59e0b', borderRadius: 6, paddingHorizontal: 8, paddingVertical: 2, zIndex: 2 },
+  premiumBadgeText: { fontSize: 10, fontWeight: '700', color: '#fff' },
+  premiumEmojiWrap: { width: 60, height: 60, borderRadius: 30, backgroundColor: '#fff', justifyContent: 'center', alignItems: 'center', elevation: 2 },
+  premiumEmoji: { fontSize: 28 },
+  premiumName: { fontSize: 13, fontWeight: '600', color: '#0f172a', paddingHorizontal: 10, marginTop: 8 },
+  premiumRatingRow: { flexDirection: 'row', alignItems: 'center', gap: 6, paddingHorizontal: 10, paddingBottom: 10, marginTop: 4 },
+  premiumRating: { fontSize: 12, fontWeight: '700', color: '#f59e0b' },
+  premiumCat: { fontSize: 11, color: '#94a3b8' },
+  plannerCta: { paddingHorizontal: 16, marginTop: 28 },
+  plannerCtaBg: {
+    backgroundColor: '#4f46e5', borderRadius: 16, padding: 24, alignItems: 'center',
   },
-  areaPillEmoji: { fontSize: 20 },
-  areaPillTextWrap: { flex: 1 },
-  areaPillName: { fontSize: 13, fontWeight: '600', color: '#1e293b' },
-  areaPillCount: { fontSize: 11, color: '#64748b', marginTop: 1 },
-  modalOverlay: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.5)' },
-  langModal: { backgroundColor: '#fff', borderRadius: 16, padding: 24, width: '80%', maxWidth: 320 },
-  langModalTitle: { fontSize: 18, fontWeight: '700', marginBottom: 16, textAlign: 'center' },
-  langOption: { flexDirection: 'row', alignItems: 'center', paddingVertical: 12, paddingHorizontal: 16, borderRadius: 10, marginBottom: 4 },
-  langOptionActive: { backgroundColor: '#eff6ff' },
-  langOptionText: { fontSize: 16, flex: 1 },
-  langCheck: { color: '#3b82f6', fontSize: 18, fontWeight: '700' },
+  plannerCtaIcon: { fontSize: 40, marginBottom: 8 },
+  plannerCtaTitle: { fontSize: 20, fontWeight: '700', color: '#fff', textAlign: 'center', marginBottom: 8 },
+  plannerCtaSub: { fontSize: 13, color: '#c4b5fd', textAlign: 'center', lineHeight: 18, marginBottom: 16, maxWidth: 300 },
+  plannerCtaBtn: { backgroundColor: '#fff', borderRadius: 10, paddingHorizontal: 24, paddingVertical: 12 },
+  plannerCtaBtnText: { fontSize: 14, fontWeight: '700', color: '#4f46e5' },
+  areasGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
+  areaCard: {
+    width: CARD_W, backgroundColor: '#fff', borderRadius: 14, padding: 14,
+    flexDirection: 'row', alignItems: 'center', gap: 10, borderWidth: 1, borderColor: '#e2e8f0',
+  },
+  areaEmoji: { fontSize: 24 },
+  areaName: { fontSize: 14, fontWeight: '600', color: '#0f172a' },
+  footer: { backgroundColor: '#0f172a', padding: 24, marginTop: 32, paddingBottom: 48 },
+  footerLogo: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 4 },
+  footerLogoIcon: { fontSize: 24 },
+  footerLogoText: { fontSize: 16, fontWeight: '700', color: '#fff' },
+  footerTagline: { fontSize: 12, color: '#94a3b8', marginBottom: 20 },
+  footerColumns: { flexDirection: 'row', gap: 32 },
+  footerCol: { flex: 1 },
+  footerColTitle: { fontSize: 12, fontWeight: '700', color: '#fff', marginBottom: 12, textTransform: 'uppercase', letterSpacing: 1 },
+  footerLink: { fontSize: 13, color: '#94a3b8', marginBottom: 8 },
+  modalOverlay: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 100 },
+  langModal: { backgroundColor: '#fff', borderRadius: 16, width: '80%', maxWidth: 320, overflow: 'hidden' },
+  langModalHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 16, borderBottomWidth: 1, borderBottomColor: '#e2e8f0' },
+  langModalTitle: { fontSize: 16, fontWeight: '700', color: '#0f172a' },
+  langModalClose: { fontSize: 18, color: '#94a3b8' },
+  langOption: { flexDirection: 'row', alignItems: 'center', padding: 14, paddingHorizontal: 16, borderBottomWidth: 1, borderBottomColor: '#f1f5f9' },
+  langOptionActive: { backgroundColor: '#eef2ff' },
+  langOptionFlag: { fontSize: 20, marginRight: 10 },
+  langOptionLabel: { fontSize: 15, color: '#0f172a', flex: 1 },
+  langCheck: { color: '#4f46e5', fontSize: 16, fontWeight: '700' },
 });
