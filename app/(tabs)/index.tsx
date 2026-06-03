@@ -105,13 +105,13 @@ export default function HomeScreen() {
           {/* Hero content */}
           <View style={styles.heroContent}>
             <Text style={styles.heroTagline}>YOUR ISLAND APP</Text>
-            <Text style={styles.heroTitle}>Discover Mallorca</Text>
-            <Text style={styles.heroSub}>Find events, restaurants, tours and trusted services in Mallorca in one place.</Text>
+            <Text style={styles.heroTitle}>{t.discoverMallorca || 'Discover Mallorca'}</Text>
+            <Text style={styles.heroSub}>{t.homeSubtitle || 'Find events, restaurants, tours and trusted services in Mallorca in one place.'}</Text>
 
             {/* Date range selector */}
             <View style={styles.dateRow}>
               <View style={styles.dateInput}>
-                <Text style={styles.datePlaceholder}>Select date range</Text>
+                <Text style={styles.datePlaceholder}>{t.selectDateRange || 'Select date range'}</Text>
               </View>
               <TouchableOpacity style={styles.searchBtn}>
                 <Text style={styles.searchBtnText}>🔍</Text>
@@ -144,10 +144,10 @@ export default function HomeScreen() {
         {/* STATS BAR */}
         <View style={styles.statsBar}>
           {[
-            { value: (stats.entities || 908).toLocaleString(), label: 'Entities' },
-            { value: (stats.events || 0).toLocaleString(), label: 'Events' },
-            { value: ((stats.entities || 908) + (stats.events || 0)).toLocaleString(), label: 'Total entries' },
-            { value: '0', label: 'Reviews' },
+            { value: (stats.entities || 908).toLocaleString(), label: t.entities || 'Entities' },
+            { value: (stats.events || 0).toLocaleString(), label: t.events || 'Events' },
+            { value: ((stats.entities || 908) + (stats.events || 0)).toLocaleString(), label: t.totalEntries || 'Total entries' },
+            { value: '0', label: t.reviews || 'Reviews' },
           ].map((s, i) => (
             <View key={i} style={styles.statItem}>
               <Text style={styles.statValue}>{s.value}</Text>
@@ -158,8 +158,8 @@ export default function HomeScreen() {
 
         {/* CATEGORIES SECTION */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Popular Categories</Text>
-          <Text style={styles.sectionSub}>Discover the most popular categories in Mallorca</Text>
+          <Text style={styles.sectionTitle}>{t.popularCategories || 'Popular Categories'}</Text>
+          <Text style={styles.sectionSub}>{t.popularCategoriesSub || 'Discover the most popular categories in Mallorca'}</Text>
           <View style={styles.categoriesGrid}>
             {categories.map(cat => {
               const count = categoryCounts[cat.id] || 0;
@@ -173,7 +173,7 @@ export default function HomeScreen() {
                     <Text style={styles.categoryEmoji}>{cat.emoji}</Text>
                   </View>
                   <Text style={styles.categoryName} numberOfLines={1}>{categoryTranslations[language][cat.id] || cat.name}</Text>
-                  <Text style={styles.categoryCount}>{count} Entries</Text>
+                  <Text style={styles.categoryCount}>{count} {t.entries || 'Entries'}</Text>
                 </TouchableOpacity>
               );
             })}
@@ -183,9 +183,9 @@ export default function HomeScreen() {
         {/* PREMIUM PARTNERS */}
         <View style={styles.section}>
           <View style={styles.sectionHeader}>
-            <Text style={styles.sectionTitle}>Premium Partners</Text>
+            <Text style={styles.sectionTitle}>{t.premiumPartners || 'Premium Partners'}</Text>
             <TouchableOpacity onPress={() => router.push('/list?premium=true')}>
-              <Text style={styles.viewAll}>View all →</Text>
+              <Text style={styles.viewAll}>{t.viewAll || 'View all'} →</Text>
             </TouchableOpacity>
           </View>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.premiumRow}>
@@ -193,7 +193,7 @@ export default function HomeScreen() {
               <TouchableOpacity key={b.id} style={styles.premiumCard} onPress={() => router.push(`/business/${b.id}`)}>
                 <View style={styles.premiumCardTop}>
                   <View style={styles.premiumBadge}>
-                    <Text style={styles.premiumBadgeText}>⭐ Premium</Text>
+                    <Text style={styles.premiumBadgeText}>⭐ {t.premium || 'Premium'}</Text>
                   </View>
                   <View style={styles.premiumEmojiWrap}>
                     <Text style={styles.premiumEmoji}>{categories.find(c => c.id === b.category)?.emoji || '📍'}</Text>
@@ -213,17 +213,17 @@ export default function HomeScreen() {
         <View style={styles.plannerCta}>
           <View style={styles.plannerCtaBg}>
             <Text style={styles.plannerCtaIcon}>📅</Text>
-            <Text style={styles.plannerCtaTitle}>Mallorca Trip & Activity Planner</Text>
-            <Text style={styles.plannerCtaSub}>Plan your Mallorca days like a calendar — add real events & places, create your own slots, and share it as a calendar subscription.</Text>
+            <Text style={styles.plannerCtaTitle}>{t.plannerCtaTitle || 'Mallorca Trip & Activity Planner'}</Text>
+            <Text style={styles.plannerCtaSub}>{t.plannerCtaSub || 'Plan your Mallorca days like a calendar — add real events & places, create your own slots, and share it as a calendar subscription.'}</Text>
             <TouchableOpacity style={styles.plannerCtaBtn} onPress={() => router.push('/trip-planner')}>
-              <Text style={styles.plannerCtaBtnText}>Try it free →</Text>
+              <Text style={styles.plannerCtaBtnText}>{t.tryItFree || 'Try it free'} →</Text>
             </TouchableOpacity>
           </View>
         </View>
 
         {/* AREAS SECTION */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Explore by Area</Text>
+          <Text style={styles.sectionTitle}>{t.exploreByArea || 'Explore by Area'}</Text>
           <View style={styles.areasGrid}>
             {areas.slice(0, 8).map(area => (
               <TouchableOpacity key={area.id} style={styles.areaCard} onPress={() => router.push(`/area/${area.id}`)}>
@@ -238,21 +238,25 @@ export default function HomeScreen() {
         <View style={styles.footer}>
           <View style={styles.footerLogo}>
             <Text style={styles.footerLogoIcon}>🏝️</Text>
-            <Text style={styles.footerLogoText}>Mallorca Directory</Text>
+            <Text style={styles.footerLogoText}>{t.title || 'Mallorca Directory'}</Text>
           </View>
-          <Text style={styles.footerTagline}>Your comprehensive guide to Mallorca</Text>
+          <Text style={styles.footerTagline}>{t.footerTagline || 'Your comprehensive guide to Mallorca'}</Text>
           <View style={styles.footerColumns}>
             <View style={styles.footerCol}>
-              <Text style={styles.footerColTitle}>Categories</Text>
-              {['Food & Drink', 'Services', 'Locations', 'Events', 'Activities'].map((c, i) => (
-                <TouchableOpacity key={i}><Text style={styles.footerLink}>{c}</Text></TouchableOpacity>
-              ))}
+              <Text style={styles.footerColTitle}>{t.categories || 'Categories'}</Text>
+              <TouchableOpacity><Text style={styles.footerLink}>{t.footerFoodDrink || 'Food & Drink'}</Text></TouchableOpacity>
+              <TouchableOpacity><Text style={styles.footerLink}>{t.footerServices || 'Services'}</Text></TouchableOpacity>
+              <TouchableOpacity><Text style={styles.footerLink}>{t.footerLocations || 'Locations'}</Text></TouchableOpacity>
+              <TouchableOpacity><Text style={styles.footerLink}>{t.footerEvents || 'Events'}</Text></TouchableOpacity>
+              <TouchableOpacity><Text style={styles.footerLink}>{t.footerActivities || 'Activities'}</Text></TouchableOpacity>
             </View>
             <View style={styles.footerCol}>
-              <Text style={styles.footerColTitle}>Guides</Text>
-              {['Moving to Mallorca', 'Formentor 2026', 'Tourist Tax', 'Car Registration', 'NIE Number'].map((g, i) => (
-                <TouchableOpacity key={i}><Text style={styles.footerLink}>{g}</Text></TouchableOpacity>
-              ))}
+              <Text style={styles.footerColTitle}>{t.guides || 'Guides'}</Text>
+              <TouchableOpacity><Text style={styles.footerLink}>{t.footerMoving || 'Moving to Mallorca'}</Text></TouchableOpacity>
+              <TouchableOpacity><Text style={styles.footerLink}>{t.footerFormentor || 'Formentor 2026'}</Text></TouchableOpacity>
+              <TouchableOpacity><Text style={styles.footerLink}>{t.footerTax || 'Tourist Tax'}</Text></TouchableOpacity>
+              <TouchableOpacity><Text style={styles.footerLink}>{t.footerCar || 'Car Registration'}</Text></TouchableOpacity>
+              <TouchableOpacity><Text style={styles.footerLink}>{t.footerNIE || 'NIE Number'}</Text></TouchableOpacity>
             </View>
           </View>
         </View>
@@ -263,7 +267,7 @@ export default function HomeScreen() {
         <View style={styles.modalOverlay}>
           <View style={styles.langModal}>
             <View style={styles.langModalHeader}>
-              <Text style={styles.langModalTitle}>Language</Text>
+              <Text style={styles.langModalTitle}>{t.language || 'Language'}</Text>
               <TouchableOpacity onPress={() => setLangOpen(false)}>
                 <Text style={styles.langModalClose}>✕</Text>
               </TouchableOpacity>

@@ -1,18 +1,30 @@
-import { View, Text, FlatList, TouchableOpacity, StyleSheet, ActivityIndicator, RefreshControl } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, StyleSheet, ActivityIndicator, RefreshControl, Dimensions, Platform } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useCallback, useEffect, useState } from 'react';
 import { collection, query, orderBy, getDocs, where } from 'firebase/firestore';
 import { db } from '../../utils/firebase';
 import { MallorcaEvent } from '../../types';
 import { useStore, translations } from '../../store/useStore';
-import { categories } from '../../utils/categories';
+import { colors as themeColors, spacing, borderRadius, typography, shadows } from '../../utils/theme';
+
+const { width } = Dimensions.get('window');
+
+const GRADIENT_COLORS = ['#4f46e5', '#7c3aed', '#a855f7'];
+
+const EVENT_CATEGORIES = [
+  { id: 'food-drink', label: { en: 'Food & Drink', es: 'Comida y Bebida', de: 'Essen & Trinken', ru: 'Еда и напитки' }, emoji: '🍽️' },
+  { id: 'events-parties', label: { en: 'Events & Parties', es: 'Eventos y Fiestas', de: 'Veranstaltungen & Partys', ru: 'Мероприятия и вечеринки' }, emoji: '🎉' },
+  { id: 'sports-fitness', label: { en: 'Sports & Fitness', es: 'Deportes y Fitness', de: 'Sport & Fitness', ru: 'Спорт и фитнес' }, emoji: '🏃' },
+  { id: 'tours-experiences', label: { en: 'Tours & Experiences', es: 'Tours y Experiencias', de: 'Touren & Erlebnisse', ru: 'Туры и впечатления' }, emoji: '🧭' },
+];
 
 interface MonthGroup {
   month: string;
   data: MallorcaEvent[];
 }
 
-function groupByMonth(events: MallorcaEvent[]): MonthGroup[] {
+function groupByMonth(events: MallorcaEvent[], lang: string): MonthGroup[] {
+  const locale = lang === 'es' ? 'es-ES' : lang === 'de' ? 'de-DE' : lang === 'ru' ? 'ru-RU' : 'en-US';
   const groups: Record<string, MallorcaEvent[]> = {};
   const sorted = [...events].sort((a, b) => {
     const dateA = a.date instanceof Date ? a.date : new Date(a.date);
@@ -21,21 +33,34 @@ function groupByMonth(events: MallorcaEvent[]): MonthGroup[] {
   });
   for (const event of sorted) {
     const date = event.date instanceof Date ? event.date : new Date(event.date);
-    const key = `${date.toLocaleString('default', { month: 'long' })} ${date.getFullYear()}`;
+    const key = `${date.toLocaleString(locale, { month: 'long' })} ${date.getFullYear()}`;
     if (!groups[key]) groups[key] = [];
     groups[key].push(event);
   }
   return Object.entries(groups).map(([month, data]) => ({ month, data }));
 }
 
+function formatTime(dateStr: string, lang: string): string {
+  const d = new Date(dateStr);
+  const now = new Date();
+  const diff = d.getTime() - now.getTime();
+  const t = translations[lang];
+  if (diff < 0) return t.past || 'Past';
+  const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+  if (days === 0) return t.today || 'Today';
+  if (days === 1) return t.tomorrow || 'Tomorrow';
+  if (days <= 7) return `${days} ${t.days || 'days'}`;
+  return d.toLocaleDateString(lang === 'es' ? 'es-ES' : lang === 'de' ? 'de-DE' : lang === 'ru' ? 'ru-RU' : 'en-US', { month: 'short', day: 'numeric' });
+}
+
 export default function EventsScreen() {
   const router = useRouter();
-  const { user } = useStore();
+  const { language, user } = useStore();
+  const t = translations[language];
   const [events, setEvents] = useState<MallorcaEvent[]>([]);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [category, setCategory] = useState('');
-  const [showDropdown, setShowDropdown] = useState(false);
 
   const fetchEvents = useCallback(async (cat: string) => {
     try {
@@ -63,275 +88,206 @@ export default function EventsScreen() {
     fetchEvents(category);
   }, [category, fetchEvents]);
 
-  const groups = groupByMonth(events);
-  const selectedCategory = categories.find(c => c.value === category);
+  const groups = groupByMonth(events, language);
 
   if (loading) {
     return (
       <View style={styles.center}>
-        <ActivityIndicator size="large" color="#2563eb" />
+        <ActivityIndicator size="large" color="#fff" />
       </View>
     );
   }
 
-  return (
-    <View style={styles.container}>
-      {user && (
-        <TouchableOpacity style={styles.addButton} onPress={() => router.push('/add-event')}>
-          <Text style={styles.addButtonText}>+ Add Event</Text>
-        </TouchableOpacity>
-      )}
-
-      <TouchableOpacity style={styles.dropdown} onPress={() => setShowDropdown(true)}>
-        <Text style={styles.dropdownText}>
-          {selectedCategory ? selectedCategory.label : 'All categories'}
-        </Text>
-        <Text style={styles.dropdownArrow}>▼</Text>
-      </TouchableOpacity>
-
-      {showDropdown && (
-        <View style={styles.dropdownOverlay}>
-          <TouchableOpacity style={styles.dropdownBackdrop} onPress={() => setShowDropdown(false)} />
-          <View style={styles.dropdownMenu}>
-            <TouchableOpacity
-              style={[styles.dropdownItem, !category && styles.dropdownItemActive]}
-              onPress={() => { setCategory(''); setShowDropdown(false); }}
-            >
-              <Text style={[styles.dropdownItemText, !category && styles.dropdownItemTextActive]}>All categories</Text>
-            </TouchableOpacity>
-            {categories.map(c => (
-              <TouchableOpacity
-                key={c.value}
-                style={[styles.dropdownItem, category === c.value && styles.dropdownItemActive]}
-                onPress={() => { setCategory(c.value); setShowDropdown(false); }}
-              >
-                <Text style={[styles.dropdownItemText, category === c.value && styles.dropdownItemTextActive]}>{c.label}</Text>
-              </TouchableOpacity>
-            ))}
+  const renderEvent = (event: MallorcaEvent) => {
+    const locale = language === 'es' ? 'es-ES' : language === 'de' ? 'de-DE' : language === 'ru' ? 'ru-RU' : 'en-US';
+    const date = event.date instanceof Date ? event.date : new Date(event.date);
+    const day = date.getDate();
+    const month = date.toLocaleString(locale, { month: 'short' });
+    const rel = formatTime(event.date, language);
+    const title = typeof event.title === 'string' ? event.title : (event.title as any)?.[language] || (event.title as any)?.en || '';
+    return (
+      <TouchableOpacity
+        key={event.id}
+        style={styles.card}
+        onPress={() => router.push(`/events/${event.id}`)}
+        activeOpacity={0.7}
+      >
+        <View style={styles.dateBadge}>
+          <Text style={styles.dateDay}>{day}</Text>
+          <Text style={styles.dateMonth}>{month}</Text>
+        </View>
+        <View style={styles.cardContent}>
+          <Text style={styles.cardTitle} numberOfLines={2}>{title}</Text>
+          {event.location && <Text style={styles.cardLocation}>{event.location}</Text>}
+          <View style={styles.cardMeta}>
+            {event.time && <Text style={styles.cardTime}>{event.time}</Text>}
+            {event.price && <Text style={styles.cardPrice}>{event.price}</Text>}
+            <View style={styles.cardRelWrap}>
+              <Text style={[styles.cardRel, rel === 'Today' && styles.cardRelToday]}>{rel}</Text>
+            </View>
           </View>
         </View>
-      )}
+      </TouchableOpacity>
+    );
+  };
 
+  return (
+    <View style={styles.container}>
       <FlatList
         data={groups}
         keyExtractor={item => item.month}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.list}
-        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor="#2563eb" />}
+        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor="#a855f7" colors={['#a855f7']} />}
+        ListHeaderComponent={
+          <View>
+            {/* HERO */}
+            <View style={styles.hero}>
+              <View style={styles.heroBg}>
+                {GRADIENT_COLORS.map((c, i) => (
+                  <View key={i} style={[styles.heroGradientBand, { backgroundColor: c, opacity: 1 - i * 0.15, height: 200 - i * 15 }]} />
+                ))}
+              </View>
+              <View style={styles.heroContent}>
+                <Text style={styles.heroTagline}>MALLORCA EVENTS</Text>
+                <Text style={styles.heroTitle}>{t.events || 'Events'}</Text>
+                <Text style={styles.heroSub}>{t.eventsSub || 'Discover events, festivals and activities across Mallorca'}</Text>
+                <View style={styles.heroStats}>
+                  <View style={styles.heroStat}>
+                    <Text style={styles.heroStatValue}>{events.length}</Text>
+                    <Text style={styles.heroStatLabel}>{t.events || 'Events'}</Text>
+                  </View>
+                  <View style={styles.heroStatDivider} />
+                  <View style={styles.heroStat}>
+                    <Text style={styles.heroStatValue}>{groups.length}</Text>
+                    <Text style={styles.heroStatLabel}>{t.months || 'Months'}</Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+
+            {/* CATEGORY FILTER */}
+            <View style={styles.filterRow}>
+              <TouchableOpacity
+                style={[styles.filterChip, !category && styles.filterChipActive]}
+                onPress={() => setCategory('')}
+              >
+                <Text style={[styles.filterChipText, !category && styles.filterChipTextActive]}>{t.all || 'All'}</Text>
+              </TouchableOpacity>
+              {EVENT_CATEGORIES.map(cat => {
+                const catLabel = cat.label[language] || cat.label.en;
+                const isActive = category === cat.id;
+                return (
+                  <TouchableOpacity
+                    key={cat.id}
+                    style={[styles.filterChip, isActive && styles.filterChipActive]}
+                    onPress={() => setCategory(isActive ? '' : cat.id)}
+                  >
+                    <Text style={styles.filterChipEmoji}>{cat.emoji}</Text>
+                    <Text style={[styles.filterChipText, isActive && styles.filterChipTextActive]}>{catLabel}</Text>
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
+          </View>
+        }
         ListEmptyComponent={
-          <View style={styles.emptyContainer}>
-            <Text style={styles.emptyTitle}>No events found</Text>
-            <Text style={styles.emptySubtitle}>Check back later for new events and offers</Text>
+          <View style={styles.emptyWrap}>
+            <Text style={styles.emptyEmoji}>📅</Text>
+            <Text style={styles.emptyTitle}>{t.noEvents || 'No events found'}</Text>
+            <Text style={styles.emptySub}>{t.emptyEventsSub || 'Check back later for new events and offers'}</Text>
           </View>
         }
         renderItem={({ item: group }) => (
           <View>
             <Text style={styles.monthHeader}>{group.month}</Text>
-            {group.data.map(event => {
-              const date = event.date instanceof Date ? event.date : new Date(event.date);
-              const day = date.getDate();
-              const month = date.toLocaleString('default', { month: 'short' });
-              return (
-                <TouchableOpacity
-                  key={event.id}
-                  style={styles.card}
-                  onPress={() => router.push(`/events/${event.id}`)}
-                  activeOpacity={0.7}
-                >
-                  <View style={styles.dateBadge}>
-                    <Text style={styles.dateDay}>{day}</Text>
-                    <Text style={styles.dateMonth}>{month}</Text>
-                  </View>
-                  <View style={styles.cardContent}>
-                    <Text style={styles.cardTitle} numberOfLines={2}>{event.title}</Text>
-                    <Text style={styles.cardBusiness} numberOfLines={1}>{event.businessName || event.location}</Text>
-                    {event.time && <Text style={styles.cardTime}>{event.time}</Text>}
-                    {event.price && <Text style={styles.cardPrice}>{event.price}</Text>}
-                  </View>
-                </TouchableOpacity>
-              );
-            })}
+            {group.data.map(renderEvent)}
           </View>
         )}
       />
+
+      {/* FAB */}
+      {user && (
+        <TouchableOpacity style={styles.fab} onPress={() => router.push('/add-event')}>
+          <Text style={styles.fabText}>+</Text>
+        </TouchableOpacity>
+      )}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f3f4f6',
+  container: { flex: 1, backgroundColor: '#f1f5f9' },
+  center: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#4f46e5' },
+  list: { paddingBottom: 24 },
+  // Hero
+  hero: { height: 230, position: 'relative', overflow: 'hidden' },
+  heroBg: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 },
+  heroGradientBand: { position: 'absolute', top: 0, left: 0, right: 0 },
+  heroContent: {
+    paddingHorizontal: 20, paddingTop: Platform.OS === 'web' ? 20 : 56, zIndex: 5,
   },
-  center: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f3f4f6',
+  heroTagline: { fontSize: 11, fontWeight: '700', color: '#c4b5fd', letterSpacing: 2, marginBottom: 4 },
+  heroTitle: { fontSize: 32, fontWeight: '800', color: '#fff', marginBottom: 4 },
+  heroSub: { fontSize: 13, color: '#e0d7ff', lineHeight: 18, marginBottom: 16, maxWidth: 320 },
+  heroStats: { flexDirection: 'row', alignItems: 'center', gap: 16 },
+  heroStat: { alignItems: 'center' },
+  heroStatValue: { fontSize: 22, fontWeight: '800', color: '#fff' },
+  heroStatLabel: { fontSize: 11, color: '#c4b5fd', fontWeight: '500', marginTop: -2 },
+  heroStatDivider: { width: 1, height: 32, backgroundColor: 'rgba(255,255,255,0.2)' },
+  // Filter
+  filterRow: {
+    flexDirection: 'row', paddingHorizontal: 16, paddingVertical: 14, gap: 8,
+    backgroundColor: '#fff', borderBottomWidth: 1, borderBottomColor: '#e2e8f0',
   },
-  list: {
-    paddingHorizontal: 16,
-    paddingBottom: 24,
+  filterChip: {
+    flexDirection: 'row', alignItems: 'center', gap: 4,
+    paddingHorizontal: 12, paddingVertical: 7, borderRadius: 20,
+    backgroundColor: '#f1f5f9', borderWidth: 1, borderColor: '#e2e8f0',
   },
-  addButton: {
-    backgroundColor: '#2563eb',
-    marginHorizontal: 16,
-    marginTop: 16,
-    paddingVertical: 12,
-    borderRadius: 12,
-    alignItems: 'center',
-  },
-  addButtonText: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: '600',
-  },
-  dropdown: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    backgroundColor: '#fff',
-    marginHorizontal: 16,
-    marginTop: 12,
-    marginBottom: 8,
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    borderRadius: 12,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.05,
-    shadowRadius: 4,
-    elevation: 2,
-  },
-  dropdownText: {
-    fontSize: 15,
-    color: '#374151',
-    fontWeight: '500',
-  },
-  dropdownArrow: {
-    fontSize: 10,
-    color: '#9ca3af',
-  },
-  dropdownOverlay: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    zIndex: 100,
-  },
-  dropdownBackdrop: {
-    flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.3)',
-  },
-  dropdownMenu: {
-    position: 'absolute',
-    top: 120,
-    left: 16,
-    right: 16,
-    backgroundColor: '#fff',
-    borderRadius: 12,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.15,
-    shadowRadius: 12,
-    elevation: 8,
-    paddingVertical: 4,
-  },
-  dropdownItem: {
-    paddingHorizontal: 16,
-    paddingVertical: 14,
-  },
-  dropdownItemActive: {
-    backgroundColor: '#eff6ff',
-  },
-  dropdownItemText: {
-    fontSize: 15,
-    color: '#374151',
-  },
-  dropdownItemTextActive: {
-    color: '#2563eb',
-    fontWeight: '600',
-  },
+  filterChipActive: { backgroundColor: '#4f46e5', borderColor: '#4f46e5' },
+  filterChipEmoji: { fontSize: 13 },
+  filterChipText: { fontSize: 12, fontWeight: '600', color: '#475569' },
+  filterChipTextActive: { color: '#fff' },
+  // Month header
   monthHeader: {
-    fontSize: 20,
-    fontWeight: '700',
-    color: '#111827',
-    marginTop: 20,
-    marginBottom: 10,
+    fontSize: 18, fontWeight: '700', color: '#0f172a',
+    paddingHorizontal: 20, marginTop: 16, marginBottom: 8,
   },
+  // Card
   card: {
-    flexDirection: 'row',
-    backgroundColor: '#fff',
-    borderRadius: 14,
-    padding: 14,
-    marginBottom: 10,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.06,
-    shadowRadius: 8,
-    elevation: 3,
+    flexDirection: 'row', backgroundColor: '#fff', borderRadius: 14,
+    marginHorizontal: 16, marginBottom: 10, padding: 14,
+    borderWidth: 1, borderColor: '#e2e8f0',
+    ...shadows.md,
   },
   dateBadge: {
-    width: 54,
-    height: 60,
-    borderRadius: 10,
-    backgroundColor: '#eff6ff',
-    justifyContent: 'center',
-    alignItems: 'center',
+    width: 52, height: 58, borderRadius: 10,
+    backgroundColor: '#eef2ff', justifyContent: 'center', alignItems: 'center',
     marginRight: 14,
   },
-  dateDay: {
-    fontSize: 22,
-    fontWeight: '700',
-    color: '#2563eb',
-    lineHeight: 26,
+  dateDay: { fontSize: 22, fontWeight: '700', color: '#4f46e5', lineHeight: 26 },
+  dateMonth: { fontSize: 11, fontWeight: '600', color: '#4f46e5', textTransform: 'uppercase' as const },
+  cardContent: { flex: 1, justifyContent: 'center' },
+  cardTitle: { fontSize: 15, fontWeight: '600', color: '#0f172a', marginBottom: 2 },
+  cardLocation: { fontSize: 12, color: '#64748b', marginBottom: 4 },
+  cardMeta: { flexDirection: 'row', alignItems: 'center', gap: 8, flexWrap: 'wrap' as const },
+  cardTime: { fontSize: 12, color: '#94a3b8' },
+  cardPrice: { fontSize: 12, color: '#059669', fontWeight: '600' },
+  cardRelWrap: { marginLeft: 'auto' as const },
+  cardRel: { fontSize: 11, fontWeight: '600', color: '#94a3b8', backgroundColor: '#f1f5f9', paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 },
+  cardRelToday: { color: '#dc2626', backgroundColor: '#fef2f2' },
+  // Empty
+  emptyWrap: { alignItems: 'center', paddingTop: 60 },
+  emptyEmoji: { fontSize: 48, marginBottom: 12 },
+  emptyTitle: { fontSize: 18, fontWeight: '600', color: '#374151', marginBottom: 6 },
+  emptySub: { fontSize: 14, color: '#94a3b8', textAlign: 'center', paddingHorizontal: 40 },
+  // FAB
+  fab: {
+    position: 'absolute', bottom: 24, right: 20,
+    width: 56, height: 56, borderRadius: 28,
+    backgroundColor: '#4f46e5', justifyContent: 'center', alignItems: 'center',
+    elevation: 8, ...shadows.lg,
   },
-  dateMonth: {
-    fontSize: 12,
-    fontWeight: '600',
-    color: '#2563eb',
-    textTransform: 'uppercase',
-  },
-  cardContent: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-  cardTitle: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#111827',
-    marginBottom: 2,
-  },
-  cardBusiness: {
-    fontSize: 13,
-    color: '#6b7280',
-    marginBottom: 2,
-  },
-  cardTime: {
-    fontSize: 13,
-    color: '#9ca3af',
-    marginTop: 2,
-  },
-  cardPrice: {
-    fontSize: 13,
-    color: '#059669',
-    fontWeight: '600',
-    marginTop: 2,
-  },
-  emptyContainer: {
-    alignItems: 'center',
-    paddingTop: 80,
-  },
-  emptyTitle: {
-    fontSize: 18,
-    fontWeight: '600',
-    color: '#374151',
-    marginBottom: 6,
-  },
-  emptySubtitle: {
-    fontSize: 14,
-    color: '#9ca3af',
-    textAlign: 'center',
-  },
+  fabText: { fontSize: 28, color: '#fff', fontWeight: '300', marginTop: -2 },
 });
