@@ -15,6 +15,7 @@ export interface Business {
   category: string;
   subcategory?: string;
   rating?: number;
+  reviewCount?: number;
   verified?: boolean;
   premium?: boolean;
   premiumType?: 'starter' | 'pro';

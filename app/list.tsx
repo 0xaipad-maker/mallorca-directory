@@ -81,6 +81,9 @@ export default function ListScreen() {
             <View style={styles.cardRatingRow}>
               <Text style={styles.cardStars}>{renderStars(item.rating)}</Text>
               <Text style={styles.cardRatingValue}>{item.rating.toFixed(1)}</Text>
+              {item.reviewCount !== undefined && (
+                <Text style={styles.cardReviewCount}>({item.reviewCount})</Text>
+              )}
             </View>
           )}
           {item.description?.[language] && (
@@ -221,6 +224,7 @@ const styles = StyleSheet.create({
   cardRatingRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginBottom: 4 },
   cardStars: { fontSize: 14, color: '#f59e0b', letterSpacing: 1 },
   cardRatingValue: { fontSize: 12, fontWeight: '700', color: '#0f172a' },
+  cardReviewCount: { fontSize: 11, color: '#94a3b8' },
   cardDesc: { fontSize: 12, color: '#64748b', lineHeight: 16 },
   cardRight: { justifyContent: 'center', paddingLeft: 8 },
   cardArrow: { fontSize: 24, color: '#cbd5e1', fontWeight: '300' },

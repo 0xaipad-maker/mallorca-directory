@@ -1,7 +1,7 @@
 import { View, Text, ScrollView, TouchableOpacity, Linking, Alert, StyleSheet, Image, TextInput, FlatList, ActivityIndicator } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { doc, getDoc, collection, query, where, getDocs, addDoc, serverTimestamp, orderBy } from 'firebase/firestore';
+import { doc, getDoc, updateDoc, collection, query, where, getDocs, addDoc, serverTimestamp, orderBy } from 'firebase/firestore';
 import { db } from '../../utils/firebase';
 import { Business } from '../../types';
 import { useStore, translations, categoryTranslations, subcategoryTranslations } from '../../store/useStore';
@@ -81,8 +81,12 @@ export default function BusinessDetailScreen() {
         businessId: business.id, userId: user.uid, userName: user.displayName || 'Anonymous',
         rating: reviewRating, text: reviewText.trim(), createdAt: serverTimestamp(),
       });
-      setReviews([{ id: ref.id, businessId: business.id, userId: user.uid, userName: user.displayName || 'Anonymous', rating: reviewRating, text: reviewText.trim(), createdAt: new Date().toISOString() }, ...reviews]);
+      const updatedReviews = [{ id: ref.id, businessId: business.id, userId: user.uid, userName: user.displayName || 'Anonymous', rating: reviewRating, text: reviewText.trim(), createdAt: new Date().toISOString() }, ...reviews];
+      setReviews(updatedReviews);
       setReviewText(''); setReviewRating(0);
+      const newAvg = updatedReviews.reduce((a, r) => a + r.rating, 0) / updatedReviews.length;
+      setBusiness({ ...business, rating: newAvg, reviewCount: updatedReviews.length });
+      await updateDoc(doc(db, 'businesses', business.id), { rating: newAvg, reviewCount: updatedReviews.length });
     } catch (e) { console.error(e); }
     setSubmitting(false);
   };
@@ -145,6 +149,9 @@ export default function BusinessDetailScreen() {
               <View style={s.ratingRow}>
                 <Text style={s.ratingStar}>{renderStars(business.rating)}</Text>
                 <Text style={s.ratingValue}>{business.rating.toFixed(1)}</Text>
+                {business.reviewCount !== undefined && (
+                  <Text style={s.reviewCount}>({business.reviewCount})</Text>
+                )}
               </View>
             )}
           </View>
@@ -275,7 +282,7 @@ export default function BusinessDetailScreen() {
 
         <View style={s.card}>
           <View style={s.sectionHeader}>
-            <Text style={s.label}>Reviews</Text>
+            <Text style={s.label}>{t.reviews || 'Reviews'}</Text>
             {reviews.length > 0 && <Text style={s.reviewCount}>{reviews.length}</Text>}
           </View>
           {reviews.length > 0 && (
@@ -303,7 +310,7 @@ export default function BusinessDetailScreen() {
                   </TouchableOpacity>
                 ))}
               </View>
-              <TextInput style={s.reviewInput} placeholder="Write a review..." value={reviewText} onChangeText={setReviewText} multiline />
+              <TextInput style={s.reviewInput} placeholder={t.writeReview || 'Write a review...'} value={reviewText} onChangeText={setReviewText} multiline />
               <TouchableOpacity style={[s.submitBtn, (!reviewText.trim() || reviewRating === 0) && s.submitDisabled]} onPress={submitReview} disabled={submitting || !reviewText.trim() || reviewRating === 0}>
                 <Text style={s.submitText}>{submitting ? '...' : t.submit}</Text>
               </TouchableOpacity>
