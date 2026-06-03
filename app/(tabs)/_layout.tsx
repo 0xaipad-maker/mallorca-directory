@@ -1,8 +1,11 @@
 import { Tabs } from 'expo-router';
 import { Text, View, StyleSheet } from 'react-native';
 import { colors, typography, shadows } from '../../utils/theme';
+import { useStore, translations } from '../../store/useStore';
 
 export default function TabLayout() {
+  const { language } = useStore();
+  const t = translations[language];
   return (
     <Tabs screenOptions={{
       headerShown: false,
@@ -12,7 +15,7 @@ export default function TabLayout() {
       tabBarLabelStyle: styles.tabLabel,
     }}>
       <Tabs.Screen name="index" options={{
-        title: 'Explore',
+        title: t.explore || 'Explore',
         tabBarIcon: ({ focused }) => (
           <View style={styles.tabIconWrap}>
             <Text style={[styles.tabIcon, focused && styles.tabIconActive]}>🗺️</Text>
@@ -21,7 +24,7 @@ export default function TabLayout() {
         ),
       }} />
       <Tabs.Screen name="events" options={{
-        title: 'Events',
+        title: t.events || 'Events',
         tabBarIcon: ({ focused }) => (
           <View style={styles.tabIconWrap}>
             <Text style={[styles.tabIcon, focused && styles.tabIconActive]}>📅</Text>
@@ -30,7 +33,7 @@ export default function TabLayout() {
         ),
       }} />
       <Tabs.Screen name="guides" options={{
-        title: 'Guides',
+        title: t.guides || 'Guides',
         tabBarIcon: ({ focused }) => (
           <View style={styles.tabIconWrap}>
             <Text style={[styles.tabIcon, focused && styles.tabIconActive]}>📖</Text>
@@ -39,7 +42,7 @@ export default function TabLayout() {
         ),
       }} />
       <Tabs.Screen name="favorites" options={{
-        title: 'Favorites',
+        title: t.favorites || 'Favorites',
         tabBarIcon: ({ focused }) => (
           <View style={styles.tabIconWrap}>
             <Text style={[styles.tabIcon, focused && styles.tabIconActive]}>⭐</Text>
@@ -48,7 +51,7 @@ export default function TabLayout() {
         ),
       }} />
       <Tabs.Screen name="profile" options={{
-        title: 'Profile',
+        title: t.profile || 'Profile',
         tabBarIcon: ({ focused }) => (
           <View style={styles.tabIconWrap}>
             <Text style={[styles.tabIcon, focused && styles.tabIconActive]}>👤</Text>
