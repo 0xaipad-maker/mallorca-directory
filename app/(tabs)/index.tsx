@@ -126,6 +126,7 @@ export default function HomeScreen() {
                 placeholderTextColor="#a5b4fc"
                 value={searchQuery}
                 onChangeText={setSearchQuery}
+                onFocus={() => router.push('/search')}
               />
               {searchResults.length > 0 && (
                 <View style={styles.searchDropdown}>

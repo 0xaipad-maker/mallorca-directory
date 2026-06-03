@@ -35,6 +35,7 @@ export default function RootLayout() {
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="area/[name]" options={{ title: 'Area' }} />
         <Stack.Screen name="list" options={{ title: 'Businesses' }} />
+        <Stack.Screen name="search" options={{ title: 'Search', headerShown: false }} />
         <Stack.Screen name="login" options={{ title: 'Sign In' }} />
         <Stack.Screen name="add-business" options={{ title: 'Add Business' }} />
         <Stack.Screen name="add-event" options={{ title: 'Add Event' }} />

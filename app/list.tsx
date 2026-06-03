@@ -1,10 +1,10 @@
-import { View, Text, FlatList, TouchableOpacity, StyleSheet, ActivityIndicator, Platform, TextInput } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, StyleSheet, ActivityIndicator, Platform, TextInput, ScrollView } from 'react-native';
 import { useLocalSearchParams, useRouter, Stack } from 'expo-router';
 import { useEffect, useState, useMemo, useCallback } from 'react';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../utils/firebase';
 import { Business } from '../types';
-import { useStore, translations, categoryTranslations } from '../store/useStore';
+import { useStore, translations, categoryTranslations, subcategoryTranslations } from '../store/useStore';
 import { categories } from '../utils/categories';
 import { areas } from '../utils/areas';
 import { colors as themeColors, spacing, borderRadius, typography, shadows } from '../utils/theme';
@@ -19,6 +19,7 @@ export default function ListScreen() {
   const [loading, setLoading] = useState(true);
   const [showMap, setShowMap] = useState(false);
   const [searchQ, setSearchQ] = useState('');
+  const [subcatFilter, setSubcatFilter] = useState('');
 
   const cat = categories.find(c => c.id === category);
   const areaData = areas.find(a => a.id === area || a.name === area);
@@ -43,14 +44,20 @@ export default function ListScreen() {
   }, [category, area]);
 
   const filtered = useMemo(() => {
-    if (!searchQ.trim()) return allBusinesses;
-    const q = searchQ.toLowerCase();
-    return allBusinesses.filter(b =>
-      b.name?.toLowerCase().includes(q) ||
-      b.address?.toLowerCase().includes(q) ||
-      b.area?.toLowerCase().includes(q)
-    );
-  }, [allBusinesses, searchQ]);
+    let list = allBusinesses;
+    const q = searchQ.toLowerCase().trim();
+    if (q) {
+      list = list.filter(b =>
+        b.name?.toLowerCase().includes(q) ||
+        b.address?.toLowerCase().includes(q) ||
+        b.area?.toLowerCase().includes(q)
+      );
+    }
+    if (subcatFilter) {
+      list = list.filter(b => b.subcategory === subcatFilter);
+    }
+    return list;
+  }, [allBusinesses, searchQ, subcatFilter]);
 
   const renderStars = (n?: number) => {
     if (!n) return '';
@@ -155,6 +162,20 @@ export default function ListScreen() {
               />
             </View>
 
+            {/* Subcategory filter */}
+            {category && categories.find(c => c.id === category)?.subcategories && (
+              <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.subcatRow}>
+                <TouchableOpacity style={[styles.subcatChip, !subcatFilter && styles.subcatChipActive]} onPress={() => setSubcatFilter('')}>
+                  <Text style={[styles.subcatChipText, !subcatFilter && styles.subcatChipTextActive]}>{t.all || 'All'}</Text>
+                </TouchableOpacity>
+                {categories.find(c => c.id === category)!.subcategories!.map(sub => (
+                  <TouchableOpacity key={sub} style={[styles.subcatChip, subcatFilter === sub && styles.subcatChipActive]} onPress={() => setSubcatFilter(sub)}>
+                    <Text style={[styles.subcatChipText, subcatFilter === sub && styles.subcatChipTextActive]}>{subcategoryTranslations[language]?.[sub] || sub}</Text>
+                  </TouchableOpacity>
+                ))}
+              </ScrollView>
+            )}
+
             {/* Map */}
             {showMap && allBusinesses.length > 0 && (
               <View style={styles.mapWrap}>
@@ -209,6 +230,12 @@ const styles = StyleSheet.create({
   },
   // Map
   mapWrap: { margin: 16, borderRadius: 14, overflow: 'hidden', ...shadows.md },
+  // Subcategory filter
+  subcatRow: { paddingHorizontal: 16, paddingVertical: 8, gap: 8, backgroundColor: '#fff', borderBottomWidth: 1, borderBottomColor: '#e2e8f0' },
+  subcatChip: { paddingHorizontal: 14, paddingVertical: 6, borderRadius: 16, backgroundColor: '#f1f5f9', borderWidth: 1, borderColor: '#e2e8f0' },
+  subcatChipActive: { backgroundColor: '#eef2ff', borderColor: '#4f46e5' },
+  subcatChipText: { fontSize: 12, color: '#64748b' },
+  subcatChipTextActive: { color: '#4f46e5', fontWeight: '600' },
   // Card
   card: {
     flexDirection: 'row', backgroundColor: '#fff', borderRadius: 14,
