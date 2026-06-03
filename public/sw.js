@@ -1,13 +1,12 @@
-const CACHE = 'mallorca-v1';
-const ASSETS = [
-  '/mallorca-directory/',
-  '/mallorca-directory/index.html',
-  '/mallorca-directory/404.html',
+const CACHE = 'mallorca-v2';
+const STATIC_ASSETS = [
+  '/mallorca-directory/favicon.ico',
+  '/mallorca-directory/manifest.json',
 ];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(
-    caches.open(CACHE).then((cache) => cache.addAll(ASSETS)).then(() => self.skipWaiting())
+    caches.open(CACHE).then((cache) => cache.addAll(STATIC_ASSETS)).then(() => self.skipWaiting())
   );
 });
 
@@ -18,9 +17,16 @@ self.addEventListener('activate', (e) => {
 });
 
 self.addEventListener('fetch', (e) => {
-  if (e.request.url.includes('firestore') || e.request.url.includes('firebase')) {
+  const url = new URL(e.request.url);
+  const isNav = e.request.mode === 'navigate';
+  const isStatic = url.pathname.match(/\.(js|css|png|ico|json)$/);
+  const isFirebase = url.hostname.includes('firestore') || url.hostname.includes('firebase');
+
+  if (isFirebase) {
     e.respondWith(networkFirst(e.request));
-  } else if (e.request.url.includes('/mallorca-directory/')) {
+  } else if (isNav) {
+    e.respondWith(networkFirst(e.request));
+  } else if (isStatic) {
     e.respondWith(cacheFirst(e.request));
   }
 });
