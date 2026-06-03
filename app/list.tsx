@@ -134,11 +134,38 @@ export default function ListScreen() {
         contentContainerStyle={styles.list}
         ListHeaderComponent={
           <View>
-            {/* Header with count and map toggle */}
+            {/* Breadcrumbs */}
+            <View style={styles.breadcrumbs}>
+              <TouchableOpacity onPress={() => router.push('/')}>
+                <Text style={styles.breadcrumbLink}>{t.home || 'Home'}</Text>
+              </TouchableOpacity>
+              {cat && (
+                <>
+                  <Text style={styles.breadcrumbSep}>›</Text>
+                  <TouchableOpacity onPress={() => router.push(`/list?category=${cat.id}`)}>
+                    <Text style={styles.breadcrumbLink}>{catName}</Text>
+                  </TouchableOpacity>
+                </>
+              )}
+              {areaData && (
+                <>
+                  <Text style={styles.breadcrumbSep}>›</Text>
+                  <Text style={styles.breadcrumbCurrent}>{areaData.name}</Text>
+                </>
+              )}
+              {subcatFilter && (
+                <>
+                  <Text style={styles.breadcrumbSep}>›</Text>
+                  <Text style={styles.breadcrumbCurrent}>{subcategoryTranslations[language]?.[subcatFilter] || subcatFilter}</Text>
+                </>
+              )}
+            </View>
+
+            {/* Header with count, map toggle, and area links */}
             <View style={styles.headerBar}>
               <View>
                 <Text style={styles.headerCount}>
-                  {filtered.length} {filtered.length === 1 ? 'entry' : 'entries'}
+                  {filtered.length} {filtered.length === 1 ? 'entry' : t.entries || 'entries'}
                 </Text>
               </View>
               <TouchableOpacity
@@ -208,6 +235,11 @@ const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#f1f5f9' },
   center: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#f1f5f9' },
   list: { paddingBottom: 24 },
+  // Breadcrumbs
+  breadcrumbs: { flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', paddingHorizontal: 16, paddingTop: 10, paddingBottom: 4, backgroundColor: '#fff', borderBottomWidth: 1, borderBottomColor: '#e2e8f0' },
+  breadcrumbLink: { fontSize: 12, color: '#4f46e5', fontWeight: '500' },
+  breadcrumbSep: { fontSize: 12, color: '#94a3b8', marginHorizontal: 4 },
+  breadcrumbCurrent: { fontSize: 12, color: '#64748b', fontWeight: '600' },
   // Header bar
   headerBar: {
     flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
