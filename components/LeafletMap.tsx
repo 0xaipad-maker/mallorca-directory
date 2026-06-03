@@ -17,7 +17,7 @@ export default function LeafletMap({
   businessName,
   style,
 }: {
-  mode: 'overview' | 'single';
+  mode: 'overview' | 'single' | 'multiple';
   height?: number;
   businesses?: Array<{ id: string; name: string; lat: number; lng: number; category?: string }>;
   lat?: number;
@@ -39,6 +39,15 @@ export default function LeafletMap({
       url = `https://www.openstreetmap.org/export/embed.html?bbox=${lng - pad},${lat - pad},${lng + pad},${lat + pad}&layer=mapnik&marker=${lat},${lng}`;
     } else if (mode === 'overview') {
       url = 'https://www.openstreetmap.org/export/embed.html?bbox=2.15%2C39.15%2C3.65%2C40.15&layer=mapnik';
+    } else if (mode === 'multiple' && businesses && businesses.length > 0) {
+      const lats = businesses.map(b => b.lat);
+      const lngs = businesses.map(b => b.lng);
+      const minLat = Math.min(...lats);
+      const maxLat = Math.max(...lats);
+      const minLng = Math.min(...lngs);
+      const maxLng = Math.max(...lngs);
+      const pad2 = 0.02;
+      url = `https://www.openstreetmap.org/export/embed.html?bbox=${minLng - pad2},${minLat - pad2},${maxLng + pad2},${maxLat + pad2}&layer=mapnik`;
     }
 
     if (!url) return;

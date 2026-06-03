@@ -1,94 +1,232 @@
-import { View, Text, SectionList, TouchableOpacity, ActivityIndicator, StyleSheet } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, StyleSheet, ActivityIndicator, Platform, TextInput } from 'react-native';
 import { useLocalSearchParams, useRouter, Stack } from 'expo-router';
-import { useEffect, useState, useMemo } from 'react';
-import { collection, query, where, getDocs } from 'firebase/firestore';
+import { useEffect, useState, useMemo, useCallback } from 'react';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../utils/firebase';
 import { Business } from '../types';
 import { useStore, translations, categoryTranslations } from '../store/useStore';
+import { categories } from '../utils/categories';
 import { areas } from '../utils/areas';
-
-const areaEmojis: Record<string, string> = {};
-for (const a of areas) areaEmojis[a.name] = a.emoji;
+import { colors as themeColors, spacing, borderRadius, typography, shadows } from '../utils/theme';
+import LeafletMap from '../components/LeafletMap';
 
 export default function ListScreen() {
-  const { category, area } = useLocalSearchParams<{ category: string; area: string }>();
+  const { category, area } = useLocalSearchParams<{ category?: string; area?: string }>();
   const router = useRouter();
   const { language } = useStore();
   const t = translations[language];
-  const catName = category ? categoryTranslations[language]?.[category] || category : '';
-  const [businesses, setBusinesses] = useState<Business[]>([]);
+  const [allBusinesses, setAllBusinesses] = useState<Business[]>([]);
   const [loading, setLoading] = useState(true);
+  const [showMap, setShowMap] = useState(false);
+  const [searchQ, setSearchQ] = useState('');
+
+  const cat = categories.find(c => c.id === category);
+  const areaData = areas.find(a => a.id === area || a.name === area);
+  const catName = cat ? (categoryTranslations[language]?.[cat.id] || cat.name) : (areaData?.name || 'All');
 
   useEffect(() => {
-    const fetch = async () => {
-      setLoading(true);
+    (async () => {
       try {
-        const constraints: any[] = [];
-        if (category) constraints.push(where('category', '==', category));
-        if (area) constraints.push(where('area', '==', area));
-        const q = constraints.length > 0 ? query(collection(db, 'businesses'), ...constraints) : collection(db, 'businesses');
-        const snapshot = await getDocs(q);
-        setBusinesses(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Business)));
-      } catch (e) { console.error(e); } finally { setLoading(false); }
-    };
-    fetch();
+        let q;
+        if (category) {
+          q = query(collection(db, 'businesses'), where('category', '==', category));
+        } else if (area) {
+          q = query(collection(db, 'businesses'), where('area', '==', area));
+        } else {
+          q = query(collection(db, 'businesses'));
+        }
+        const snap = await getDocs(q);
+        setAllBusinesses(snap.docs.map(d => ({ id: d.id, ...d.data() }) as Business));
+      } catch (e) { console.error(e); }
+      finally { setLoading(false); }
+    })();
   }, [category, area]);
 
-  const sections = useMemo(() => {
-    const grouped: Record<string, Business[]> = {};
-    for (const b of businesses) {
-      const key = b.area || 'Other';
-      if (!grouped[key]) grouped[key] = [];
-      grouped[key].push(b);
-    }
-    return Object.entries(grouped).sort(([a], [b]) => a.localeCompare(b)).map(([key, data]) => ({ area: key, data }));
-  }, [businesses]);
+  const filtered = useMemo(() => {
+    if (!searchQ.trim()) return allBusinesses;
+    const q = searchQ.toLowerCase();
+    return allBusinesses.filter(b =>
+      b.name?.toLowerCase().includes(q) ||
+      b.address?.toLowerCase().includes(q) ||
+      b.area?.toLowerCase().includes(q)
+    );
+  }, [allBusinesses, searchQ]);
 
-  const pageTitle = area ? `${area} · ${catName}` : (catName || 'All');
+  const renderStars = (n?: number) => {
+    if (!n) return '';
+    const r = Math.round(n);
+    return '★'.repeat(r) + '☆'.repeat(5 - r);
+  };
+
+  const renderBusiness = useCallback(({ item }: { item: Business }) => {
+    const bCat = categories.find(c => c.id === item.category);
+    const bArea = areas.find(a => a.id === item.area);
+    return (
+      <TouchableOpacity
+        style={styles.card}
+        onPress={() => router.push(`/business/${item.id}`)}
+        activeOpacity={0.7}
+      >
+        <View style={styles.cardLeft}>
+          <View style={[styles.cardEmojiWrap, { backgroundColor: bCat?.color || '#f1f5f9' }]}>
+            <Text style={styles.cardEmoji}>{bCat?.emoji || '📍'}</Text>
+          </View>
+        </View>
+        <View style={styles.cardBody}>
+          <Text style={styles.cardTitle} numberOfLines={1}>{item.name}</Text>
+          <Text style={styles.cardArea} numberOfLines={1}>
+            {bArea?.name || item.area || item.address}
+          </Text>
+          {item.rating && (
+            <View style={styles.cardRatingRow}>
+              <Text style={styles.cardStars}>{renderStars(item.rating)}</Text>
+              <Text style={styles.cardRatingValue}>{item.rating.toFixed(1)}</Text>
+            </View>
+          )}
+          {item.description?.[language] && (
+            <Text style={styles.cardDesc} numberOfLines={2}>{item.description[language]}</Text>
+          )}
+        </View>
+        <View style={styles.cardRight}>
+          <Text style={styles.cardArrow}>›</Text>
+        </View>
+      </TouchableOpacity>
+    );
+  }, [language, router]);
+
+  const center = useMemo(() => {
+    if (allBusinesses.length === 0) return { lat: 39.6, lng: 2.9 };
+    const lat = allBusinesses.reduce((s, b) => s + b.location.lat, 0) / allBusinesses.length;
+    const lng = allBusinesses.reduce((s, b) => s + b.location.lng, 0) / allBusinesses.length;
+    return { lat, lng };
+  }, [allBusinesses]);
 
   if (loading) {
-    return <View style={styles.center}><ActivityIndicator size="large" color="#3b82f6" /></View>;
+    return (
+      <View style={styles.center}>
+        <ActivityIndicator size="large" color="#4f46e5" />
+      </View>
+    );
   }
 
   return (
     <View style={styles.container}>
-      <Stack.Screen options={{ title: pageTitle }} />
-      <SectionList
-        sections={sections}
-        keyExtractor={(item) => item.id}
-        renderSectionHeader={({ section: { area: a } }) => (
-          <View style={styles.sectionHeader}>
-            <Text style={styles.sectionEmoji}>{areaEmojis[a] || '📍'}</Text>
-            <Text style={styles.sectionTitle}>{a}</Text>
+      <Stack.Screen options={{
+        title: catName,
+        headerTintColor: '#fff',
+        headerStyle: { backgroundColor: '#4f46e5' },
+      }} />
+
+      <FlatList
+        data={filtered}
+        keyExtractor={item => item.id}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.list}
+        ListHeaderComponent={
+          <View>
+            {/* Header with count and map toggle */}
+            <View style={styles.headerBar}>
+              <View>
+                <Text style={styles.headerCount}>
+                  {filtered.length} {filtered.length === 1 ? 'entry' : 'entries'}
+                </Text>
+              </View>
+              <TouchableOpacity
+                style={[styles.mapToggle, showMap && styles.mapToggleActive]}
+                onPress={() => setShowMap(!showMap)}
+              >
+                <Text style={[styles.mapToggleText, showMap && styles.mapToggleTextActive]}>
+                  {showMap ? '☰ List' : '🗺️ Map'}
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            {/* Search */}
+            <View style={styles.searchWrap}>
+              <TextInput
+                style={styles.searchInput}
+                placeholder={`${t.search || 'Search'}...`}
+                placeholderTextColor="#94a3b8"
+                value={searchQ}
+                onChangeText={setSearchQ}
+              />
+            </View>
+
+            {/* Map */}
+            {showMap && allBusinesses.length > 0 && (
+              <View style={styles.mapWrap}>
+                <LeafletMap
+                  mode="multiple"
+                  height={300}
+                  businesses={allBusinesses}
+                  businessName={catName}
+                />
+              </View>
+            )}
           </View>
-        )}
-        renderItem={({ item }) => (
-          <TouchableOpacity style={styles.item} onPress={() => router.push(`/business/${item.id}`)}>
-            <Text style={styles.itemName}>{item.name}</Text>
-            <Text style={styles.itemAddress}>{item.address}</Text>
-            {item.description?.[language] && <Text style={styles.itemDesc} numberOfLines={1}>{item.description[language]}</Text>}
-            {item.rating ? <Text style={styles.itemRating}>★ {item.rating}</Text> : null}
-          </TouchableOpacity>
-        )}
-        ListEmptyComponent={
-          <View style={styles.empty}><Text style={styles.emptyText}>{t.noBusinessesInCategory}</Text></View>
         }
+        ListEmptyComponent={
+          <View style={styles.emptyWrap}>
+            <Text style={styles.emptyEmoji}>{cat?.emoji || '📭'}</Text>
+            <Text style={styles.emptyTitle}>{t.noBusinessesInCategory || 'No businesses in this category'}</Text>
+            {searchQ ? (
+              <Text style={styles.emptySub}>Try a different search term</Text>
+            ) : null}
+          </View>
+        }
+        renderItem={renderBusiness}
       />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#fff' },
-  center: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  sectionHeader: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#f1f5f9', paddingHorizontal: 16, paddingVertical: 10, borderBottomWidth: 1, borderBottomColor: '#e2e8f0' },
-  sectionEmoji: { fontSize: 18, marginRight: 8 },
-  sectionTitle: { fontSize: 16, fontWeight: '700', color: '#334155' },
-  item: { padding: 16, borderBottomWidth: 1, borderBottomColor: '#f1f5f9', paddingLeft: 52 },
-  itemName: { fontWeight: '600', fontSize: 18, color: '#1e293b' },
-  itemAddress: { color: '#475569' },
-  itemDesc: { color: '#64748b', fontSize: 13, marginTop: 2 },
-  itemRating: { color: '#ca8a04', marginTop: 2 },
-  empty: { padding: 32, alignItems: 'center' },
-  emptyText: { color: '#64748b' },
+  container: { flex: 1, backgroundColor: '#f1f5f9' },
+  center: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#f1f5f9' },
+  list: { paddingBottom: 24 },
+  // Header bar
+  headerBar: {
+    flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
+    paddingHorizontal: 16, paddingVertical: 12, backgroundColor: '#fff',
+    borderBottomWidth: 1, borderBottomColor: '#e2e8f0',
+  },
+  headerCount: { fontSize: 14, fontWeight: '700', color: '#0f172a' },
+  mapToggle: {
+    paddingHorizontal: 14, paddingVertical: 6, borderRadius: 8,
+    backgroundColor: '#f1f5f9', borderWidth: 1, borderColor: '#e2e8f0',
+  },
+  mapToggleActive: { backgroundColor: '#4f46e5', borderColor: '#4f46e5' },
+  mapToggleText: { fontSize: 13, fontWeight: '600', color: '#475569' },
+  mapToggleTextActive: { color: '#fff' },
+  // Search
+  searchWrap: { paddingHorizontal: 16, paddingVertical: 10, backgroundColor: '#fff', borderBottomWidth: 1, borderBottomColor: '#e2e8f0' },
+  searchInput: {
+    backgroundColor: '#f1f5f9', borderRadius: 10, padding: 12, fontSize: 14, color: '#0f172a',
+    borderWidth: 1, borderColor: '#e2e8f0',
+  },
+  // Map
+  mapWrap: { margin: 16, borderRadius: 14, overflow: 'hidden', ...shadows.md },
+  // Card
+  card: {
+    flexDirection: 'row', backgroundColor: '#fff', borderRadius: 14,
+    marginHorizontal: 16, marginTop: 10, padding: 14,
+    borderWidth: 1, borderColor: '#e2e8f0', ...shadows.sm,
+  },
+  cardLeft: { marginRight: 14 },
+  cardEmojiWrap: { width: 52, height: 52, borderRadius: 12, justifyContent: 'center', alignItems: 'center' },
+  cardEmoji: { fontSize: 26 },
+  cardBody: { flex: 1 },
+  cardTitle: { fontSize: 15, fontWeight: '700', color: '#0f172a', marginBottom: 2 },
+  cardArea: { fontSize: 12, color: '#64748b', marginBottom: 4 },
+  cardRatingRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginBottom: 4 },
+  cardStars: { fontSize: 14, color: '#f59e0b', letterSpacing: 1 },
+  cardRatingValue: { fontSize: 12, fontWeight: '700', color: '#0f172a' },
+  cardDesc: { fontSize: 12, color: '#64748b', lineHeight: 16 },
+  cardRight: { justifyContent: 'center', paddingLeft: 8 },
+  cardArrow: { fontSize: 24, color: '#cbd5e1', fontWeight: '300' },
+  // Empty
+  emptyWrap: { alignItems: 'center', paddingTop: 60 },
+  emptyEmoji: { fontSize: 48, marginBottom: 12 },
+  emptyTitle: { fontSize: 16, fontWeight: '600', color: '#64748b', textAlign: 'center', paddingHorizontal: 40, marginBottom: 6 },
+  emptySub: { fontSize: 13, color: '#94a3b8', textAlign: 'center' },
 });

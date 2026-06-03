@@ -234,29 +234,57 @@ export default function HomeScreen() {
           </View>
         </View>
 
-        {/* FOOTER */}
+        {/* FOOTER — mallorca-map.com style */}
         <View style={styles.footer}>
-          <View style={styles.footerLogo}>
-            <Text style={styles.footerLogoIcon}>🏝️</Text>
-            <Text style={styles.footerLogoText}>{t.title || 'Mallorca Directory'}</Text>
-          </View>
-          <Text style={styles.footerTagline}>{t.footerTagline || 'Your comprehensive guide to Mallorca'}</Text>
-          <View style={styles.footerColumns}>
-            <View style={styles.footerCol}>
-              <Text style={styles.footerColTitle}>{t.categories || 'Categories'}</Text>
-              <TouchableOpacity><Text style={styles.footerLink}>{t.footerFoodDrink || 'Food & Drink'}</Text></TouchableOpacity>
-              <TouchableOpacity><Text style={styles.footerLink}>{t.footerServices || 'Services'}</Text></TouchableOpacity>
-              <TouchableOpacity><Text style={styles.footerLink}>{t.footerLocations || 'Locations'}</Text></TouchableOpacity>
-              <TouchableOpacity><Text style={styles.footerLink}>{t.footerEvents || 'Events'}</Text></TouchableOpacity>
-              <TouchableOpacity><Text style={styles.footerLink}>{t.footerActivities || 'Activities'}</Text></TouchableOpacity>
+          <View style={styles.footerInner}>
+            <View style={styles.footerBrand}>
+              <View style={styles.footerLogo}>
+                <Text style={styles.footerLogoIcon}>🏝️</Text>
+                <View>
+                  <Text style={styles.footerLogoText}>{t.title || 'Mallorca Directory'}</Text>
+                  <Text style={styles.footerTagline}>{t.footerTagline || 'Your comprehensive guide to Mallorca'}</Text>
+                </View>
+              </View>
+              <Text style={styles.footerAppText}>Also as an app</Text>
+              <View style={styles.footerAppBtns}>
+                <View style={styles.footerAppBtn}><Text style={styles.footerAppBtnText}>📱 App Store</Text></View>
+                <View style={styles.footerAppBtn}><Text style={styles.footerAppBtnText}>📱 Google Play</Text></View>
+              </View>
             </View>
-            <View style={styles.footerCol}>
-              <Text style={styles.footerColTitle}>{t.guides || 'Guides'}</Text>
-              <TouchableOpacity><Text style={styles.footerLink}>{t.footerMoving || 'Moving to Mallorca'}</Text></TouchableOpacity>
-              <TouchableOpacity><Text style={styles.footerLink}>{t.footerFormentor || 'Formentor 2026'}</Text></TouchableOpacity>
-              <TouchableOpacity><Text style={styles.footerLink}>{t.footerTax || 'Tourist Tax'}</Text></TouchableOpacity>
-              <TouchableOpacity><Text style={styles.footerLink}>{t.footerCar || 'Car Registration'}</Text></TouchableOpacity>
-              <TouchableOpacity><Text style={styles.footerLink}>{t.footerNIE || 'NIE Number'}</Text></TouchableOpacity>
+
+            <View style={styles.footerColumns}>
+              <View style={styles.footerCol}>
+                <Text style={styles.footerColTitle}>{t.categories || 'Categories'}</Text>
+                {categories.slice(0, 7).map(cat => (
+                  <TouchableOpacity key={cat.id} onPress={() => router.push(`/list?category=${cat.id}`)}>
+                    <Text style={styles.footerLink}>{categoryTranslations[language]?.[cat.id] || cat.name}</Text>
+                  </TouchableOpacity>
+                ))}
+              </View>
+              <View style={styles.footerCol}>
+                <Text style={styles.footerColTitle}>{t.guides || 'Guides'}</Text>
+                <TouchableOpacity onPress={() => router.push('/guides/long-term-rentals-mallorca')}><Text style={styles.footerLink}>{t.footerMoving || 'Moving to Mallorca'}</Text></TouchableOpacity>
+                <TouchableOpacity onPress={() => router.push('/guides/formentor-2026')}><Text style={styles.footerLink}>{t.footerFormentor || 'Formentor 2026'}</Text></TouchableOpacity>
+                <TouchableOpacity onPress={() => router.push('/guides/mallorca-tourist-tax-2026')}><Text style={styles.footerLink}>{t.footerTax || 'Tourist Tax'}</Text></TouchableOpacity>
+                <TouchableOpacity onPress={() => router.push('/guides/traffic-fines-mallorca')}><Text style={styles.footerLink}>{t.footerCar || 'Traffic Fines'}</Text></TouchableOpacity>
+                <TouchableOpacity onPress={() => router.push('/guides/nie-number-mallorca')}><Text style={styles.footerLink}>{t.footerNIE || 'NIE Number'}</Text></TouchableOpacity>
+              </View>
+              <View style={styles.footerCol}>
+                <Text style={styles.footerColTitle}>{t.premium || 'Premium'}</Text>
+                <TouchableOpacity onPress={() => router.push('/add-business')}><Text style={styles.footerLink}>{t.addBusiness || 'Add Business'}</Text></TouchableOpacity>
+                <TouchableOpacity><Text style={styles.footerLink}>{t.claim || 'Claim Listing'}</Text></TouchableOpacity>
+              </View>
+            </View>
+
+            <View style={styles.footerBottom}>
+              <View style={styles.footerLegal}>
+                <TouchableOpacity><Text style={styles.footerLegalLink}>{t.privacy || 'Privacy'}</Text></TouchableOpacity>
+                <Text style={styles.footerLegalSep}>·</Text>
+                <TouchableOpacity><Text style={styles.footerLegalLink}>{t.help || 'Contact'}</Text></TouchableOpacity>
+                <Text style={styles.footerLegalSep}>·</Text>
+                <TouchableOpacity><Text style={styles.footerLegalLink}>Imprint</Text></TouchableOpacity>
+              </View>
+              <Text style={styles.footerCopy}>© 2026 Mallorca Directory. {t.footerTagline || 'All rights reserved'}</Text>
             </View>
           </View>
         </View>
@@ -374,15 +402,26 @@ const styles = StyleSheet.create({
   },
   areaEmoji: { fontSize: 24 },
   areaName: { fontSize: 14, fontWeight: '600', color: '#0f172a' },
-  footer: { backgroundColor: '#0f172a', padding: 24, marginTop: 32, paddingBottom: 48 },
-  footerLogo: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 4 },
-  footerLogoIcon: { fontSize: 24 },
-  footerLogoText: { fontSize: 16, fontWeight: '700', color: '#fff' },
-  footerTagline: { fontSize: 12, color: '#94a3b8', marginBottom: 20 },
-  footerColumns: { flexDirection: 'row', gap: 32 },
+  footer: { backgroundColor: '#0f172a', paddingTop: 32, marginTop: 32 },
+  footerInner: { paddingHorizontal: 24, paddingBottom: 48 },
+  footerBrand: { marginBottom: 28 },
+  footerLogo: { flexDirection: 'row', alignItems: 'center', gap: 10, marginBottom: 6 },
+  footerLogoIcon: { fontSize: 28 },
+  footerLogoText: { fontSize: 18, fontWeight: '700', color: '#fff' },
+  footerTagline: { fontSize: 12, color: '#94a3b8', marginTop: 2 },
+  footerAppText: { fontSize: 11, color: '#64748b', fontWeight: '600', textTransform: 'uppercase' as const, letterSpacing: 1, marginBottom: 8, marginTop: 16 },
+  footerAppBtns: { flexDirection: 'row', gap: 8 },
+  footerAppBtn: { backgroundColor: '#1e293b', borderRadius: 8, paddingHorizontal: 14, paddingVertical: 8, borderWidth: 1, borderColor: '#334155' },
+  footerAppBtnText: { fontSize: 12, fontWeight: '600', color: '#e2e8f0' },
+  footerColumns: { flexDirection: 'row', gap: 24, marginBottom: 28 },
   footerCol: { flex: 1 },
-  footerColTitle: { fontSize: 12, fontWeight: '700', color: '#fff', marginBottom: 12, textTransform: 'uppercase', letterSpacing: 1 },
-  footerLink: { fontSize: 13, color: '#94a3b8', marginBottom: 8 },
+  footerColTitle: { fontSize: 11, fontWeight: '700', color: '#fff', marginBottom: 12, textTransform: 'uppercase' as const, letterSpacing: 1 },
+  footerLink: { fontSize: 12, color: '#94a3b8', marginBottom: 7, lineHeight: 16 },
+  footerBottom: { borderTopWidth: 1, borderTopColor: '#1e293b', paddingTop: 16 },
+  footerLegal: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 8 },
+  footerLegalLink: { fontSize: 12, color: '#64748b' },
+  footerLegalSep: { fontSize: 12, color: '#334155' },
+  footerCopy: { fontSize: 11, color: '#475569' },
   modalOverlay: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 100 },
   langModal: { backgroundColor: '#fff', borderRadius: 16, width: '80%', maxWidth: 320, overflow: 'hidden' },
   langModalHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 16, borderBottomWidth: 1, borderBottomColor: '#e2e8f0' },
