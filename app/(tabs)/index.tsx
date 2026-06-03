@@ -245,10 +245,10 @@ export default function HomeScreen() {
                   <Text style={styles.footerTagline}>{t.footerTagline || 'Your comprehensive guide to Mallorca'}</Text>
                 </View>
               </View>
-              <Text style={styles.footerAppText}>Also as an app</Text>
+              <Text style={styles.footerAppText}>{t.footerApp || 'Also as an app'}</Text>
               <View style={styles.footerAppBtns}>
-                <View style={styles.footerAppBtn}><Text style={styles.footerAppBtnText}>📱 App Store</Text></View>
-                <View style={styles.footerAppBtn}><Text style={styles.footerAppBtnText}>📱 Google Play</Text></View>
+                <View style={styles.footerAppBtn}><Text style={styles.footerAppBtnText}>📱 {t.footerAppStore || 'App Store'}</Text></View>
+                <View style={styles.footerAppBtn}><Text style={styles.footerAppBtnText}>📱 {t.footerGooglePlay || 'Google Play'}</Text></View>
               </View>
             </View>
 
@@ -282,9 +282,9 @@ export default function HomeScreen() {
                 <Text style={styles.footerLegalSep}>·</Text>
                 <TouchableOpacity><Text style={styles.footerLegalLink}>{t.help || 'Contact'}</Text></TouchableOpacity>
                 <Text style={styles.footerLegalSep}>·</Text>
-                <TouchableOpacity><Text style={styles.footerLegalLink}>Imprint</Text></TouchableOpacity>
+                <TouchableOpacity><Text style={styles.footerLegalLink}>{t.footerImprint || 'Imprint'}</Text></TouchableOpacity>
               </View>
-              <Text style={styles.footerCopy}>© 2026 Mallorca Directory. {t.footerTagline || 'All rights reserved'}</Text>
+              <Text style={styles.footerCopy}>© 2026 Mallorca Directory. {t.footerCopyright || 'All rights reserved'}</Text>
             </View>
           </View>
         </View>

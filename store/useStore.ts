@@ -148,6 +148,11 @@ export const translations = {
     footerTax: 'Impuesto Turístico',
     footerCar: 'Matricular Coche',
     footerNIE: 'Número NIE',
+    footerApp: 'También como app',
+    footerAppStore: 'App Store',
+    footerGooglePlay: 'Google Play',
+    footerImprint: 'Aviso Legal',
+    footerCopyright: 'Reservados todos los derechos',
   },
   en: {
     title: 'Mallorca Directory',
@@ -254,6 +259,11 @@ export const translations = {
     footerTax: 'Tourist Tax',
     footerCar: 'Car Registration',
     footerNIE: 'NIE Number',
+    footerApp: 'Also as an app',
+    footerAppStore: 'App Store',
+    footerGooglePlay: 'Google Play',
+    footerImprint: 'Imprint',
+    footerCopyright: 'All rights reserved',
   },
   de: {
     title: 'Mallorca Verzeichnis',
@@ -360,6 +370,11 @@ export const translations = {
     footerTax: 'Touristensteuer',
     footerCar: 'Auto anmelden',
     footerNIE: 'NIE-Nummer',
+    footerApp: 'Auch als App',
+    footerAppStore: 'App Store',
+    footerGooglePlay: 'Google Play',
+    footerImprint: 'Impressum',
+    footerCopyright: 'Alle Rechte vorbehalten',
   },
   ru: {
     title: 'Директория Майорки',
@@ -466,6 +481,11 @@ export const translations = {
     footerTax: 'Туристический налог',
     footerCar: 'Регистрация авто',
     footerNIE: 'Номер NIE',
+    footerApp: 'Также как приложение',
+    footerAppStore: 'App Store',
+    footerGooglePlay: 'Google Play',
+    footerImprint: 'Выходные данные',
+    footerCopyright: 'Все права защищены',
   },
 };
 
