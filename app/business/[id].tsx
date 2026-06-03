@@ -42,12 +42,13 @@ export default function BusinessDetailScreen() {
   const [reviewText, setReviewText] = useState('');
   const [reviewRating, setReviewRating] = useState(0);
   const [submitting, setSubmitting] = useState(false);
-  const { language, isFavorite, addToFavorites, removeFromFavorites, user } = useStore();
+  const { language, isFavorite, addToFavorites, removeFromFavorites, addToRecent, user } = useStore();
   const t = translations[language];
 
   useEffect(() => {
     (async () => {
       if (!id) return;
+      addToRecent(id);
       try {
         const docRef = doc(db, 'businesses', id);
         const docSnap = await getDoc(docRef);
@@ -89,6 +90,16 @@ export default function BusinessDetailScreen() {
       await updateDoc(doc(db, 'businesses', business.id), { rating: newAvg, reviewCount: updatedReviews.length });
     } catch (e) { console.error(e); }
     setSubmitting(false);
+  };
+
+  const handleShare = async () => {
+    if (!business) return;
+    const url = typeof window !== 'undefined' ? `${window.location.origin}/mallorca-directory/business/${business.id}` : `https://0xaipad-maker.github.io/mallorca-directory/business/${business.id}`;
+    if (navigator?.share) {
+      try { await navigator.share({ title: business.name, url }); } catch {}
+    } else {
+      try { await navigator.clipboard.writeText(url); Alert.alert('', t.linkCopied || 'Link copied!'); } catch {}
+    }
   };
 
   const renderStars = (n: number) => '★'.repeat(Math.round(n)) + '☆'.repeat(5 - Math.round(n));
@@ -156,7 +167,7 @@ export default function BusinessDetailScreen() {
             )}
           </View>
           <View style={s.headerActions}>
-            <TouchableOpacity onPress={() => router.push(`/share/${business.id}`)} style={s.iconBtn}>
+            <TouchableOpacity onPress={handleShare} style={s.iconBtn}>
               <Text style={s.iconBtnText}>📤</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={toggleFavorite} style={s.iconBtn}>

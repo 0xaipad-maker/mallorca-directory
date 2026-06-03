@@ -11,6 +11,7 @@ interface User {
 interface StoreState {
   language: 'es' | 'en' | 'de' | 'ru';
   favorites: string[];
+  recentlyViewed: string[];
   user: User | null;
   tripPlans: TripPlan[];
   activePlanId: string | null;
@@ -18,6 +19,7 @@ interface StoreState {
   addToFavorites: (id: string) => void;
   removeFromFavorites: (id: string) => void;
   isFavorite: (id: string) => boolean;
+  addToRecent: (id: string) => void;
   setUser: (user: User | null) => void;
   createPlan: (name: string, startDate: string, endDate: string) => string;
   deletePlan: (planId: string) => void;
@@ -33,6 +35,7 @@ export const useStore = create<StoreState>()(
     (set, get) => ({
       language: 'en',
       favorites: [],
+      recentlyViewed: [],
       user: null,
       tripPlans: [],
       activePlanId: null,
@@ -40,6 +43,9 @@ export const useStore = create<StoreState>()(
       addToFavorites: (id) => set((state) => ({ favorites: [...state.favorites, id] })),
       removeFromFavorites: (id) => set((state) => ({ favorites: state.favorites.filter((f) => f !== id) })),
       isFavorite: (id) => get().favorites.includes(id),
+      addToRecent: (id) => set((state) => ({
+        recentlyViewed: [id, ...state.recentlyViewed.filter(r => r !== id)].slice(0, 12),
+      })),
       setUser: (user) => set({ user }),
       createPlan: (name, startDate, endDate) => {
         const id = 'plan_' + Date.now();
@@ -178,6 +184,8 @@ export const translations = {
     allAreas: 'Todas las zonas',
     home: 'Inicio',
     entries: 'Entradas',
+    recentlyViewed: 'Visto Recientemente',
+    linkCopied: '¡Enlace copiado!',
     any: 'Cualquiera',
     plannedDays2: 'Planificados',
     myBusinesses: 'Mis Negocios',
@@ -254,6 +262,8 @@ export const translations = {
     allAreas: 'All areas',
     home: 'Home',
     any: 'Any',
+    recentlyViewed: 'Recently Viewed',
+    linkCopied: 'Link copied!',
     plannedDays2: 'Planned',
     myBusinesses: 'My Businesses',
     myReviews: 'My Reviews',
@@ -406,6 +416,8 @@ export const translations = {
     allAreas: 'Alle Gebiete',
     home: 'Startseite',
     any: 'Alle',
+    recentlyViewed: 'Zuletzt Angesehen',
+    linkCopied: 'Link kopiert!',
     plannedDays2: 'Geplant',
     myBusinesses: 'Meine Unternehmen',
     myReviews: 'Meine Bewertungen',
@@ -558,6 +570,8 @@ export const translations = {
     allAreas: 'Все районы',
     home: 'Главная',
     any: 'Любой',
+    recentlyViewed: 'Недавно Просмотренные',
+    linkCopied: 'Ссылка скопирована!',
     plannedDays2: 'Запланировано',
     myBusinesses: 'Мои компании',
     myReviews: 'Мои отзывы',

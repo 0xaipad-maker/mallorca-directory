@@ -2,7 +2,7 @@
 import { useRouter } from 'expo-router';
 import { View, Text, ScrollView, TouchableOpacity, TextInput, StyleSheet, Platform, Dimensions, Animated, Image } from 'react-native';
 import { useRef, useEffect, useState, useCallback } from 'react';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, doc, getDoc } from 'firebase/firestore';
 import { db } from '../../utils/firebase';
 import { Business } from '../../types';
 import { useStore, translations, categoryTranslations } from '../../store/useStore';
@@ -24,7 +24,7 @@ const GRADIENT_COLORS = ['#4f46e5', '#7c3aed', '#a855f7'];
 
 export default function HomeScreen() {
   const router = useRouter();
-  const { language, user, setLanguage } = useStore();
+  const { language, user, recentlyViewed, setLanguage } = useStore();
   const t = translations[language];
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<Business[]>([]);
@@ -32,6 +32,7 @@ export default function HomeScreen() {
   const [stats, setStats] = useState({ entities: 0, events: 0, reviews: 0 });
   const [langOpen, setLangOpen] = useState(false);
   const [categoryCounts, setCategoryCounts] = useState<Record<string, number>>({});
+  const [recentBusinesses, setRecentBusinesses] = useState<Business[]>([]);
   const scrollY = useRef(new Animated.Value(0)).current;
 
   // Fetch real data from Firestore
@@ -50,6 +51,21 @@ export default function HomeScreen() {
       } catch (e) { console.error(e); }
     })();
   }, []);
+
+  // Load recently viewed businesses
+  useEffect(() => {
+    if (recentlyViewed.length === 0) { setRecentBusinesses([]); return; }
+    (async () => {
+      try {
+        const results: Business[] = [];
+        for (const id of recentlyViewed.slice(0, 8)) {
+          const snap = await getDoc(doc(db, 'businesses', id));
+          if (snap.exists()) results.push({ id: snap.id, ...snap.data() } as Business);
+        }
+        setRecentBusinesses(results);
+      } catch {}
+    })();
+  }, [recentlyViewed.join(',')]);
 
   useEffect(() => {
     if (!searchQuery.trim()) { setSearchResults([]); return; }
@@ -209,6 +225,32 @@ export default function HomeScreen() {
             ))}
           </ScrollView>
         </View>
+
+        {/* RECENTLY VIEWED */}
+        {recentBusinesses.length > 0 && (
+          <View style={styles.section}>
+            <View style={styles.sectionHeader}>
+              <Text style={styles.sectionTitle}>{t.recentlyViewed || 'Recently Viewed'}</Text>
+              <TouchableOpacity onPress={() => router.push('/search')}>
+                <Text style={styles.viewAll}>{t.viewAll || 'View all'} →</Text>
+              </TouchableOpacity>
+            </View>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.premiumRow}>
+              {recentBusinesses.map(b => {
+                const bCat = categories.find(c => c.id === b.category);
+                return (
+                  <TouchableOpacity key={b.id} style={styles.recentCard} onPress={() => router.push(`/business/${b.id}`)}>
+                    <View style={[styles.recentEmojiWrap, { backgroundColor: bCat?.color || '#f1f5f9' }]}>
+                      <Text style={styles.recentEmoji}>{bCat?.emoji || '📍'}</Text>
+                    </View>
+                    <Text style={styles.recentName} numberOfLines={1}>{b.name}</Text>
+                    {b.rating && <Text style={styles.recentRating}>★ {b.rating.toFixed(1)}</Text>}
+                  </TouchableOpacity>
+                );
+              })}
+            </ScrollView>
+          </View>
+        )}
 
         {/* TRIP PLANNER CTA */}
         <View style={styles.plannerCta}>
@@ -387,6 +429,11 @@ const styles = StyleSheet.create({
   premiumRatingRow: { flexDirection: 'row', alignItems: 'center', gap: 6, paddingHorizontal: 10, paddingBottom: 10, marginTop: 4 },
   premiumRating: { fontSize: 12, fontWeight: '700', color: '#f59e0b' },
   premiumCat: { fontSize: 11, color: '#94a3b8' },
+  recentCard: { width: 100, backgroundColor: '#fff', borderRadius: 12, padding: 10, borderWidth: 1, borderColor: '#e2e8f0', alignItems: 'center' },
+  recentEmojiWrap: { width: 44, height: 44, borderRadius: 22, justifyContent: 'center', alignItems: 'center', marginBottom: 6 },
+  recentEmoji: { fontSize: 22 },
+  recentName: { fontSize: 12, fontWeight: '600', color: '#0f172a', textAlign: 'center', marginBottom: 2 },
+  recentRating: { fontSize: 11, color: '#f59e0b', fontWeight: '600' },
   plannerCta: { paddingHorizontal: 16, marginTop: 28 },
   plannerCtaBg: {
     backgroundColor: '#4f46e5', borderRadius: 16, padding: 24, alignItems: 'center',
