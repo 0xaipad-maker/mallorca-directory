@@ -55,6 +55,21 @@ jobs:
           fs.writeFileSync('dist/index.html', h);
           "
 
+      - name: Inject manifest, service worker, and meta tags for PWA
+        run: |
+          # Copy PWA assets to dist
+          cp public/manifest.json dist/
+          cp public/sw.js dist/
+          # Inject manifest + meta + sw registration into index.html
+          node -e "
+          const fs = require('fs');
+          let h = fs.readFileSync('dist/index.html','utf-8');
+          const head = '<link rel=\"manifest\" href=\"/mallorca-directory/manifest.json\"><meta name=\"theme-color\" content=\"#4f46e5\"><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"><meta name=\"apple-mobile-web-app-status-bar-style\" content=\"default\"><meta name=\"apple-mobile-web-app-title\" content=\"Mallorca\"><link rel=\"apple-touch-icon\" href=\"/mallorca-directory/assets/icon.png\">';
+          h = h.replace('<head>', '<head>' + head);
+          h = h.replace('</body>', '<script>if(\"serviceWorker\" in navigator){window.addEventListener(\"load\",()=>{navigator.serviceWorker.register(\"/mallorca-directory/sw.js\")})}</script></body>');
+          fs.writeFileSync('dist/index.html', h);
+          "
+
       - name: Copy index.html as 404.html for SPA routing
         run: cp dist/index.html dist/404.html
 

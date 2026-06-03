@@ -9,6 +9,7 @@ import { categories } from '../utils/categories';
 import { areas } from '../utils/areas';
 import { colors as themeColors, spacing, borderRadius, typography, shadows } from '../utils/theme';
 import LeafletMap from '../components/LeafletMap';
+import { SkeletonList } from '../components/Skeleton';
 
 export default function ListScreen() {
   const { category, area } = useLocalSearchParams<{ category?: string; area?: string }>();
@@ -113,8 +114,9 @@ export default function ListScreen() {
 
   if (loading) {
     return (
-      <View style={styles.center}>
-        <ActivityIndicator size="large" color="#4f46e5" />
+      <View style={styles.container}>
+        <Stack.Screen options={{ title: catName || t.loading || '...', headerTintColor: '#fff', headerStyle: { backgroundColor: '#4f46e5' } }} />
+        <SkeletonList count={6} />
       </View>
     );
   }

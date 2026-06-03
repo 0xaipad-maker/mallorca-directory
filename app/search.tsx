@@ -7,6 +7,7 @@ import { Business } from '../types';
 import { useStore, translations, categoryTranslations } from '../store/useStore';
 import { categories } from '../utils/categories';
 import { areas } from '../utils/areas';
+import Skeleton, { SkeletonList } from '../components/Skeleton';
 
 export default function SearchScreen() {
   const router = useRouter();
@@ -83,8 +84,14 @@ export default function SearchScreen() {
 
   if (loading) {
     return (
-      <View style={styles.center}>
-        <ActivityIndicator size="large" color="#4f46e5" />
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <View style={styles.searchRow}>
+            <Skeleton width={40} height={40} borderRadius={20} />
+            <Skeleton width="80%" height={44} borderRadius={12} style={{ marginLeft: 8 }} />
+          </View>
+        </View>
+        <SkeletonList count={6} />
       </View>
     );
   }
