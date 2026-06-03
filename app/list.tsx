@@ -21,12 +21,12 @@ export default function ListScreen() {
   const [showMap, setShowMap] = useState(true);
   const [searchQ, setSearchQ] = useState('');
   const [subcatFilter, setSubcatFilter] = useState('');
-  const [areaFilter, setAreaFilter] = useState(areaName);
 
   const cat = categories.find(c => c.id === category);
   const areaData = areas.find(a => a.id === area || a.name === area);
   const areaName = areaData?.name || area || '';
   const catName = cat ? (categoryTranslations[language]?.[cat.id] || cat.name) : (areaName || 'All');
+  const [areaFilter, setAreaFilter] = useState(areaName);
 
   useEffect(() => {
     (async () => {
